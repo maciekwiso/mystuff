@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	
+	<!--
+		We declare a new template named template-main.
+		This template is used for displaying the main page.
+		It has 4 attributes. These attributes are placeholder for our contents
+		For each attribute, we have assigned a corresponding JSP
+	-->
+	<definition name="template-main" template="/WEB-INF/views/layouts/main.jsp">
+		<put-attribute name="header-content" value="/WEB-INF/views/sections/header.jsp" />
+		<put-attribute name="primary-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/views/sections/footer.jsp" />
+	</definition>
+	
+	<!-- Concrete page. To use this page, your controller must return the name "pet-tiles" -->
+	<definition name="login" extends="template-main">
+		<put-attribute name="header-content" value="" />
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/login.jsp" />
+	</definition>
+	
+	<definition name="denied" extends="template-main">
+		<put-attribute name="header-content" value="" />
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/denied.jsp" />
+	</definition>
+	
+	<definition name="main" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/main.jsp" />
+	</definition>
+	
+	<definition name="shows" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/shows.jsp" />
+	</definition>
+	
+	<definition name="editshow" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/editshow.jsp" />
+	</definition>
+	
+	<definition name="users" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/users.jsp" />
+	</definition>
+	
+	<definition name="edituser" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/edituser.jsp" />
+	</definition>
+	
+	<definition name="adduser" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/adduser.jsp" />
+	</definition>
+	
+	<definition name="usersubs" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/usersubs.jsp" />
+	</definition>
+	
+	<definition name="addsub" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/addsub.jsp" />
+	</definition>
+	
+	<definition name="picviewer" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/picsViewer.jsp" />
+	</definition>
+	
+</tiles-definitions>
