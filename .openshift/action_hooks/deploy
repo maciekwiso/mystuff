@@ -7,4 +7,6 @@ export M2=/usr/bin
 export MAVEN_OPTS="-Xms384m -Xmx412m"
 export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$M2:$PATH
+echo Running maven install
 mvn -s settings.xml clean install
+echo After running maven install
