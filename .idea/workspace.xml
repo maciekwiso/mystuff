@@ -5,8 +5,6 @@
       <change type="DELETED" beforePath="C:\Users\maciek\Documents\znewtvshowinfo\diy\diy\index.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\maciek\Documents\znewtvshowinfo\diy\diy\testrubyserver.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tvshowinfo.iml" afterPath="$PROJECT_DIR$/tvshowinfo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/tvshowinfo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tvshowinfo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tvshowinfo.iws" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6130435" vertical-offset="2360" max-vertical-offset="7293">
-              <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.42826086" vertical-offset="1731" max-vertical-offset="7293">
+              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -497,12 +495,12 @@
       <created>1426709940244</created>
       <option name="number" value="Default" />
       <updated>1426709940244</updated>
-      <workItem from="1426709945450" duration="1620000" />
+      <workItem from="1426709945450" duration="1913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1620000" />
+    <option name="totallyTimeSpent" value="1913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -582,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6130435" vertical-offset="2360" max-vertical-offset="7293">
-          <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.42826086" vertical-offset="1731" max-vertical-offset="7293">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
           <folding />
         </state>
       </provider>
