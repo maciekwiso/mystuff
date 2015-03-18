@@ -244,16 +244,16 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 		addTestMail();
 		startEmailGenerator();
 		updateShowsInfo();
-        //checkJava8();
+        checkJava8();
 	}
 
-    /*private void checkJava8() {
+    private void checkJava8() {
         List<String> list = new LinkedList<>();
         list.add("first element");
         list.add("second");
         logger.debug("using lambda expression");
         list.stream().forEach(p -> logger.debug(p));
-    }*/
+    }
 
     private void updateShowsInfo() {
 		showService.updateShowsData();
