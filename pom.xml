@@ -88,9 +88,9 @@
 			<properties>
 				<env>openshift</env>
 				<config.jdbc.driverClassName>com.mysql.jdbc.Driver</config.jdbc.driverClassName>
-				<config.jdbc.url>jdbc:mysql://127.3.24.2/tvshowinfo</config.jdbc.url>
-				<config.jdbc.user>adminfQGh5sk</config.jdbc.user>
-				<config.jdbc.pass>zcfCwaqevGVA</config.jdbc.pass>
+				<config.jdbc.url>jdbc:mysql://${env.OPENSHIFT_MYSQL_DB_HOST}:${env.OPENSHIFT_MYSQL_DB_PORT}/diy</config.jdbc.url>
+				<config.jdbc.user>adminii5vYLT</config.jdbc.user>
+				<config.jdbc.pass>CYX7VYeRm7F4</config.jdbc.pass>
 				<config.persistence.dialect>org.hibernate.dialect.MySQLDialect</config.persistence.dialect>
 				<config.persistence.hbm2ddl.auto>update</config.persistence.hbm2ddl.auto>
 				<config.persistence.generateDdl>true</config.persistence.generateDdl>
