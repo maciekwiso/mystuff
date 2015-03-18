@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +22,9 @@ import com.visosoft.tvshowinfo.service.PicViewerRecordService;
 @Service
 @Transactional
 public class PicViewerRecordServiceImpl implements PicViewerRecordService {
-	
+
+    private static final Logger logger = LoggerFactory.getLogger(PicViewerRecordServiceImpl.class);
+
 	@Autowired
 	private PicViewerDao picViewerDao;
 
@@ -31,7 +35,9 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 
 	@Override
 	public void refresh() {
+        logger.info("Starting Pic Viewer refresh");
 		doRefresh();
+        logger.info("Pic Viewer refresh done, deleting old pics");
 		picViewerDao.deleteOld();
 	}
 
@@ -61,11 +67,11 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 			String contents = Resources.toString(new URL(page), Charsets.UTF_8);
 			addPics(contents);
 		} catch (MalformedURLException e) {
-			e.printStackTrace();
+			logger.error("Exception in doRefresh", e);
 		} catch (IOException e) {
-			e.printStackTrace();
+            logger.error("Exception in doRefresh", e);
 		} catch (Exception e) {
-			e.printStackTrace();
+            logger.error("Exception in doRefresh", e);
 		}
 	}
 
