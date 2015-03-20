@@ -26,103 +26,107 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 
     private static final Logger logger = LoggerFactory.getLogger(PicViewerRecordServiceImpl.class);
 
-	@Autowired
-	private PicViewerDao picViewerDao;
+    private final Pattern artPattern = Pattern.compile("<article.*?</article>", Pattern.DOTALL);
+    private final Pattern titlePattern = Pattern.compile("<a .*?>(.*?)</a>", Pattern.DOTALL);
+    private final Pattern srcPattern = Pattern.compile("src=\"(.*?)\"");
+    private final Pattern gifPattern = Pattern.compile("\"([^\"]*\\.gif)\"");
 
-	@Override
-	public void insert(PicViewerRecord s) {
-		picViewerDao.insert(s);
-	}
+    @Autowired
+    private PicViewerDao picViewerDao;
 
-	@Override
-	public void refresh() {
+    @Override
+    public void insert(PicViewerRecord s) {
+        picViewerDao.insert(s);
+    }
+
+    @Override
+    public void refresh() {
         logger.info("Starting Pic Viewer refresh");
-		doRefresh();
+        doRefresh();
         logger.info("Pic Viewer refresh done, deleting old pics");
-		picViewerDao.deleteOld();
-	}
+        picViewerDao.deleteOld();
+    }
 
-	@Override
-	public List<PicViewerRecord> selectAll() {
-		return picViewerDao.selectAll();
-	}
+    @Override
+    public List<PicViewerRecord> selectAll() {
+        return picViewerDao.selectAll();
+    }
 
-	@Override
-	public List<PicViewerRecord> selectUnseen() {
-		return picViewerDao.selectUnseen();
-	}
+    @Override
+    public List<PicViewerRecord> selectUnseen() {
+        return picViewerDao.selectUnseen();
+    }
 
-	@Override
-	public PicViewerRecord selectOne(Long id) {
-		return picViewerDao.selectOne(id);
-	}
+    @Override
+    public PicViewerRecord selectOne(Long id) {
+        return picViewerDao.selectOne(id);
+    }
 
-	@Override
-	public void setAsSeenWithIdLorE(Long id) {
-		picViewerDao.setAsSeenWithIdLorE(id);
-	}
-	
-	private void doRefresh() {
-		String page = "http://9gag.com";
-		try {
-			String contents = Resources.toString(new URL(page), Charsets.UTF_8);
-			addPics(contents);
-		} catch (IOException e) {
-			logger.error("Exception in doRefresh", e);
-		}
-	}
+    @Override
+    public void setAsSeenWithIdLorE(Long id) {
+        picViewerDao.setAsSeenWithIdLorE(id);
+    }
 
-	private void addPics(String contents) {
-		Pattern artPattern = Pattern.compile("<article.*?</article>", Pattern.DOTALL);
-		Pattern titlePattern = Pattern.compile("<a .*?>(.*?)</a>", Pattern.DOTALL);
-		Pattern srcPattern = Pattern.compile("src=\"(.*?)\"");
-		Pattern gifPattern = Pattern.compile("\"([^\"]*\\.gif)\"");
-		Matcher m = artPattern.matcher(contents);
+    private void doRefresh() {
+        String page = "http://9gag.com";
+        try {
+            String contents = Resources.toString(new URL(page), Charsets.UTF_8);
+            addPics(contents);
+        } catch (IOException e) {
+            logger.error("Exception in doRefresh", e);
+        }
+    }
+
+    private void addPics(String contents) {
+        Matcher m = artPattern.matcher(contents);
         int added = 0;
-		while (m.find()) {
-			String currentContent = m.group();
-			Matcher titleMatcher = titlePattern.matcher(currentContent);
-			titleMatcher.find();
-			String title = titleMatcher.group(1).trim();
-			Matcher gifMatcher = gifPattern.matcher(currentContent);
-			Optional<String> url = Optional.empty();
-			if (gifMatcher.find()) {
-				url = Optional.of(gifMatcher.group(1));
-			} else {
-				Matcher m2 = srcPattern.matcher(currentContent);
-				m2.find();
-				String foundUrl = m2.group(1);
-				if (!foundUrl.endsWith("_v1.jpg") && !foundUrl.contains("long-post-cover")) {
-					url = Optional.of(foundUrl);
-				}
-			}
-			if (url.isPresent() && addNewPic(url.get(), title)) added++;
-		}
+        while (m.find()) {
+            String currentContent = m.group();
+            Matcher titleMatcher = titlePattern.matcher(currentContent);
+            titleMatcher.find();
+            String title = titleMatcher.group(1).trim();
+            Matcher gifMatcher = gifPattern.matcher(currentContent);
+            Optional<String> url = Optional.empty();
+            if (gifMatcher.find()) {
+                url = Optional.of(gifMatcher.group(1));
+            } else {
+                Matcher m2 = srcPattern.matcher(currentContent);
+                if (m2.find()) {
+                    String foundUrl = m2.group(1);
+                    if (!foundUrl.endsWith("_v1.jpg") && !foundUrl.contains("long-post-cover")) {
+                        url = Optional.of(foundUrl);
+                    }
+                } else {
+                    logger.warn("Didn't find src pattern in [{}]", currentContent);
+                }
+            }
+            if (url.isPresent() && addNewPic(url.get(), title)) added++;
+        }
         logger.info("Added new pics {}", added);
-	}
+    }
 
-	private boolean addNewPic(String url, String title) {
+    private boolean addNewPic(String url, String title) {
         int lastSlash = url.lastIndexOf("/");
         if (lastSlash == -1) {
             return false;
         }
         if (picViewerDao.withUrlEndingExists(url.substring(lastSlash))) {
-			return false;
-		}
-		PicViewerRecord p = new PicViewerRecord();
-		p.setUrl(url);
-		p.setTitle(title);
-		picViewerDao.insert(p);
+            return false;
+        }
+        PicViewerRecord p = new PicViewerRecord();
+        p.setUrl(url);
+        p.setTitle(title);
+        picViewerDao.insert(p);
         return true;
-	}
+    }
 
-	@Override
-	public List<PicViewerRecord> selectAll(int maxResults) {
-		return picViewerDao.selectAll(maxResults);
-	}
+    @Override
+    public List<PicViewerRecord> selectAll(int maxResults) {
+        return picViewerDao.selectAll(maxResults);
+    }
 
-	@Override
-	public List<PicViewerRecord> selectUnseen(int maxResults) {
-		return picViewerDao.selectUnseen(maxResults);
-	}
+    @Override
+    public List<PicViewerRecord> selectUnseen(int maxResults) {
+        return picViewerDao.selectUnseen(maxResults);
+    }
 }
