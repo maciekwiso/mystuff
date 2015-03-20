@@ -81,7 +81,7 @@ public class EmailQueueDaoHibernate implements EmailQueueDao {
 			em.flush();
 			em.clear();
 		}
-		logger.debug("Updated: " + u);
+		logger.debug("Updated: {}", u);
 	}
 
 	@Override

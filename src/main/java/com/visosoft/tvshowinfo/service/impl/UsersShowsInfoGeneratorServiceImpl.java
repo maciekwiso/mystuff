@@ -70,10 +70,8 @@ public class UsersShowsInfoGeneratorServiceImpl implements
 	}
 
 	private Set<Show> getNeededShows(List<UserSubscription> subs) {
-		Set<Show> res = new HashSet<Show>();
-		for (UserSubscription us : subs) {
-			res.add(us.getShow());
-		}
+		Set<Show> res = new HashSet<>();
+        subs.forEach((sub) -> res.add(sub.getShow()));
 		return res;
 	}
 
@@ -93,14 +91,14 @@ public class UsersShowsInfoGeneratorServiceImpl implements
 	}
 
 	private Map<User, SortedSet<Show>> getActiveSubscriptions(List<UserSubscription> subs) {
-		Map<User, SortedSet<Show>> activeSubs = new LinkedHashMap<User, SortedSet<Show>>();
-		for (UserSubscription us : subs) {
-			if (!activeSubs.containsKey(us.getUser())) {
-				activeSubs.put(us.getUser(), new TreeSet<Show>(getShowsAlphabeticalComparator()));
-			}
-			activeSubs.get(us.getUser()).add(us.getShow());
-		}
-		return activeSubs;
+		Map<User, SortedSet<Show>> activeSubs = new LinkedHashMap<>();
+        subs.forEach((us) -> {
+            if (!activeSubs.containsKey(us.getUser())) {
+                activeSubs.put(us.getUser(), new TreeSet<>(getShowsAlphabeticalComparator()));
+            }
+            activeSubs.get(us.getUser()).add(us.getShow());
+        });
+        return activeSubs;
 	}
 
 }

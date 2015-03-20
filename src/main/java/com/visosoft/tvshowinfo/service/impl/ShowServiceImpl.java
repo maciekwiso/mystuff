@@ -42,14 +42,14 @@ public class ShowServiceImpl implements ShowService,ShowsDataUpdaterService {
 	@Override
 	@Transactional
 	public void insert(Show s) {
-		logger.debug("inserting: " + s);
+		logger.debug("inserting: {}", s);
 		showDao.insert(s);
 	}
 
 	@Override
 	@Transactional
 	public Show update(Show s) {
-		logger.debug("update: " + s);
+		logger.debug("update: {}", s);
 		return showDao.update(s);
 	}
 
@@ -72,20 +72,16 @@ public class ShowServiceImpl implements ShowService,ShowsDataUpdaterService {
 	@Override
 	@Transactional
 	public Show selectOne(Long id) {
-		logger.debug("select One " + id);
+		logger.debug("select One {}", id);
 		return showDao.selectOne(id);
 	}
 	@Override
 	public void updateShowsData() {
-		List<Show> list = tt.execute(new TransactionCallback<List<Show>>() {
-
-			@Override
-			public List<Show> doInTransaction(TransactionStatus status) {
-				List<Show> list = showDao.selectAll();
-				logger.debug("Number of shows: " + list.size());
-				return list;
-			}
-		});
+		List<Show> list = tt.execute((TransactionStatus) -> {
+            List<Show> ShowsList = showDao.selectAll();
+            logger.debug("Number of shows: {}", ShowsList.size());
+            return ShowsList;
+			});
 		
         for (final Show s : list) {
         	logger.debug("Resolving updater for show: " + s);

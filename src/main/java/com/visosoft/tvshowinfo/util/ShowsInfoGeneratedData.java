@@ -13,10 +13,10 @@ import com.visosoft.tvshowinfo.domain.User;
 public class ShowsInfoGeneratedData {
 	private Map<User, SortedSet<Show>> userSubs;
 	private Set<Show> shows;
-	private List<Episode> yesterday = new LinkedList<Episode>();
-	private List<Episode> today = new LinkedList<Episode>();
-	private List<Episode> inTwoWeeks = new LinkedList<Episode>();
-	private List<Episode> moreThanTwoWeeks = new LinkedList<Episode>();
+	private List<Episode> yesterday = new LinkedList<>();
+	private List<Episode> today = new LinkedList<>();
+	private List<Episode> inTwoWeeks = new LinkedList<>();
+	private List<Episode> moreThanTwoWeeks = new LinkedList<>();
 	public Map<User, SortedSet<Show>> getUserSubs() {
 		return userSubs;
 	}

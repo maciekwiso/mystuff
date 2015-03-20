@@ -47,7 +47,7 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 	
 	@Override
 	public boolean updateShow(Show show) {
-		logger.debug("Starting update of show: " + show);
+		logger.debug("Starting update of show: {}", show);
 		ShowXmlTVRage showXml = createShowXml(show);
 		if (showXml == null) {
 			logger.error("Unmarshalling of the show was unsuccessfull");
@@ -67,16 +67,16 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 
 	private boolean updateEps(Show show, ShowXmlTVRage showXml) {
         if (showXml.getEpisodelist() == null || showXml.getEpisodelist().getSeason() == null) {
-            logger.debug("updateShow; " + show.getTitle() + "; There was an empty list of episodes in tv rage object");
+            logger.debug("updateShow; {}; There was an empty list of episodes in tv rage object", show.getTitle());
             return true;
         }
         List<Episode> eps = episodeDao.selectAllByShow(show);
-		List<Episode> changedEps = new LinkedList<Episode>();
-		logger.debug("updateShow; " + show.getTitle() + "; " + eps.size());
+		List<Episode> changedEps = new LinkedList<>();
+		logger.debug("updateShow; {}; {}", show.getTitle(), eps.size());
 		for (Season ses : showXml.getEpisodelist().getSeason()) {
 			for (ShowXmlTVRage.Episodelist.Season.Episode epXml : ses.getEpisode()) {
-				logger.debug("Current xml ep: " + epXml.getTitle() + "; " + ses.getNo() + "x"
-						+ epXml.getSeasonnum() + "; " + xmlDateToDate(epXml.getAirdate()));
+				logger.debug("Current xml ep: {}; {}x{}; {}",
+                        new Object[] {epXml.getTitle(), ses.getNo(), epXml.getSeasonnum(), xmlDateToDate(epXml.getAirdate())});
 				Episode ep = findEp(eps, ses, epXml);
 				if (ep == null) {
 					changedEps.add(addNewEp(epXml, ses, show));
@@ -89,33 +89,31 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 				}
 			}
 		}
-		if (changedEps.size() > 0) {
-			logger.debug("Some episodes were changed. DB update needed for number of episodes: " + changedEps.size());
+		if (!changedEps.isEmpty()) {
+			logger.debug("Some episodes were changed. DB update needed for number of episodes: {}", changedEps.size());
 			updateEpsInDb(changedEps);
 			show.setLastUpdated(new Date());
 			showDao.update(show);
 		} else {
-			logger.debug("No episodes were changed.");
+			logger.debug("No episodes were changed");
 		}
 		removeDeletedEpsInDb(eps);
 		return true;
 	}
 	
 	private void removeDeletedEpsInDb(List<Episode> changedEps) {
-		if (changedEps.size() <= 0) {
-			logger.debug("No episodes were deleted in TVRage.");
+		if (changedEps.isEmpty()) {
+			logger.debug("No episodes were deleted in TVRage");
 			return;
 		}
 		for (Episode ep : changedEps) {
-			logger.debug("Removing episode: " + ep);
+			logger.debug("Removing episode: {}", ep);
 			episodeDao.delete(ep);
 		}
 	}
 	
 	private void updateEpsInDb(List<Episode> changedEps) {
-		for (Episode ep : changedEps) {
-			episodeDao.update(ep);
-		}
+        changedEps.forEach((ep) -> episodeDao.update(ep));
 	}
 
 	private void updateEp(
@@ -148,7 +146,7 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 				return e;
 			}
 		}
-		logger.debug("Didn't find EP: " + epXml.getTitle());
+		logger.debug("Didn't find EP: {}", epXml.getTitle());
 		return null;
 	}
 	
@@ -175,9 +173,10 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 		try {
 			ShowXmlTVRage r = xMLUnmarshaller.unmarshall(new URL(show.getUrl()), ShowXmlTVRage.class);
 			if (r == null) {
-				logger.error("Couldn't unmarshall show: " + show);
+				logger.error("Couldn't unmarshall show: {}", show);
 			} else {
-				logger.debug("Unmarshalled for: " + show.getTitle() + "; " + r.getName() + "; " + r.getTotalseasons());
+				logger.debug("Unmarshalled for: {}; {}; {}",
+                        new Object[] {show.getTitle(), r.getName(), r.getTotalseasons()});
 			}
 			return r;
 		} catch (MalformedURLException e) {
@@ -191,19 +190,17 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 		SearchResultsTVRage results = getSearchResults(showName);
 		if (results == null) {
 			logger.info("There was a problem with getting search results");
-			return new ArrayList<ShowSearchResult>();
+			return new ArrayList<>();
 		}
 		return mapSearchResults(results);
 	}
 	
 	private List<ShowSearchResult> mapSearchResults(SearchResultsTVRage results) {
 		if (results.getShow() == null || results.getShow().isEmpty()) {
-			return new ArrayList<ShowSearchResult>();
+			return new ArrayList<>();
 		}
-		ArrayList<ShowSearchResult> mappedResults = new ArrayList<ShowSearchResult>();
-		for (SearchResultsTVRage.Show show : results.getShow()) {
-			mappedResults.add(mapSearchResult(show));
-		}
+		ArrayList<ShowSearchResult> mappedResults = new ArrayList<>();
+        results.getShow().forEach((show) -> mappedResults.add(mapSearchResult(show)));
 		return mappedResults;
 	}
 

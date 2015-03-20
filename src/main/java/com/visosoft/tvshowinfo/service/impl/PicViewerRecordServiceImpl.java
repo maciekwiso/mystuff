@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -66,12 +67,8 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 		try {
 			String contents = Resources.toString(new URL(page), Charsets.UTF_8);
 			addPics(contents);
-		} catch (MalformedURLException e) {
-			logger.error("Exception in doRefresh", e);
 		} catch (IOException e) {
-            logger.error("Exception in doRefresh", e);
-		} catch (Exception e) {
-            logger.error("Exception in doRefresh", e);
+			logger.error("Exception in doRefresh", e);
 		}
 	}
 
@@ -81,37 +78,42 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 		Pattern srcPattern = Pattern.compile("src=\"(.*?)\"");
 		Pattern gifPattern = Pattern.compile("\"([^\"]*\\.gif)\"");
 		Matcher m = artPattern.matcher(contents);
+        int added = 0;
 		while (m.find()) {
 			String currentContent = m.group();
 			Matcher titleMatcher = titlePattern.matcher(currentContent);
 			titleMatcher.find();
 			String title = titleMatcher.group(1).trim();
 			Matcher gifMatcher = gifPattern.matcher(currentContent);
-			String url = null;
+			Optional<String> url = Optional.empty();
 			if (gifMatcher.find()) {
-				url = gifMatcher.group(1);
+				url = Optional.of(gifMatcher.group(1));
 			} else {
 				Matcher m2 = srcPattern.matcher(currentContent);
 				m2.find();
 				String foundUrl = m2.group(1);
 				if (!foundUrl.endsWith("_v1.jpg") && !foundUrl.contains("long-post-cover")) {
-					url = foundUrl;
+					url = Optional.of(foundUrl);
 				}
 			}
-			if (url != null) {
-				addNewPic(url, title);
-			}
+			if (url.isPresent() && addNewPic(url.get(), title)) added++;
 		}
+        logger.info("Added new pics {}", added);
 	}
 
-	private void addNewPic(String url, String title) {
-		if (picViewerDao.withUrlEndingExists(url.substring(url.lastIndexOf("/")))) {
-			return;
+	private boolean addNewPic(String url, String title) {
+        int lastSlash = url.lastIndexOf("/");
+        if (lastSlash == -1) {
+            return false;
+        }
+        if (picViewerDao.withUrlEndingExists(url.substring(lastSlash))) {
+			return false;
 		}
 		PicViewerRecord p = new PicViewerRecord();
 		p.setUrl(url);
 		p.setTitle(title);
 		picViewerDao.insert(p);
+        return true;
 	}
 
 	@Override

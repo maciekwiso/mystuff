@@ -3,6 +3,7 @@ package com.visosoft.tvshowinfo.service.impl;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
@@ -113,7 +114,7 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 					emailQueueDao.refreshStuckPendingTasks();
 				}  catch (RuntimeException e) {
 					status.setRollbackOnly();
-					logger.error("Rolledback.", e);
+					logger.error("Rolledback", e);
 				}
 			}
 		});
@@ -123,9 +124,10 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 		EmailTask lastTask = null;
 		final String execId = createExecId();
 		int priority = 0;
-		EmailTask currentTask = null;
+		Optional<EmailTask> currentTaskOpt;
 		long processed = 0;
-		while ((currentTask = findNextReadyTask(lastTask, execId, priority)) != null ) {
+		while ((currentTaskOpt = findNextReadyTask(lastTask, execId, priority)).isPresent() ) {
+            EmailTask currentTask = currentTaskOpt.get();
 			setCurrentAsPending(currentTask, execId);
 			boolean success = true;
 			try {
@@ -141,7 +143,7 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 			priority = lastTask.getPriority();
 			processed++;
 		}
-		logger.debug("Emails processed: " + processed);
+		logger.debug("Emails processed: {}", processed);
 	}
 
 	private void setCurrentAsFailed(final EmailTask currentTask, final Exception e) {
@@ -156,7 +158,7 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 						emailQueueDao.update(currentTask);
 					}  catch (RuntimeException e) {
 						status.setRollbackOnly();
-						logger.error("Rolledback.", e);
+						logger.error("Rolledback", e);
 					}
 			}});
 	}
@@ -172,20 +174,20 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 						emailQueueDao.update(currentTask);
 					}  catch (RuntimeException e) {
 						status.setRollbackOnly();
-						logger.error("Rolledback.", e);
+						logger.error("Rolledback", e);
 					}
 			}});
 	}
 
 	private void sendEmail(EmailTask currentTask) throws MessagingException {
-		logger.debug("Sending mail: " + currentTask);
+		logger.debug("Sending mail: {}", currentTask);
 		MimeMessage msg = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(msg);
 		helper.setTo(currentTask.getName() + " <" + currentTask.getAddress() + ">");
 		helper.setText(currentTask.getContent());
 		helper.setSubject(currentTask.getSubject());
 		mailSender.send(msg);
-		logger.debug("Sent mail: " + currentTask);
+		logger.debug("Sent mail: {}", currentTask);
 	}
 
 	private void setCurrentAsPending(final EmailTask currentTask, final String execId) {
@@ -205,32 +207,28 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 					emailQueueDao.update(currentTask);
 				}  catch (RuntimeException e) {
 					status.setRollbackOnly();
-					logger.error("Rolledback.", e);
+					logger.error("Rolledback", e);
 				}
 			}
 		});
 	}
 
-	private EmailTask findNextReadyTask(final EmailTask lastTask, final String execId,
+	private Optional<EmailTask> findNextReadyTask(final EmailTask lastTask, final String execId,
 			final int priority) {
-		return tt.execute(new TransactionCallback<EmailTask>() {
-			
-			@Override
-			public EmailTask doInTransaction(TransactionStatus status) {
-				EmailTask newTask = findNextReadyTaskQuery(null, execId, priority - 1, IGNORE_HIGHER_PRIORITY);
-				if (newTask != null) return newTask;
-				newTask = findNextReadyTaskQuery(lastTask, execId, priority, IGNORE_HIGHER_PRIORITY);
-				if (newTask != null) return newTask;
-				newTask = findNextReadyTaskQuery(null, execId, 0, priority);
-				if (newTask != null) return newTask;
-				return findNextReadyTaskQuery(null, execId, priority, IGNORE_HIGHER_PRIORITY);
-			}
-		});
+        return tt.execute((TransactionStatus) -> {
+            Optional<EmailTask> newTask = findNextReadyTaskQuery(null, execId, priority - 1, IGNORE_HIGHER_PRIORITY);
+            if (newTask.isPresent()) return newTask;
+            newTask = findNextReadyTaskQuery(lastTask, execId, priority, IGNORE_HIGHER_PRIORITY);
+            if (newTask.isPresent()) return newTask;
+            newTask = findNextReadyTaskQuery(null, execId, 0, priority);
+            if (newTask.isPresent()) return newTask;
+            return findNextReadyTaskQuery(null, execId, priority, IGNORE_HIGHER_PRIORITY);
+        });
 	}
 	
-	private EmailTask findNextReadyTaskQuery(EmailTask lastTask, String execId,
+	private Optional<EmailTask> findNextReadyTaskQuery(EmailTask lastTask, String execId,
 			int priority, int priorityHigherThan) {
-		return emailQueueDao.selectOne(lastTask, execId, priority, priorityHigherThan);
+		return Optional.ofNullable(emailQueueDao.selectOne(lastTask, execId, priority, priorityHigherThan));
 	}
 
 	private String createExecId() {
@@ -244,16 +242,7 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 		addTestMail();
 		startEmailGenerator();
 		updateShowsInfo();
-        checkJava8();
 	}
-
-    private void checkJava8() {
-        List<String> list = new LinkedList<>();
-        list.add("first element");
-        list.add("second");
-        logger.debug("using lambda expression");
-        list.stream().forEach(p -> logger.debug(p));
-    }
 
     private void updateShowsInfo() {
 		showService.updateShowsData();
@@ -294,10 +283,10 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 					et.setSubject(testSubject);
 					et.setLastError("");
 					add(et);
-					logger.info("added test mail to the queue: " + et);
+					logger.info("added test mail to the queue: {}", et);
 				}  catch (RuntimeException e) {
 					status.setRollbackOnly();
-					logger.error("Rolledback.", e);
+					logger.error("Rolledback", e);
 				}
 			}
 		});

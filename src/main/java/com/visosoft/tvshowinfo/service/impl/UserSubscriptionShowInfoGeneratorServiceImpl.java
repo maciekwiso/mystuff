@@ -55,13 +55,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 	}
 	
 	private void checkActiveSubscriptions(List<UserSubscription> subs) {
-		Iterator<UserSubscription> it = subs.iterator();
-		while (it.hasNext()) {
-			UserSubscription s = it.next();
-			if (!s.getEnabled()) {
-				it.remove();
-			}
-		}
+        subs.removeIf((sub) -> !sub.getEnabled());
 	}
 
 	private String generateEmailList(ShowsInfoGeneratedData data) {

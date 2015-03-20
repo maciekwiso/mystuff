@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -119,12 +120,12 @@ public class UsersController {
 			bindingResult.reject("username", "Empty username");
 			return;
 		}
-		if (user.getEmail() == null || user.getEmail().isEmpty()) {
+		if (StringUtils.isEmpty(user.getEmail())) {
 			bindingResult.reject("email", "Empty email");
 			return;
 		}
 		user.setEmail(user.getEmail().trim());
-		if (user.getPassword() == null || user.getPassword().isEmpty()) {
+		if (StringUtils.isEmpty(user.getPassword())) {
 			bindingResult.reject("password", "Empty password");
 			return;
 		}
@@ -160,10 +161,8 @@ public class UsersController {
 	private String getUserSubInfo(User s, int days) {
 		List<UserSubscription> subs = userSubscriptionDao.selectAll(s);
 		checkActiveSubscriptions(subs);
-		List<Show> shows = new LinkedList<Show>();
-		for (UserSubscription us : subs) {
-			shows.add(us.getShow());
-		}
+		List<Show> shows = new LinkedList<>();
+        subs.forEach((us) -> shows.add(us.getShow()));
 		int past = 0, future = 0;
 		if (days > 0) {
 			future = days;
@@ -184,13 +183,7 @@ public class UsersController {
 	}
 
 	private void checkActiveSubscriptions(List<UserSubscription> subs) {
-		Iterator<UserSubscription> it = subs.iterator();
-		while (it.hasNext()) {
-			UserSubscription s = it.next();
-			if (!s.getEnabled()) {
-				it.remove();
-			}
-		}
+        subs.removeIf((s) -> !s.getEnabled());
 	}
 	
 	@RequestMapping("usersubs/{userId}")
@@ -228,9 +221,7 @@ public class UsersController {
 	
 	@RequestMapping(value = "addusersub", method = RequestMethod.POST)
 	public String addSubSearch(@RequestParam long userId, @RequestParam String showName, ModelMap model) {
-		
-		List<ShowSearchResult> searchResults = userSubscriptionService
-				.searchShow(showName);
+		List<ShowSearchResult> searchResults = userSubscriptionService.searchShow(showName);
 		model.put("searchResults", searchResults);
 		model.put("showName", showName);
 		return addSub(userId, model);

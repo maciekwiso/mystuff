@@ -20,7 +20,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(@RequestParam(value="error", required=false) boolean error, Locale locale, ModelMap model) {
-		LOG.info("Welcome home! the client locale is "+ locale.toString());
+		LOG.info("Welcome home! the client locale is {}", locale.toString());
 		if (error == true) {
 			model.put("error", "You have entered an invalid username or password!");
 		} else {

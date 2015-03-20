@@ -49,9 +49,7 @@ public final class Utils {
 	public static StringBuilder generateSubscribedShowsContent(
 			SortedSet<Show> shows) {
 		StringBuilder b = new StringBuilder();
-		for (Show s : shows) {
-			b.append(s.getTitle()).append(NEW_LINE);
-		}
+        shows.forEach((s) -> b.append(s.getTitle()).append(NEW_LINE));
 		return b;
 	}
 	

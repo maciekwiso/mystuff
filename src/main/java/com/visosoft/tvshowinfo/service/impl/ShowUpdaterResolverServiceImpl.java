@@ -42,7 +42,7 @@ public class ShowUpdaterResolverServiceImpl implements
 				return u.getValue();
 			}
 		}
-		logger.info("Didn't find updater for show: " + show);
+		logger.info("Didn't find updater for show: {}", show);
 		return null;
 	}
 

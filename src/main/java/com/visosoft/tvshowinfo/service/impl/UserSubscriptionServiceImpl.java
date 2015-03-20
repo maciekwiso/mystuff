@@ -142,7 +142,7 @@ public class UserSubscriptionServiceImpl implements UserSubscriptionService, Use
 		et.setSubject(subject);
 		et.setLastError("");
 		emailQueueService.add(et);
-		logger.debug("Added email task: " + et);
+		logger.debug("Added email task: {}", et);
 	}
 
 	@Override

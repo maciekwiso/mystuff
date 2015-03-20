@@ -75,8 +75,6 @@ public class WebPagesPicsViewerController {
 			URL url = new URL(pvr.getUrl());
 			InputStream stream = url.openStream();
 			return ByteStreams.toByteArray(stream);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 

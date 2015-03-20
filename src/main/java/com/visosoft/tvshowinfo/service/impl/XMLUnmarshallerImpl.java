@@ -25,9 +25,7 @@ public class XMLUnmarshallerImpl implements XMLUnmarshaller {
 	public <T> T unmarshall(URL url, Class<?> XMLMapperclass) {
         try {
 			return (T)unmarshaller.unmarshal(new StreamSource(url.toExternalForm()));
-		} catch (XmlMappingException e) {
-			logger.error("Problem with unmarshalling url: " + url.toExternalForm(), e);
-		} catch (IOException e) {
+		} catch (XmlMappingException | IOException e) {
 			logger.error("Problem with unmarshalling url: " + url.toExternalForm(), e);
 		}
         return null;
