@@ -66,12 +66,12 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true);
 		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
         try {
-            return contentTemplate.replaceAll(CONTENTVAR_SHOWS, shows.toString())
-                    .replaceAll(CONTENTVAR_USERNAME, rec.getKey().getUsername())
-                    .replaceAll(CONTENTVAR_TODAY, today.toString())
-                    .replaceAll(CONTENTVAR_INTWOWEEKS, inTwoWeeks.toString())
-                    .replaceAll(CONTENTVAR_LATERTHANTWOWEEKS, moreThanTwoWeeks.toString())
-                    .replaceAll(CONTENTVAR_YESTERDAY, yesterday.toString());
+            return contentTemplate.replaceAll(CONTENTVAR_SHOWS, escapeString(shows.toString()))
+                    .replaceAll(CONTENTVAR_USERNAME, escapeString(rec.getKey().getUsername()))
+                    .replaceAll(CONTENTVAR_TODAY, escapeString(today.toString()))
+                    .replaceAll(CONTENTVAR_INTWOWEEKS, escapeString(inTwoWeeks.toString()))
+                    .replaceAll(CONTENTVAR_LATERTHANTWOWEEKS, escapeString(moreThanTwoWeeks.toString()))
+                    .replaceAll(CONTENTVAR_YESTERDAY, escapeString(yesterday.toString()));
         } catch (Exception e) {
             logger.error(String.format("An exception on creating the info for user, shows: [%s], username: [%s], today: [%s], " +
                     "in two weeks [%s], later than 2 weeks [%s], yesterday [%s]", shows, rec.getKey().getUsername(),
@@ -79,5 +79,9 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
         }
         return "Sorry, an error occurred";
 	}
+
+    private String escapeString(String s) {
+        return s.replaceAll("\\$", "\\\\\\$");
+    }
 
 }
