@@ -67,7 +67,7 @@ public class WebPagesPicsViewerController {
 	}
 
 	private String getContentType(PicViewerRecord pvr) {
-		return pvr.getUrl().endsWith("jpg") ? "image/jpg" : "image/gif";
+		return pvr.getUrl().endsWith("jpg") ? "image/jpg" : pvr.getUrl().endsWith("mp4") ? "video/mp4" : "image/gif";
 	}
 
 	private byte[] getPic(PicViewerRecord pvr) {
