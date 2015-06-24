@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     private final Pattern titlePattern = Pattern.compile("<a .*?>(.*?)</a>", Pattern.DOTALL);
     private final Pattern srcPattern = Pattern.compile("src=\"(.*?)\"");
     private final Pattern gifPattern = Pattern.compile("\"([^\"]*\\.gif)\"");
+    private final Pattern mp4Pattern = Pattern.compile("\"([^\"]*\\.mp4)\"");
 
     @Autowired
     private PicViewerDao picViewerDao;
@@ -77,7 +79,7 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
         }
     }
 
-    private void addPics(String contents) {
+    @VisibleForTesting protected void addPics(String contents) {
         Matcher m = artPattern.matcher(contents);
         int added = 0;
         while (m.find()) {
@@ -85,9 +87,12 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
             Matcher titleMatcher = titlePattern.matcher(currentContent);
             titleMatcher.find();
             String title = titleMatcher.group(1).trim();
-            Matcher gifMatcher = gifPattern.matcher(currentContent);
             Optional<String> url = Optional.empty();
-            if (gifMatcher.find()) {
+            Matcher mp4Matcher = mp4Pattern.matcher(currentContent);
+            Matcher gifMatcher = gifPattern.matcher(currentContent);
+            if (mp4Matcher.find()) {
+                url = Optional.of(mp4Matcher.group(1));
+            } else if (gifMatcher.find()) {
                 url = Optional.of(gifMatcher.group(1));
             } else {
                 Matcher m2 = srcPattern.matcher(currentContent);
