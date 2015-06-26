@@ -7,8 +7,6 @@
       <change type="DELETED" beforePath="C:\Users\maciek\Documents\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\maciek\Documents\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/picsViewer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/picsViewer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tvshowinfo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,11 +107,11 @@
       <file leaf-file-name="PicViewerRecord.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7959866" vertical-offset="0" max-vertical-offset="897">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.7770346" vertical-offset="0" max-vertical-offset="901">
+              <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding>
-                <element signature="e#1468#1469#0" expanded="true" />
-                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -925,12 +923,12 @@
       <workItem from="1435170996293" duration="1784000" />
       <workItem from="1435172861526" duration="1434000" />
       <workItem from="1435174865034" duration="749000" />
-      <workItem from="1435343607917" duration="711000" />
+      <workItem from="1435343607917" duration="1101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21468000" />
+    <option name="totallyTimeSpent" value="21858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1378,11 +1376,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7959866" vertical-offset="0" max-vertical-offset="897">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.7770346" vertical-offset="0" max-vertical-offset="901">
+          <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
           </folding>
         </state>
       </provider>
