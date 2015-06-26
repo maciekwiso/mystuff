@@ -61,5 +61,9 @@ public class PicViewerRecord  implements Serializable {
 		return "PicViewerRecord [id=" + id + ", title=" + title + ", url=" + url + ", seen=" + seen
 				+ "]";
 	}
+
+    public boolean isVideo() {
+        return url.endsWith("mp4");
+    }
     
 }
