@@ -17,6 +17,7 @@ public class ShowsInfoGeneratedData {
 	private List<Episode> today = new LinkedList<>();
 	private List<Episode> inTwoWeeks = new LinkedList<>();
 	private List<Episode> moreThanTwoWeeks = new LinkedList<>();
+	private List<Episode> lastWeek = new LinkedList<>();
 	public Map<User, SortedSet<Show>> getUserSubs() {
 		return userSubs;
 	}
@@ -53,5 +54,12 @@ public class ShowsInfoGeneratedData {
 	public void setMoreThanTwoWeeks(List<Episode> moreThanTwoWeeks) {
 		this.moreThanTwoWeeks = moreThanTwoWeeks;
 	}
-	
+
+	public List<Episode> getLastWeek() {
+		return lastWeek;
+	}
+
+	public void setLastWeek(List<Episode> lastWeek) {
+		this.lastWeek = lastWeek;
+	}
 }

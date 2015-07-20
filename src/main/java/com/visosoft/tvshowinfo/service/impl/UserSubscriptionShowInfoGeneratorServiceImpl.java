@@ -41,6 +41,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 	private final String CONTENTVAR_TODAY = "\\$today";
 	private final String CONTENTVAR_INTWOWEEKS = "\\$twoweeks";
 	private final String CONTENTVAR_LATERTHANTWOWEEKS = "\\$latertwoweeks";
+	private final String CONTENTVAR_LASTWEEK = "\\$lastweek";
 
 	@Override
 	public String generateShowsInfo(User user) {
@@ -63,6 +64,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false);
 		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false);
 		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true);
+		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), data.getLastWeek(), true);
 		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true);
 		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
         try {
@@ -71,7 +73,8 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
                     .replaceAll(CONTENTVAR_TODAY, escapeString(today.toString()))
                     .replaceAll(CONTENTVAR_INTWOWEEKS, escapeString(inTwoWeeks.toString()))
                     .replaceAll(CONTENTVAR_LATERTHANTWOWEEKS, escapeString(moreThanTwoWeeks.toString()))
-                    .replaceAll(CONTENTVAR_YESTERDAY, escapeString(yesterday.toString()));
+					.replaceAll(CONTENTVAR_LASTWEEK, escapeString(lastWeek.toString()))
+					.replaceAll(CONTENTVAR_YESTERDAY, escapeString(yesterday.toString()));
         } catch (Exception e) {
             logger.error(String.format("An exception on creating the info for user, shows: [%s], username: [%s], today: [%s], " +
                     "in two weeks [%s], later than 2 weeks [%s], yesterday [%s]", shows, rec.getKey().getUsername(),

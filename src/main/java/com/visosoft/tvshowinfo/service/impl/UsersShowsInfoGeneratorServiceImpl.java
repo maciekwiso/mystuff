@@ -53,11 +53,14 @@ public class UsersShowsInfoGeneratorServiceImpl implements
 		c0.set(Calendar.SECOND, 0);
 		c0.set(Calendar.HOUR_OF_DAY, 0);
 		Date today = c0.getTime();
+		Date yesterday = new Date(c0.getTime().getTime() - 86400000);
 		Calendar c1 = Calendar.getInstance();
 		c1.add(Calendar.DAY_OF_MONTH, 14);
 		Date twoWeeks = c1.getTime();
 		for (Episode e : eps) {
-			if (e.getAirdate().before(today)) {
+			if (e.getAirdate().before(yesterday)) {
+				data.getLastWeek().add(e);
+			} else if (e.getAirdate().before(today)) {
 				data.getYesterday().add(e);
 			} else if (e.getAirdate().after(twoWeeks)) {
 				data.getMoreThanTwoWeeks().add(e);
@@ -87,7 +90,7 @@ public class UsersShowsInfoGeneratorServiceImpl implements
 	}
 
 	private List<Episode> getNewEpisodes(Set<Show> shows) {
-		return episodeService.selectEpisodesFromDays(1, MAX_DAYS_INTO_FUTURE, shows);
+		return episodeService.selectEpisodesFromDays(8, MAX_DAYS_INTO_FUTURE, shows);
 	}
 
 	private Map<User, SortedSet<Show>> getActiveSubscriptions(List<UserSubscription> subs) {
