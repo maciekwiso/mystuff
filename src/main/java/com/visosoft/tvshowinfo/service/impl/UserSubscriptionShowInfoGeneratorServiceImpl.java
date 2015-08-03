@@ -1,10 +1,8 @@
 package com.visosoft.tvshowinfo.service.impl;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.SortedSet;
+import java.util.*;
 
+import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +62,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false);
 		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false);
 		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true);
-		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), data.getLastWeek(), true);
+		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), Lists.reverse(data.getLastWeek()), true);
 		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true);
 		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
         try {

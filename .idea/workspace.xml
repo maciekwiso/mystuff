@@ -33,24 +33,7 @@
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\diy\testrubyserver.rb" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/EmailQueueServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/EmailQueueServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/domain/PicViewerRecord.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/domain/PicViewerRecord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/dao/hibernate/ShowDaoHibernate.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/dao/hibernate/ShowDaoHibernate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/ShowServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/ShowServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/dao/hibernate/UserDaoHibernate.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/dao/hibernate/UserDaoHibernate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/web/controller/UsersController.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/web/controller/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/util/Utils.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/util/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/web/controller/WebPagesPicsViewerController.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/web/controller/WebPagesPicsViewerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/util/ShowsInfoGeneratedData.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/util/ShowsInfoGeneratedData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tvshowinfo.iml" afterPath="$PROJECT_DIR$/tvshowinfo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/tvshowinfo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tvshowinfo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tvshowinfo.iws" />
@@ -74,20 +57,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserSubscriptionShowInfoGeneratorServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1021814">
-              <caret line="43" column="51" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersShowsInfoGeneratorServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsersShowsInfoGeneratorServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.518518">
+            <state vertical-scroll-proportion="0.072383076">
               <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
               <folding />
             </state>
@@ -216,6 +189,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -646,7 +620,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1040,7 +1013,8 @@
       <workItem from="1435526255226" duration="281000" />
       <workItem from="1435698237199" duration="1252000" />
       <workItem from="1435781746012" duration="37000" />
-      <workItem from="1437418536401" duration="860000" />
+      <workItem from="1437418536401" duration="1287000" />
+      <workItem from="1438625497031" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="Changed dataSource to a pooled one">
       <created>1435698853787</created>
@@ -1052,11 +1026,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25690000" />
+    <option name="totallyTimeSpent" value="26441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1072,7 +1046,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1088,6 +1061,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1119,20 +1093,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/config/openshift/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/EmailQueueServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40869564">
-          <caret line="268" column="64" selection-start-line="268" selection-start-column="64" selection-end-line="268" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/EpisodeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.092391305">
@@ -1319,10 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7728285">
           <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-          <folding>
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,7 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1549,18 +1504,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/collect/Lists.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.518518">
-          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+        <state vertical-scroll-proportion="-11.074074">
+          <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0-sources.jar!/com/google/common/collect/Lists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33296213">
+          <caret line="785" column="28" selection-start-line="785" selection-start-column="28" selection-end-line="785" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UserSubscriptionShowInfoGeneratorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1021814">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.49443206">
+          <caret line="64" column="117" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/UsersShowsInfoGeneratorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.072383076">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding />
         </state>
       </provider>
