@@ -32,12 +32,16 @@ public final class Utils {
 				b.append("In ").append(daysBetween(today, e.getAirdate())).append(" days (")
 					.append(formatAirDate(e.getAirdate())).append("): ");
 			}
-			b.append(e.toReadableString()).append(NEW_LINE);
+			b.append(e.toReadableString()).append("  ").append(torrentzLink(e)).append(NEW_LINE);
 		}
 		if (b.length() <= 0) {
 			b.append(EMAIL_CONTENT_NOTHING);
 		}
 		return b;
+	}
+
+	private static String torrentzLink(Episode e) {
+		return String.format("https://torrentz.eu/search?q=%s+s%se%02d", e.getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
 	}
 
 	private static DateFormat dateFormat = DateFormat.getDateInstance();
