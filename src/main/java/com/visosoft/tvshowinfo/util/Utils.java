@@ -41,7 +41,7 @@ public final class Utils {
 	}
 
 	private static String torrentzLink(Episode e) {
-		return String.format("https://torrentz.eu/search?q=%s+s%se%02d", e.getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
+		return String.format("<a href=\"https://torrentz.eu/search?q=%s+s%se%02d\">torrent</a>", e.getShow().getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
 	}
 
 	private static DateFormat dateFormat = DateFormat.getDateInstance();
