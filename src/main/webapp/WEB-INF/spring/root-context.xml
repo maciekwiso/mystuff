@@ -22,8 +22,7 @@
 	<context:property-placeholder location="classpath:config.properties,classpath:emailsender.properties" />
 	<util:properties id="settings" location="classpath:config.properties" />
 
-	<task:annotation-driven executor="myExecutor"
-		scheduler="myScheduler" />
+	<task:annotation-driven executor="myExecutor" scheduler="myScheduler" />
 
 	<task:executor id="myExecutor" pool-size="5" />
 

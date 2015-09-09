@@ -111,10 +111,10 @@ public class UserSubscriptionServiceImpl implements UserSubscriptionService, Use
 	}
 	
 	private void generateEmailList(Map.Entry<User, SortedSet<Show>> rec, ShowsInfoGeneratedData data) {
-		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false);
-		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false);
-		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true);
-		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true);
+		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false, true);
+		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false, true);
+		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true, true);
+		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true, true);
 		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
 		String subject = emailSubjectTemplate;
 		String content = emailContentTemplate.replaceAll(EMAILVAR_SHOWS, shows.toString())

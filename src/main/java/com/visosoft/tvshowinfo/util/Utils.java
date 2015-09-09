@@ -15,7 +15,7 @@ public final class Utils {
 	private static final String EMAIL_CONTENT_NOTHING = "nothing" + NEW_LINE;
 	
 	public static StringBuilder generateEpisodesList(SortedSet<Show> shows,
-			List<Episode> eps, boolean showDays) {
+			List<Episode> eps, boolean showDays, boolean withLink) {
 		Date today = null;
 		if (showDays) {
 			today = new Date();
@@ -32,7 +32,11 @@ public final class Utils {
 				b.append("In ").append(daysBetween(today, e.getAirdate())).append(" days (")
 					.append(formatAirDate(e.getAirdate())).append("): ");
 			}
-			b.append(e.toReadableString()).append("  ").append(torrentzLink(e)).append(NEW_LINE);
+			b.append(e.toReadableString());
+			if (withLink) {
+				b.append("  ").append(torrentzLink(e));
+			}
+			b.append(NEW_LINE);
 		}
 		if (b.length() <= 0) {
 			b.append(EMAIL_CONTENT_NOTHING);

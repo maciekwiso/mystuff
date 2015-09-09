@@ -42,7 +42,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 	private final String CONTENTVAR_LASTWEEK = "\\$lastweek";
 
 	@Override
-	public String generateShowsInfo(User user) {
+	public String generateShowsInfo(User user, boolean withLinks) {
 		List<UserSubscription> subs = userSubscriptionDao.selectAll(user);
 		checkActiveSubscriptions(subs);
 		ShowsInfoGeneratedData data = usersShowsInfoGeneratorService.generateData(subs);
@@ -50,20 +50,20 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 			logger.debug("user subs entry set is empty");
 			return "";
 		}
-		return generateEmailList(data);
+		return generateEmailList(data, withLinks);
 	}
 	
 	private void checkActiveSubscriptions(List<UserSubscription> subs) {
         subs.removeIf((sub) -> !sub.getEnabled());
 	}
 
-	private String generateEmailList(ShowsInfoGeneratedData data) {
+	private String generateEmailList(ShowsInfoGeneratedData data, boolean withLinks) {
 		Map.Entry<User, SortedSet<Show>> rec = data.getUserSubs().entrySet().iterator().next();
-		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false);
-		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false);
-		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true);
-		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), Lists.reverse(data.getLastWeek()), true);
-		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true);
+		StringBuilder yesterday = Utils.generateEpisodesList(rec.getValue(), data.getYesterday(), false, withLinks);
+		StringBuilder today = Utils.generateEpisodesList(rec.getValue(), data.getToday(), false, withLinks);
+		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true, withLinks);
+		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), Lists.reverse(data.getLastWeek()), true, withLinks);
+		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true, withLinks);
 		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
         try {
             return contentTemplate.replaceAll(CONTENTVAR_SHOWS, escapeString(shows.toString()))

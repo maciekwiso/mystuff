@@ -4,5 +4,5 @@ import com.visosoft.tvshowinfo.domain.User;
 
 public interface UserSubscriptionShowInfoGeneratorService {
 	
-	String generateShowsInfo(User user);
+	String generateShowsInfo(User user, boolean withLink);
 }

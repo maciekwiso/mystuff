@@ -35,7 +35,7 @@ public class UserSubscriptionInfoController {
 		}
 		User user = userService.selectOne(username);
 		LOG.info("generating info for user: {}", user.getUsername());
-		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user);
+		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user, false);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/showsInfo/{username}")
@@ -45,7 +45,7 @@ public class UserSubscriptionInfoController {
 			return "Bad credentials!";
 		}
 		LOG.info("generating info (no security) for user: {}", user.getUsername());
-		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user);
+		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user, false);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/showsInfoHtml/{username}")
@@ -55,6 +55,6 @@ public class UserSubscriptionInfoController {
 			return "Bad credentials!";
 		}
 		LOG.info("generating html info (no security) for user: {}", user.getUsername());
-		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user).replaceAll("\n", "<br \\>");
+		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user, true).replaceAll("\n", "<br \\>");
 	}
 }
