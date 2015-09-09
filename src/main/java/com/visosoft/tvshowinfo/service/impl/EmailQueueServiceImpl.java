@@ -241,7 +241,7 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 		contextRefreshedFired = true;
 		addTestMail();
 		startEmailGenerator();
-		updateShowsInfo();
+		//updateShowsInfo();
 	}
 
     private void updateShowsInfo() {
