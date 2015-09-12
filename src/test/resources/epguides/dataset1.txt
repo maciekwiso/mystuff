@@ -163,11 +163,11 @@ _____ ______ ___________  ___________ __________________________________________
 
 &bull; Pilot
 
-1      1-01      1AJN01    06/Feb/05    <a href='http://www.tvrage.com/American_Dad/episodes/11809'>Pilot</a> 
+1      1-01      1AJN01    UNAIRED     <a href='http://www.tvrage.com/American_Dad/episodes/11809'>Pilot</a>
 
 &bull; Season 1
 
-2      1-02      1AJN02                <a href='http://www.tvrage.com/American_Dad/episodes/11810' title='American Dad! season 1 episode 2'>Threat Levels</a>
+2      1-02      1AJN02    UNAIRED     <a href='http://www.tvrage.com/American_Dad/episodes/11810' title='American Dad! season 1 episode 2'>Threat Levels</a>
 3      1-03      1AJN03    08/May/05   <a href='http://www.tvrage.com/American_Dad/episodes/305204' title='American Dad! season 1 episode 3'>Stan Knows Best</a> 
 4      1-04      1AJN05    15/May/05   <a href='http://www.tvrage.com/American_Dad/episodes/11812' title='American Dad! season 1 episode 4'>Francine's Flashback</a> 
 5      1-05      1AJN04    05/Jun/05   <a href='http://www.tvrage.com/American_Dad/episodes/305205' title='American Dad! season 1 episode 5'>Roger Codger</a> 

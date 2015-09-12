@@ -30,9 +30,7 @@ public class EpGuidesShowUpdater implements ShowUpdater {
 
     private static final Logger logger = LoggerFactory.getLogger(EpGuidesShowUpdater.class);
 //    private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+).*<a.*>(.*)</a");
-//    private static final Pattern EPISODE_DATA_LINE_NO_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+)?.*<a.*>(.*)</a");
     private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+ *([0-9])+-([0-9]+).*?([0-9]+/[A-Za-z]{3}/[0-9]+).*<a.*>(.*)</a");
-    private static final Pattern EPISODE_DATA_LINE_NO_DATE =   Pattern.compile(" *[0-9]+ *([0-9])+-([0-9]+).*?([0-9]+/[A-Za-z]{3}/[0-9]+)?.*<a.*>(.*)</a");
     private static final DateFormat EPISODE_AIR_DATE_FORMATTER = new SimpleDateFormat("d/MMM/yy", Locale.ENGLISH);
 
     @Autowired
@@ -68,20 +66,15 @@ public class EpGuidesShowUpdater implements ShowUpdater {
         }
         for (String line : epsData) {
             Matcher matcher = EPISODE_DATA_LINE_WITH_DATE.matcher(line);
-            if (!matcher.find(0)) {
-                matcher = EPISODE_DATA_LINE_NO_DATE.matcher(line);
-            }
-            if (matcher.find(0)) {
+            if (matcher.find()) {
+                String airDate = matcher.group(3);
                 short season = Short.valueOf(matcher.group(1));
                 short epNumber = Short.valueOf(matcher.group(2));
-                String airDate = matcher.group(3);
                 String epTitle = matcher.group(4);
                 Episode newEpisode = new Episode();
                 newEpisode.setSeason(season);
                 newEpisode.setNumber(epNumber);
-                if (!Strings.isNullOrEmpty(airDate)) {
-                    newEpisode.setAirdate(EPISODE_AIR_DATE_FORMATTER.parse(airDate));
-                }
+                newEpisode.setAirdate(EPISODE_AIR_DATE_FORMATTER.parse(airDate));
                 newEpisode.setTitle(epTitle);
                 newEpisode.setShow(show);
                 processEpisode(newEpisode, oldEpisodes);
