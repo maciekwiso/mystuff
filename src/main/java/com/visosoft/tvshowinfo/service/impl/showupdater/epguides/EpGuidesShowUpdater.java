@@ -49,7 +49,7 @@ public class EpGuidesShowUpdater implements ShowUpdater {
             String episodesData = getEpisodesData(show);
             return updateEps(episodesData, show);
         } catch (Exception e) {
-            logger.error("Error on updating show {}", show.getTitle(), e);
+            logger.error("Error on updating show " + show.getTitle(), e);
         }
         return false;
     }
