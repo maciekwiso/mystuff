@@ -16,6 +16,7 @@
 	<http auto-config="true" use-expressions="true" access-denied-page="/denied" >
 	
 		<intercept-url pattern="/" access="permitAll"/>
+		<intercept-url pattern="/favicon.ico" access="permitAll" />
 		<intercept-url pattern="/showsInfo/**" access="permitAll"/>
 		<intercept-url pattern="/showsInfoHtml/**" access="permitAll"/>
 		<intercept-url pattern="/resources/**" access="permitAll"/>

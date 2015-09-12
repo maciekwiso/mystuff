@@ -11,6 +11,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.google.common.annotations.VisibleForTesting;
+import org.apache.http.client.fluent.Content;
+import org.apache.http.client.fluent.Request;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -85,21 +87,7 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     }
 
     private static String get9gagContents() throws IOException {
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        try {
-            HttpGet httpget = new HttpGet("http://9gag.com");
-            CloseableHttpResponse response = httpclient.execute(httpget);
-            BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-
-            StringBuilder result = new StringBuilder();
-            String line;
-            while ((line = rd.readLine()) != null) {
-                result.append(line);
-            }
-            return result.toString();
-        } finally {
-            httpclient.close();
-        }
+        return Request.Get("http://9gag.com").execute().returnContent().asString();
     }
 
     @VisibleForTesting protected void addPics(String contents) {

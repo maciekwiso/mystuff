@@ -85,6 +85,7 @@
 		<beans:property name="updaters">
 			<beans:map>
 				<beans:entry key="services.tvrage.com" value-ref="showUpdaterTVRage"></beans:entry>
+				<beans:entry key="epguides.com" value-ref="showUpdaterEpguides"></beans:entry>
 			</beans:map>
 		</beans:property>
 	</beans:bean>

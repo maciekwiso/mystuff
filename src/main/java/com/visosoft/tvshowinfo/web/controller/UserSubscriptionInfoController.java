@@ -1,6 +1,8 @@
 package com.visosoft.tvshowinfo.web.controller;
 
 import java.security.Principal;
+
+import com.visosoft.tvshowinfo.service.ShowsDataUpdaterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class UserSubscriptionInfoController {
 	
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private ShowsDataUpdaterService showService;
 	
 	@Autowired
 	private UserSubscriptionShowInfoGeneratorService userSubscriptionShowInfoGeneratorService;
@@ -56,5 +61,12 @@ public class UserSubscriptionInfoController {
 		}
 		LOG.info("generating html info (no security) for user: {}", user.getUsername());
 		return userSubscriptionShowInfoGeneratorService.generateShowsInfo(user, true).replaceAll("\n", "<br \\>");
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/updateShows")
+	public String updateShows() {
+		LOG.info("Updating shows");
+		showService.updateShowsData();
+		return "DONE";
 	}
 }
