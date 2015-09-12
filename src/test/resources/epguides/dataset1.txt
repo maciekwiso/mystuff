@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!--Force IE6 into quirks mode with this comment tag-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -7,7 +7,7 @@
 <head>
 <title>American Dad! (a Titles &amp; Air Dates Guide)</title>
 
-<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
 <!--
 function popup(mylink, windowname, iWidth, iHeight)
@@ -64,9 +64,9 @@ function cancel() {
                 <input type="hidden" name="likeLink" value="like" /><a href="../common/myShows.asp"
                     onclick="return popup(this,'myepguides',400,400)">my shows</a> | <a href="javascript:document.likeToggle.submit();">
                         like</a> |
-
-                change your list &lt;<a href="../common/preferences.asp">preferences</a>&gt;
-
+                
+                set your list &lt;<a href="../common/preferences.asp">preferences</a>&gt;
+                
             </small>
             </form>
         </td>
@@ -78,7 +78,7 @@ function cancel() {
 <tr class="center">
 <td class="headleft" colspan="2">
 
-<a href="../"><img alt="epguides.com &amp; TV.com present" src="../images/epguides_tome.gif" /></a>
+<a href="../"><img alt="epguides.com &amp; TVRage present" src="../images/epguides_rage.gif" /></a>
 
 
 <h1><a href="http://us.imdb.com/title/tt397306">American Dad!</a></h1>
@@ -86,7 +86,10 @@ function cancel() {
 <h2><strong>(a Titles &amp;<br /> Air Dates Guide)</strong></h2>
 
 
-<h4>by <a href="http://epguides.com/common/findEditor.asp?ShowID=21935&amp;DirName=AmericanDad">this TV.com editor</a></h4>
+<h4>by <a href="http://epguides.com/common/findEditor.asp?DirName=AmericanDad&amp;rageID=2594">this TVRage editor</a></h4>
+
+<h3><strong>Last updated:</strong><br />
+<em>Fri, 8 May 2015 18:00</em></h3></td>
 
 
 <td class="headright" colspan="3">
@@ -129,11 +132,11 @@ Misadventures of a gung-ho CIA agent trying to keep a leash on his hippie daught
 <tr class="center">
 <td><a href="#latest">Down to<br />Latest</a></td>
 
-<td class="TVcom"><form name="swList1" action="./" method="post"><input type="hidden" name="list" value="tvrage.com" /></form><a href="javascript:document.swList1.submit();">switch to<br />TVRage<br />list</a></td>
+<td class="TVRage"><form name="swList1" action="./" method="post"><input type="hidden" name="list" value="tv.com" /></form><a href="javascript:document.swList1.submit();">switch to<br />TV.com<br />list</a></td>
 
-<td class='TVcom'><a target='_blank' href="http://www.tv.com/shows/american-dad%21/episodes/?printable=1"><strong>Printable</strong><br />Guide<br />@TV.com</a></td>
-<td class="TVcom"><a target="_blank" href="http://www.tv.com/show/21935/forums.html">Questions<br />Forum<br />@TV.com</a></td>
-<td class="TVcom"><a target="_blank" href="http://www.tv.com/show/21935/summary.html">Show<br />Summary<br />@TV.com</a></td>
+<td class="TVRage"><a target="_blank" href="http://www.tvrage.com/shows/id-2594/printable"><strong>Printable</strong><br />Guide<br />@TVRage</a></td>
+<td class="TVRage"><a target="_blank" href="http://www.tvrage.com/shows/id-2594">Show<br />Summary<br />@TVRage</a></td>
+<td class="TVRage"><a href="http://epguides.com/common/exportToCSV.asp?rage=2594" onclick="return popup(this,'exportToCSV',725,625)">list as<br />.csv</a></td>
 
 
 <td class="linkTXT"><a target="_blank" href="http://thefutoncritic.com/showatch.aspx?id=American_Dad&#38;view=listings">The<br />Futon<br />Critic</a></td>
@@ -158,243 +161,237 @@ Misadventures of a gung-ho CIA agent trying to keep a leash on his hippie daught
   Episode #     Prod #      Air Date   Titles
 _____ ______ ___________  ___________ ___________________________________________
 
+&bull; Pilot
 
-Special
+1      1-01      1AJN01    06/Feb/05    <a href='http://www.tvrage.com/American_Dad/episodes/11809'>Pilot</a> 
 
-       S- 0              <a target="_blank" href="http://www.tv.com/american-dad/inside-the-cia/episode/418634/summary.html">Inside the CIA</a>
+&bull; Season 1
 
-Pilot
+2      1-02      1AJN02                <a href='http://www.tvrage.com/American_Dad/episodes/11810' title='American Dad! season 1 episode 2'>Threat Levels</a>
+3      1-03      1AJN03    08/May/05   <a href='http://www.tvrage.com/American_Dad/episodes/305204' title='American Dad! season 1 episode 3'>Stan Knows Best</a> 
+4      1-04      1AJN05    15/May/05   <a href='http://www.tvrage.com/American_Dad/episodes/11812' title='American Dad! season 1 episode 4'>Francine's Flashback</a> 
+5      1-05      1AJN04    05/Jun/05   <a href='http://www.tvrage.com/American_Dad/episodes/305205' title='American Dad! season 1 episode 5'>Roger Codger</a> 
+6      1-06      1AJN06    12/Jun/05   <a href='http://www.tvrage.com/American_Dad/episodes/11813' title='American Dad! season 1 episode 6'>Homeland Insecurity</a> 
+7      1-07      1AJN07    19/Jun/05   <a href='http://www.tvrage.com/American_Dad/episodes/11816' title='American Dad! season 1 episode 7'>Deacon Stan, Jesus Man</a> 
+8      1-08      1AJN09    11/Sep/05   <a href='http://www.tvrage.com/American_Dad/episodes/11819' title='American Dad! season 1 episode 8'>Bullocks to Stan</a> 
+9      1-09      1AJN10    18/Sep/05   <a href='http://www.tvrage.com/American_Dad/episodes/11817' title='American Dad! season 1 episode 9'>A Smith in the Hand</a> 
+10     1-10      1AJN08    25/Sep/05   <a href='http://www.tvrage.com/American_Dad/episodes/305206' title='American Dad! season 1 episode 10'>All About Steve</a> 
+11     1-11      1AJN11    02/Oct/05   <a href='http://www.tvrage.com/American_Dad/episodes/11822' title='American Dad! season 1 episode 11'>Con Heir</a> 
+12     1-12      1AJN12    06/Nov/05   <a href='http://www.tvrage.com/American_Dad/episodes/11825' title='American Dad! season 1 episode 12'>Stan of Arabia (1)</a> 
+13     1-13      1AJN13    13/Nov/05   <a href='http://www.tvrage.com/American_Dad/episodes/11827' title='American Dad! season 1 episode 13'>Stan of Arabia (2)</a> 
+14     1-14      1AJN14    20/Nov/05   <a href='http://www.tvrage.com/American_Dad/episodes/11830' title='American Dad! season 1 episode 14'>Stannie Get Your Gun</a> 
+15     1-15      1AJN15    27/Nov/05   <a href='http://www.tvrage.com/American_Dad/episodes/305203' title='American Dad! season 1 episode 15'>Star Trek</a> 
+16     1-16      1AJN16    18/Dec/05   <a href='http://www.tvrage.com/American_Dad/episodes/307981' title='American Dad! season 1 episode 16'>Not Particularly Desperate Housewives</a> 
+17     1-17      1AJN17    08/Jan/06   <a href='http://www.tvrage.com/American_Dad/episodes/311284' title='American Dad! season 1 episode 17'>Rough Trade</a> 
+18     1-18      1AJN18    29/Jan/06   <a href='http://www.tvrage.com/American_Dad/episodes/313998' title='American Dad! season 1 episode 18'>Finances With Wolves</a> 
+19     1-19      1AJN19    26/Feb/06   <a href='http://www.tvrage.com/American_Dad/episodes/321311' title='American Dad! season 1 episode 19'>It's Good to be Queen</a> 
+20     1-20      2AJN01    23/Apr/06   <a href='http://www.tvrage.com/American_Dad/episodes/344698' title='American Dad! season 1 episode 20'>Roger 'n Me</a> 
+21     1-21      2AJN02    30/Apr/06   <a href='http://www.tvrage.com/American_Dad/episodes/344699' title='American Dad! season 1 episode 21'>Helping Handis</a> 
+22     1-22      2AJN03    07/May/06   <a href='http://www.tvrage.com/American_Dad/episodes/358800' title='American Dad! season 1 episode 22'>With Friends Like Steve's</a> 
+23     1-23      2AJN04    14/May/06   <a href='http://www.tvrage.com/American_Dad/episodes/363278' title='American Dad! season 1 episode 23'>Tears of a Clooney</a> 
 
-       P- 0        N/A   <a target="_blank" href="http://www.tv.com/american-dad/unaired-pilot-presentation/episode/1125249/summary.html">Unaired Pilot Presentation</a>
-       P- 1     1AJN01      6 Feb 05   <a target="_blank" href="http://www.tv.com/american-dad/pilot-american-dad/episode/337969/summary.html">Pilot (American Dad!)</a>
+&bull; Season 2
 
-Season 1
+24     2-01      2AJN06    10/Sep/06   <a href='http://www.tvrage.com/American_Dad/episodes/387626' title='American Dad! season 2 episode 1'>Camp Refoogee</a> 
+25     2-02      2AJN05    17/Sep/06   <a href='http://www.tvrage.com/American_Dad/episodes/363279' title='American Dad! season 2 episode 2'>The American Dad After School Special</a> 
+26     2-03      2AJN07    24/Sep/06   <a href='http://www.tvrage.com/American_Dad/episodes/387627' title='American Dad! season 2 episode 3'>Failure is Not a Factory-installed Option</a> 
+27     2-04      2AJN11    05/Nov/06   <a href='http://www.tvrage.com/American_Dad/episodes/387630' title='American Dad! season 2 episode 4'>Lincoln Lover</a> 
+28     2-05      2AJN08    12/Nov/06   <a href='http://www.tvrage.com/American_Dad/episodes/387628' title='American Dad! season 2 episode 5'>Dungeons and Wagons</a> 
+29     2-06      2AJN09    19/Nov/06   <a href='http://www.tvrage.com/American_Dad/episodes/387629' title='American Dad! season 2 episode 6'>Iced, Iced Babies</a> 
+30     2-07      2AJN10    26/Nov/06   <a href='http://www.tvrage.com/American_Dad/episodes/480805' title='American Dad! season 2 episode 7'>Of Ice and Men</a> 
+31     2-08      2AJN12    10/Dec/06   <a href='http://www.tvrage.com/American_Dad/episodes/480806' title='American Dad! season 2 episode 8'>Irregarding Steve</a> 
+32     2-09      2AJN14    17/Dec/06   <a href='http://www.tvrage.com/American_Dad/episodes/480808' title='American Dad! season 2 episode 9'>The Best Christmas Story Never Told</a> 
+33     2-10      2AJN13    07/Jan/07   <a href='http://www.tvrage.com/American_Dad/episodes/480807' title='American Dad! season 2 episode 10'>Bush Comes to Dinner</a> 
+34     2-11      2AJN16    28/Jan/07   <a href='http://www.tvrage.com/American_Dad/episodes/480809' title='American Dad! season 2 episode 11'>American Dream Factory</a> 
+35     2-12      2AJN17    11/Feb/07   <a href='http://www.tvrage.com/American_Dad/episodes/480810' title='American Dad! season 2 episode 12'>A.T. The Abusive Terrestrial</a> 
+36     2-13      2AJN20    18/Feb/07   <a href='http://www.tvrage.com/American_Dad/episodes/480811' title='American Dad! season 2 episode 13'>Black Mystery Month</a> 
+37     2-14      2AJN19    25/Mar/07   <a href='http://www.tvrage.com/American_Dad/episodes/480813' title='American Dad! season 2 episode 14'>An Apocalypse to Remember</a> 
+38     2-15      2AJN18    01/Apr/07   <a href='http://www.tvrage.com/American_Dad/episodes/480812' title='American Dad! season 2 episode 15'>Four Little Words</a> 
+39     2-16      2AJN23    29/Apr/07   <a href='http://www.tvrage.com/American_Dad/episodes/480817' title='American Dad! season 2 episode 16'>When a Stan Loves a Woman</a> 
+40     2-17      2AJN15    06/May/07   <a href='http://www.tvrage.com/American_Dad/episodes/480814' title='American Dad! season 2 episode 17'>I Can't Stan You</a> 
+41     2-18      2AJN21    13/May/07   <a href='http://www.tvrage.com/American_Dad/episodes/480815' title='American Dad! season 2 episode 18'>The Magnificent Steven</a> 
+42     2-19      2AJN24    20/May/07   <a href='http://www.tvrage.com/American_Dad/episodes/480818' title='American Dad! season 2 episode 19'>Joint Custody</a> 
 
-  2.   1- 2     1AJN02                 <a target="_blank" href="http://www.tv.com/american-dad/threat-levels/episode/381953/summary.html">Threat Levels</a>
-  3.   1- 3     1AJN03      8 May 05   <a target="_blank" href="http://www.tv.com/american-dad/stan-knows-best/episode/381954/summary.html">Stan Knows Best</a>
-  4.   1- 4     1AJN05     15 May 05   <a target="_blank" href="http://www.tv.com/american-dad/francines-flashback/episode/381956/summary.html">Francine's Flashback</a>
-  5.   1- 5     1AJN04      5 Jun 05   <a target="_blank" href="http://www.tv.com/american-dad/roger-codger/episode/381955/summary.html">Roger Codger</a>
-  6.   1- 6     1AJN06     12 Jun 05   <a target="_blank" href="http://www.tv.com/american-dad/homeland-insecurity/episode/381957/summary.html">Homeland Insecurity</a>
-  7.   1- 7     1AJN07     19 Jun 05   <a target="_blank" href="http://www.tv.com/american-dad/deacon-stan-jesus-man/episode/381958/summary.html">Deacon Stan, Jesus Man</a>
+&bull; Season 3
 
-Season 2
+43     3-01      2AJN22    30/Sep/07   <a href='http://www.tvrage.com/American_Dad/episodes/480816' title='American Dad! season 3 episode 1'>The Vacation Goo</a> 
+44     3-02      3AJN01    07/Oct/07   <a href='http://www.tvrage.com/American_Dad/episodes/511465' title='American Dad! season 3 episode 2'>Meter Made</a> 
+45     3-03      3AJN02    14/Oct/07   <a href='http://www.tvrage.com/American_Dad/episodes/480819' title='American Dad! season 3 episode 3'>Dope and Faith</a> 
+46     3-04      3AJN03    04/Nov/07   <a href='http://www.tvrage.com/American_Dad/episodes/511466' title='American Dad! season 3 episode 4'>Big Trouble in Little Langley</a> 
+47     3-05      3AJN04    11/Nov/07   <a href='http://www.tvrage.com/American_Dad/episodes/625444' title='American Dad! season 3 episode 5'>Haylias</a> 
+48     3-06      3AJN05    18/Nov/07   <a href='http://www.tvrage.com/American_Dad/episodes/625445' title='American Dad! season 3 episode 6'>42-Year-Old Virgin</a> 
+49     3-07      3AJN07    02/Dec/07   <a href='http://www.tvrage.com/American_Dad/episodes/625447' title='American Dad! season 3 episode 7'>Surro-Gate</a> 
+50     3-08      3AJN12    16/Dec/07   <a href='http://www.tvrage.com/American_Dad/episodes/627797' title='American Dad! season 3 episode 8'>The Most Adequate Christmas Ever</a> 
+51     3-09      3AJN06    06/Jan/08   <a href='http://www.tvrage.com/American_Dad/episodes/626796' title='American Dad! season 3 episode 9'>Frannie 911</a> 
+52     3-10      3AJN08    13/Jan/08   <a href='http://www.tvrage.com/American_Dad/episodes/625446' title='American Dad! season 3 episode 10'>Tearjerker</a> 
+53     3-11      3AJN09    27/Jan/08   <a href='http://www.tvrage.com/American_Dad/episodes/638643' title='American Dad! season 3 episode 11'>Oedipal Panties</a> 
+54     3-12      3AJN10    17/Feb/08   <a href='http://www.tvrage.com/American_Dad/episodes/640816' title='American Dad! season 3 episode 12'>Widowmaker</a> 
+55     3-13      3AJN11    27/Apr/08   <a href='http://www.tvrage.com/American_Dad/episodes/640817' title='American Dad! season 3 episode 13'>Red October Sky</a> 
+56     3-14      3AJN13    04/May/08   <a href='http://www.tvrage.com/American_Dad/episodes/652878' title='American Dad! season 3 episode 14'>Office Spaceman</a> 
+57     3-15      3AJN14    11/May/08   <a href='http://www.tvrage.com/American_Dad/episodes/654819' title='American Dad! season 3 episode 15'>Stanny Slickers II: The Legend of Ollie's Gold</a> 
+58     3-16      3AJN17    18/May/08   <a href='http://www.tvrage.com/American_Dad/episodes/659773' title='American Dad! season 3 episode 16'>Spring Break-Up</a> 
 
-  8.   2- 1     1AJN09     11 Sep 05   <a target="_blank" href="http://www.tv.com/american-dad/bullocks-to-stan/episode/381960/summary.html">Bullocks to Stan</a>
-  9.   2- 2     1AJN10     18 Sep 05   <a target="_blank" href="http://www.tv.com/american-dad/a-smith-in-the-hand/episode/381961/summary.html">A Smith in the Hand</a>
- 10.   2- 3     1AJN08     25 Sep 05   <a target="_blank" href="http://www.tv.com/american-dad/all-about-steve/episode/381959/summary.html">All About Steve</a>
- 11.   2- 4     1AJN11      2 Oct 05   <a target="_blank" href="http://www.tv.com/american-dad/con-heir/episode/381962/summary.html">Con Heir</a>
- 12.   2- 5     1AJN12      6 Nov 05   <a target="_blank" href="http://www.tv.com/american-dad/stan-of-arabia-1/episode/381963/summary.html">Stan of Arabia (1)</a>
- 13.   2- 6     1AJN13     13 Nov 05   <a target="_blank" href="http://www.tv.com/american-dad/stan-of-arabia-2/episode/381964/summary.html">Stan of Arabia (2)</a>
- 14.   2- 7     1AJN14     20 Nov 05   <a target="_blank" href="http://www.tv.com/american-dad/stannie-get-your-gun/episode/394928/summary.html">Stannie Get Your Gun</a>
- 15.   2- 8     1AJN15     27 Nov 05   <a target="_blank" href="http://www.tv.com/american-dad/star-trek/episode/395856/summary.html">Star Trek</a>
- 16.   2- 9     1AJN16     18 Dec 05   <a target="_blank" href="http://www.tv.com/american-dad/not-particularly-desperate-housewives/episode/395857/summary.html">Not Particularly Desperate Housewives</a>
- 17.   2-10     1AJN17      8 Jan 06   <a target="_blank" href="http://www.tv.com/american-dad/rough-trade/episode/395858/summary.html">Rough Trade</a>
- 18.   2-11     1AJN18     29 Jan 06   <a target="_blank" href="http://www.tv.com/american-dad/finances-with-wolves/episode/395859/summary.html">Finances With Wolves</a>
- 19.   2-12     1AJN19     26 Feb 06   <a target="_blank" href="http://www.tv.com/american-dad/its-good-to-be-the-queen/episode/395860/summary.html">It's Good to be the Queen</a>
- 20.   2-13     2AJN01     23 Apr 06   <a target="_blank" href="http://www.tv.com/american-dad/roger-n-me/episode/685295/summary.html">Roger 'n Me</a>
- 21.   2-14     2AJN02     30 Apr 06   <a target="_blank" href="http://www.tv.com/american-dad/helping-handis/episode/697761/summary.html">Helping Handis</a>
- 22.   2-15     2AJN03      7 May 06   <a target="_blank" href="http://www.tv.com/american-dad/with-friends-like-steves/episode/704801/summary.html">With Friends Like Steve's</a>
- 23.   2-16     2AJN04     14 May 06   <a target="_blank" href="http://www.tv.com/american-dad/tears-of-a-clooney/episode/722862/summary.html">Tears of a Clooney</a>
+&bull; Season 4
 
-Season 3
+59     4-01      3AJN20    28/Sep/08   <a href='http://www.tvrage.com/American_Dad/episodes/668141' title='American Dad! season 4 episode 1'>1600 Candles</a> 
+60     4-02      3AJN16    05/Oct/08   <a href='http://www.tvrage.com/American_Dad/episodes/714489' title='American Dad! season 4 episode 2'>The One That Got Away</a> 
+61     4-03      3AJN18    19/Oct/08   <a href='http://www.tvrage.com/American_Dad/episodes/729131' title='American Dad! season 4 episode 3'>One Little Word</a> 
+62     4-04      3AJN15    02/Nov/08   <a href='http://www.tvrage.com/American_Dad/episodes/729132' title='American Dad! season 4 episode 4'>Choosy Wives Choose Smith</a> 
+63     4-05      3AJN19    09/Nov/08   <a href='http://www.tvrage.com/American_Dad/episodes/730730' title='American Dad! season 4 episode 5'>Escape from Pearl Bailey</a> 
+64     4-06      3AJN21    16/Nov/08   <a href='http://www.tvrage.com/American_Dad/episodes/730731' title='American Dad! season 4 episode 6'>Pulling Double Booty</a> 
+65     4-07      3AJN22    30/Nov/08   <a href='http://www.tvrage.com/American_Dad/episodes/745846' title='American Dad! season 4 episode 7'>Phantom of the Telethon</a> 
+66     4-08      4AJN01    25/Jan/09   <a href='http://www.tvrage.com/American_Dad/episodes/771254' title='American Dad! season 4 episode 8'>Chimdale</a> 
+67     4-09      4AJN02    08/Feb/09   <a href='http://www.tvrage.com/American_Dad/episodes/776321' title='American Dad! season 4 episode 9'>Stan Time</a> 
+68     4-10      4AJN03    15/Feb/09   <a href='http://www.tvrage.com/American_Dad/episodes/780082' title='American Dad! season 4 episode 10'>Family Affair</a> 
+69     4-11      4AJN04    01/Mar/09   <a href='http://www.tvrage.com/American_Dad/episodes/782310' title='American Dad! season 4 episode 11'>Live and Let Fry</a> 
+70     4-12      4AJN05    08/Mar/09   <a href='http://www.tvrage.com/American_Dad/episodes/782311' title='American Dad! season 4 episode 12'>Roy Rogers McFreely</a> 
+71     4-13      4AJN07    15/Mar/09   <a href='http://www.tvrage.com/American_Dad/episodes/784642' title='American Dad! season 4 episode 13'>Jack's Back</a> 
+72     4-14      4AJN06    22/Mar/09   <a href='http://www.tvrage.com/American_Dad/episodes/784643' title='American Dad! season 4 episode 14'>Bar Mitzvah Shuffle</a> 
+73     4-15      4AJN08    29/Mar/09   <a href='http://www.tvrage.com/American_Dad/episodes/784644' title='American Dad! season 4 episode 15'>Wife Insurance</a> 
+74     4-16      4AJN09    19/Apr/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064801525' title='American Dad! season 4 episode 16'>Delorean Story-An</a> 
+75     4-17      4AJN10    26/Apr/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064801526' title='American Dad! season 4 episode 17'>Every Which Way But Lose</a> 
+76     4-18      4AJN11    03/May/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064801527' title='American Dad! season 4 episode 18'>Weiner of Our Discontent</a> 
+77     4-19      4AJN12    10/May/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064810125' title='American Dad! season 4 episode 19'>Daddy Queerest</a> 
+78     4-20      4AJN13    17/May/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064811082' title='American Dad! season 4 episode 20'>Stan's Night Out</a> 
 
- 24.   3- 1     2AJN06     10 Sep 06   <a target="_blank" href="http://www.tv.com/american-dad/camp-refoogee/episode/686008/summary.html">Camp Refoogee</a>
- 25.   3- 2     2AJN05     17 Sep 06   <a target="_blank" href="http://www.tv.com/american-dad/the-american-dad-after-school-special/episode/685351/summary.html">The American Dad After School Special</a>
- 26.   3- 3     2AJN07     24 Sep 06   <a target="_blank" href="http://www.tv.com/american-dad/failure-is-not-a-factory-installed-option/episode/686009/summary.html">Failure is Not a Factory-installed Option</a>
- 27.   3- 4     2AJN11      5 Nov 06   <a target="_blank" href="http://www.tv.com/american-dad/lincoln-lover/episode/749913/summary.html">Lincoln Lover</a>
- 28.   3- 5     2AJN08     12 Nov 06   <a target="_blank" href="http://www.tv.com/american-dad/dungeons-and-wagons/episode/686011/summary.html">Dungeons and Wagons</a>
- 29.   3- 6     2AJN09     19 Nov 06   <a target="_blank" href="http://www.tv.com/american-dad/iced-iced-babies/episode/686012/summary.html">Iced, Iced Babies</a>
- 30.   3- 7     2AJN10     26 Nov 06   <a target="_blank" href="http://www.tv.com/american-dad/of-ice-and-men/episode/889091/summary.html">Of Ice and Men</a>
- 31.   3- 8     2AJN12     10 Dec 06   <a target="_blank" href="http://www.tv.com/american-dad/irregarding-steve/episode/888106/summary.html">Irregarding Steve</a>
- 32.   3- 9     2AJN14     17 Dec 06   <a target="_blank" href="http://www.tv.com/american-dad/the-best-christmas-story-never/episode/888108/summary.html">The Best Christmas Story Never</a>
- 33.   3-10     2AJN13      7 Jan 07   <a target="_blank" href="http://www.tv.com/american-dad/bush-comes-to-dinner/episode/888107/summary.html">Bush Comes to Dinner</a>
- 34.   3-11     2AJN16     28 Jan 07   <a target="_blank" href="http://www.tv.com/american-dad/american-dream-factory/episode/888110/summary.html">American Dream Factory</a>
- 35.   3-12     2AJN17     11 Feb 07   <a target="_blank" href="http://www.tv.com/american-dad/a-t-the-abusive-terrestrial/episode/888111/summary.html">A.T. The Abusive Terrestrial</a>
- 36.   3-13     2AJN20     18 Feb 07   <a target="_blank" href="http://www.tv.com/american-dad/black-mystery-month/episode/888114/summary.html">Black Mystery Month</a>
- 37.   3-14     2AJN19     25 Mar 07   <a target="_blank" href="http://www.tv.com/american-dad/an-apocalypse-to-remember/episode/888113/summary.html">An Apocalypse to Remember</a>
- 38.   3-15     2AJN18      1 Apr 07   <a target="_blank" href="http://www.tv.com/american-dad/four-little-words/episode/888112/summary.html">Four Little Words</a>
- 39.   3-16     2AJN23     29 Apr 07   <a target="_blank" href="http://www.tv.com/american-dad/when-a-stan-loves-a-woman/episode/888117/summary.html">When a Stan Loves a Woman</a>
- 40.   3-17     2AJN15      6 May 07   <a target="_blank" href="http://www.tv.com/american-dad/i-cant-stan-you/episode/888109/summary.html">I Can't Stan You</a>
- 41.   3-18     2AJN21     13 May 07   <a target="_blank" href="http://www.tv.com/american-dad/the-magnificent-steven/episode/888115/summary.html">The Magnificent Steven</a>
- 42.   3-19     2AJN24     20 May 07   <a target="_blank" href="http://www.tv.com/american-dad/joint-custody/episode/888118/summary.html">Joint Custody</a>
+&bull; Season 5
 
-Season 4
+79     5-01      4AJN15    27/Sep/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064823988' title='American Dad! season 5 episode 1'>In Country...Club</a> 
+80     5-02      4AJN18    04/Oct/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064825242' title='American Dad! season 5 episode 2'>Moon Over Isla Island</a> 
+81     5-03      4AJN14    11/Oct/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064825243' title='American Dad! season 5 episode 3'>Home Adrone</a> 
+82     5-04      4AJN20    18/Oct/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064825244' title='American Dad! season 5 episode 4'>Brains, Brains, and Automobiles</a> 
+83     5-05      4AJN19    08/Nov/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064826073' title='American Dad! season 5 episode 5'>Man in the Moonbounce</a> 
+84     5-06      4AJN16    15/Nov/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064826071' title='American Dad! season 5 episode 6'>Shallow Vows</a> 
+85     5-07      4AJN22    22/Nov/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064826074' title='American Dad! season 5 episode 7'>My Morning Straitjacket</a> 
+86     5-08      4AJN21    29/Nov/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064825245' title='American Dad! season 5 episode 8'>G-String Circus</a> 
+87     5-09      4AJN17    13/Dec/09   <a href='http://www.tvrage.com/American_Dad/episodes/1064826072' title='American Dad! season 5 episode 9'>Rapture's Delight</a> 
+88     5-10      5AJN01    03/Jan/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064825246' title='American Dad! season 5 episode 10'>Don't Look a Smith Horse in the Mouth</a> 
+89     5-11      5AJN04    31/Jan/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064826070' title='American Dad! season 5 episode 11'>A Jones for a Smith</a> 
+90     5-12      5AJN04    14/Feb/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064826068' title='American Dad! season 5 episode 12'>May the Best Stan Win</a> 
+91     5-13      5AJN02    21/Feb/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064826069' title='American Dad! season 5 episode 13'>Return of the Bling</a> 
+92     5-14      5AJN06    11/Apr/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064917036' title='American Dad! season 5 episode 14'>Cops & Roger</a> 
+93     5-15      5AJN08    18/Apr/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064917077' title='American Dad! season 5 episode 15'>Merlot Down Dirty Shame</a> 
+94     5-16      5AJN11    25/Apr/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064918511' title='American Dad! season 5 episode 16'>Bully for Steve</a> 
+95     5-17      5AJN10    09/May/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064918512' title='American Dad! season 5 episode 17'>An Incident at Owl Creek</a> 
+96     5-18      5AJN12    16/May/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064918513' title='American Dad! season 5 episode 18'>Great Space Roaster</a> 
 
- 43.   4- 1     2AJN22     30 Sep 07   <a target="_blank" href="http://www.tv.com/american-dad/the-vacation-goo/episode/888116/summary.html">The Vacation Goo</a>
- 44.   4- 2     3AJN01      7 Oct 07   <a target="_blank" href="http://www.tv.com/american-dad/meter-made/episode/888120/summary.html">Meter Made</a>
- 45.   4- 3     3AJN02     14 Oct 07   <a target="_blank" href="http://www.tv.com/american-dad/dope-and-faith/episode/888121/summary.html">Dope & Faith</a>
- 46.   4- 4     3AJN03      4 Nov 07   <a target="_blank" href="http://www.tv.com/american-dad/big-trouble-in-little-langley/episode/1072260/summary.html">Big Trouble in Little Langley</a>
- 47.   4- 5     3AJN04     11 Nov 07   <a target="_blank" href="http://www.tv.com/american-dad/haylias/episode/1072261/summary.html">Haylias</a>
- 48.   4- 6     3AJN05     18 Nov 07   <a target="_blank" href="http://www.tv.com/american-dad/the-42-year-old-virgin/episode/1072283/summary.html">The 42-Year-Old Virgin</a>
- 49.   4- 7     3AJN07      2 Dec 07   <a target="_blank" href="http://www.tv.com/american-dad/surro-gate/episode/1149947/summary.html">Surro-Gate</a>
- 50.   4- 8     3AJN12     16 Dec 07   <a target="_blank" href="http://www.tv.com/american-dad/most-adequate-christmas-ever/episode/1072280/summary.html">Most Adequate Christmas Ever</a>
- 51.   4- 9     3AJN06      6 Jan 08   <a target="_blank" href="http://www.tv.com/american-dad/frannie-911/episode/1072284/summary.html">Frannie 911</a>
- 52.   4-10     3AJN08     13 Jan 08   <a target="_blank" href="http://www.tv.com/american-dad/tearjerker/episode/1072278/summary.html">Tearjerker</a>
- 53.   4-11     3AJN09     27 Jan 08   <a target="_blank" href="http://www.tv.com/american-dad/oedipal-panties/episode/1072275/summary.html">Oedipal Panties</a>
- 54.   4-12     3AJN10     17 Feb 08   <a target="_blank" href="http://www.tv.com/american-dad/widowmaker/episode/1072271/summary.html">Widowmaker</a>
- 55.   4-13     3AJN11     27 Apr 08   <a target="_blank" href="http://www.tv.com/american-dad/red-october-sky/episode/1072286/summary.html">Red October Sky</a>
- 56.   4-14     3AJN13      4 May 08   <a target="_blank" href="http://www.tv.com/american-dad/office-spaceman/episode/1072276/summary.html">Office Spaceman</a>
- 57.   4-15     3AJN14     11 May 08   <a target="_blank" href="http://www.tv.com/american-dad/stanny-slickers-2-the-legend-of-ollies-gold/episode/1072287/summary.html">Stanny Slickers 2: The Legend of Ollie's Gold</a>
- 58.   4-16     3AJN17     18 May 08   <a target="_blank" href="http://www.tv.com/american-dad/spring-break-up/episode/1177841/summary.html">Spring Break-Up</a>
+&bull; Season 6
 
-Season 5
+97     6-01      5AJN14    03/Oct/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064893847' title='American Dad! season 6 episode 1'>100 A.D. (1)</a> 
+98     6-02      5AJN17    10/Oct/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920534' title='American Dad! season 6 episode 2'>Son of Stan (2)</a> 
+99     6-03      5AJN19    07/Nov/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920535' title='American Dad! season 6 episode 3'>Best Little Horror House in Langley Falls</a> 
+100    6-04      5AJN16    14/Nov/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920536' title='American Dad! season 6 episode 4'>Stan’s Food Restaurant</a> 
+101    6-05                21/Nov/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920537' title='American Dad! season 6 episode 5'>White Rice</a> 
+102    6-06      5AJN20    28/Nov/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920538' title='American Dad! season 6 episode 6'>There Will Be Bad Blood</a> 
+103    6-07      5AJN05    05/Dec/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920539' title='American Dad! season 6 episode 7'>The People vs. Martin Sugar</a> 
+104    6-08                12/Dec/10   <a href='http://www.tvrage.com/American_Dad/episodes/1064920540' title='American Dad! season 6 episode 8'>For Whom the Sleigh Bell Tolls</a> 
+105    6-09      5AJN18    16/Jan/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065004493' title='American Dad! season 6 episode 9'>Fartbreak Hotel</a> 
+106    6-10      5AJN13    23/Jan/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065009337' title='American Dad! season 6 episode 10'>Stanny Boy and Frantastic</a> 
+107    6-11      5AJN07    13/Feb/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065012289' title='American Dad! season 6 episode 11'>A Piñata Named Desire</a> 
+108    6-12      5AJN09    20/Feb/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065004497' title='American Dad! season 6 episode 12'>You Debt Your Life</a> 
+109    6-13                27/Mar/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065004495' title='American Dad! season 6 episode 13'>I Am the Walrus</a> 
+110    6-14      6AJN03    03/Apr/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065023792' title='American Dad! season 6 episode 14'>School Lies</a> 
+111    6-15      6AJN04    10/Apr/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065004496' title='American Dad! season 6 episode 15'>License to Till</a> 
+112    6-16      6AJN08    17/Apr/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065009338' title='American Dad! season 6 episode 16'>Jenny Fromdabloc</a> 
+113    6-17      6AJN05    08/May/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065009340' title='American Dad! season 6 episode 17'>Home Wrecker</a> 
+114    6-18      6AJN06    15/May/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065032659' title='American Dad! season 6 episode 18'>Flirting with Disaster</a> 
+115    6-19      6AJN10    22/May/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065032660' title='American Dad! season 6 episode 19'>Gorillas in the Mist</a> 
 
- 59.   5- 1     3AJN20     28 Sep 08   <a target="_blank" href="http://www.tv.com/american-dad/1600-candles/episode/1177842/summary.html">1600 Candles</a>
- 60.   5- 2     3AJN16      5 Oct 08   <a target="_blank" href="http://www.tv.com/american-dad/the-one-that-got-away/episode/1177843/summary.html">The One That Got Away</a>
- 61.   5- 3     3AJN18     19 Oct 08   <a target="_blank" href="http://www.tv.com/american-dad/one-little-word/episode/1231697/summary.html">One Little Word</a>
- 62.   5- 4     3AJN15      2 Nov 08   <a target="_blank" href="http://www.tv.com/american-dad/choosey-wives-choose-smith/episode/1072267/summary.html">Choosey Wives Choose Smith</a>
- 63.   5- 5     3AJN19      9 Nov 08   <a target="_blank" href="http://www.tv.com/american-dad/escape-from-pearl-bailey/episode/748408/summary.html">Escape From Pearl Bailey</a>
- 64.   5- 6     3AJN21     16 Nov 08   <a target="_blank" href="http://www.tv.com/american-dad/pulling-double-booty/episode/1177839/summary.html">Pulling Double Booty</a>
- 65.   5- 7     3AJN22     30 Nov 08   <a target="_blank" href="http://www.tv.com/american-dad/phantom-of-the-telethon/episode/1177840/summary.html">Phantom of the Telethon</a>
- 66.   5- 8     4AJN01     25 Jan 09   <a target="_blank" href="http://www.tv.com/american-dad/chimdale/episode/1177844/summary.html">Chimdale</a>
- 67.   5- 9     4AJN02      8 Feb 09   <a target="_blank" href="http://www.tv.com/american-dad/stan-time/episode/1251637/summary.html">Stan Time</a>
- 68.   5-10     4AJN03     15 Feb 09   <a target="_blank" href="http://www.tv.com/american-dad/family-affair/episode/888119/summary.html">Family Affair</a>
- 69.   5-11     4AJN04      1 Mar 09   <a target="_blank" href="http://www.tv.com/american-dad/live-and-let-fry/episode/1256312/summary.html">Live and Let Fry</a>
- 70.   5-12     4AJN05      8 Mar 09   <a target="_blank" href="http://www.tv.com/american-dad/roy-rogers-mcfreely/episode/1256315/summary.html">Roy Rogers McFreely</a>
- 71.   5-13     4AJN07     15 Mar 09   <a target="_blank" href="http://www.tv.com/american-dad/jacks-back/episode/1256317/summary.html">Jack's Back</a>
- 72.   5-14     4AJN06     22 Mar 09   <a target="_blank" href="http://www.tv.com/american-dad/bar-mitzvah-shuffle/episode/1257155/summary.html">Bar Mitzvah Shuffle</a>
- 73.   5-15     4AJN08     29 Mar 09   <a target="_blank" href="http://www.tv.com/american-dad/wife-insurance/episode/1257157/summary.html">Wife Insurance</a>
- 74.   5-16     4AJN09     19 Apr 09   <a target="_blank" href="http://www.tv.com/american-dad/delorean-story-an/episode/1263511/summary.html">DeLorean Story-An</a>
- 75.   5-17     4AJN10     26 Apr 09   <a target="_blank" href="http://www.tv.com/american-dad/every-which-way-but-lose/episode/1263513/summary.html">Every Which Way But Lose</a>
- 76.   5-18     4AJN11      3 May 09   <a target="_blank" href="http://www.tv.com/american-dad/weiner-of-our-discontent/episode/1265035/summary.html">Weiner of Our Discontent</a>
- 77.   5-19     4AJN12     10 May 09   <a target="_blank" href="http://www.tv.com/american-dad/daddy-queerest/episode/1265036/summary.html">Daddy Queerest</a>
- 78.   5-20     4AJN13     17 May 09   <a target="_blank" href="http://www.tv.com/american-dad/stans-night-out/episode/1265037/summary.html">Stan's Night Out</a>
+&bull; Season 7
 
-Season 6
+116    7-01      6AJN18    25/Sep/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065053839' title='American Dad! season 7 episode 1'>Hot Water</a> 
+117    7-02      6AJN07    02/Oct/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065053840' title='American Dad! season 7 episode 2'>Hurricane! (3)</a> 
+118    7-03      6AJN01    06/Nov/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065053841' title='American Dad! season 7 episode 3'>A Ward Show</a> 
+119    7-04      6AJN11    13/Nov/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065101856' title='American Dad! season 7 episode 4'>The Worst Stan</a> 
+120    7-05      6AJN10    20/Nov/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065101857' title='American Dad! season 7 episode 5'>Virtual In-Stanity</a> 
+121    7-06      6AJN09    27/Nov/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065111116' title='American Dad! season 7 episode 6'>The Scarlett Getter</a> 
+122    7-07      6AJN21    11/Dec/11   <a href='http://www.tvrage.com/American_Dad/episodes/1065111851' title='American Dad! season 7 episode 7'>Season's Beatings</a> 
+123    7-08      6AJN13    08/Jan/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065126197' title='American Dad! season 7 episode 8'>The Unbrave One</a> 
+124    7-09      6AJN15    29/Jan/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065135515' title='American Dad! season 7 episode 9'>Stanny Tendergrass</a> 
+125    7-10      6AJN17    12/Feb/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065140575' title='American Dad! season 7 episode 10'>Wheels & the Legman and the Case of Grandpa’s Key</a> 
+126    7-11      6AJN14    19/Feb/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065143248' title='American Dad! season 7 episode 11'>Old Stan in the Mountain</a> 
+127    7-12      6AJN19    04/Mar/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065146382' title='American Dad! season 7 episode 12'>The Wrestler</a> 
+128    7-13      6AJN12    11/Mar/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065147952' title='American Dad! season 7 episode 13'>Dr. Klaustus</a> 
+129    7-14      6AJN20    18/Mar/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065149427' title='American Dad! season 7 episode 14'>Stan’s Best Friend</a> 
+130    7-15      6AJN02    25/Mar/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065151776' title='American Dad! season 7 episode 15'>Less Money, Mo’ Problems</a> 
+131    7-16      6AJN22    01/Apr/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065155096' title='American Dad! season 7 episode 16'>The Kidney Stays In The Picture</a> 
+132    7-17      7AJN02    06/May/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065165581' title='American Dad! season 7 episode 17'>Ricky Spanish</a> 
+133    7-18                13/May/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065167432' title='American Dad! season 7 episode 18'>Toy Whorey</a> 
 
- 79.   6- 1     4AJN20     27 Sep 09   <a target="_blank" href="http://www.tv.com/american-dad/in-country-club/episode/1286302/summary.html">In Country... Club</a>
- 80.   6- 2     4AJN15      4 Oct 09   <a target="_blank" href="http://www.tv.com/american-dad/moon-over-isla-island/episode/1286298/summary.html">Moon Over Isla Island</a>
- 81.   6- 3     4AJN14     11 Oct 09   <a target="_blank" href="http://www.tv.com/american-dad/home-adrone/episode/1287975/summary.html">Home Adrone</a>
- 82.   6- 4     4AJN18     18 Oct 09   <a target="_blank" href="http://www.tv.com/american-dad/brains-brains-and-automobiles/episode/1286299/summary.html">Brains, Brains, and Automobiles</a>
- 83.   6- 5     4AJN19      8 Nov 09   <a target="_blank" href="http://www.tv.com/american-dad/man-in-the-moonbounce/episode/1286300/summary.html">Man in the Moonbounce</a>
- 84.   6- 6     4AJN16     15 Nov 09   <a target="_blank" href="http://www.tv.com/american-dad/shallow-vows/episode/1287973/summary.html">Shallow Vows</a>
- 85.   6- 7     4AJN22     22 Nov 09   <a target="_blank" href="http://www.tv.com/american-dad/my-morning-straightjacket/episode/1287976/summary.html">My Morning Straightjacket</a>
- 86.   6- 8     4AJN21     29 Nov 09   <a target="_blank" href="http://www.tv.com/american-dad/g-string-circus/episode/1274567/summary.html">G-String Circus</a>
- 87.   6- 9     4AJN17     13 Dec 09   <a target="_blank" href="http://www.tv.com/american-dad/raptures-delight/episode/1287974/summary.html">Rapture's Delight</a>
- 88.   6-10     5AJN01      3 Jan 10   <a target="_blank" href="http://www.tv.com/american-dad/dont-look-a-smith-horse-in-the-mouth/episode/1287966/summary.html">Don't Look a Smith Horse in the Mouth</a>
- 89.   6-11     5AJN02     31 Jan 10   <a target="_blank" href="http://www.tv.com/american-dad/a-jones-for-a-smith/episode/1320721/summary.html">A Jones for a Smith</a>
- 90.   6-12     5AJN04     14 Feb 10   <a target="_blank" href="http://www.tv.com/american-dad/may-the-best-stan-win/episode/1287972/summary.html">May the Best Stan Win</a>
- 91.   6-13     5AJN03     21 Feb 10   <a target="_blank" href="http://www.tv.com/american-dad/return-of-the-bling/episode/1287970/summary.html">Return of the Bling</a>
- 92.   6-14     5AJN06     11 Apr 10   <a target="_blank" href="http://www.tv.com/american-dad/cops-and-roger/episode/1337859/summary.html">Cops & Roger</a>
- 93.   6-15     5AJN08     18 Apr 10   <a target="_blank" href="http://www.tv.com/american-dad/merlot-down-dirty-shame/episode/1337861/summary.html">Merlot Down Dirty Shame</a>
- 94.   6-16     5AJN11     25 Apr 10   <a target="_blank" href="http://www.tv.com/american-dad/bully-for-steve/episode/1338324/summary.html">Bully For Steve</a>
- 95.   6-17     5AJN10      9 May 10   <a target="_blank" href="http://www.tv.com/american-dad/an-incident-at-owl-creek/episode/1338325/summary.html">An Incident at Owl Creek</a>
- 96.   6-18     5AJN12     16 May 10   <a target="_blank" href="http://www.tv.com/american-dad/great-space-roaster/episode/1341867/summary.html">Great Space Roaster</a>
+&bull; Season 8
 
-Season 7
+134    8-01      7AJN03    30/Sep/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065192397' title='American Dad! season 8 episode 1'>Love, American Dad Style</a> 
+135    8-02      7AJN05    07/Oct/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065225283' title='American Dad! season 8 episode 2'>Killer Vacation</a> 
+136    8-03      7AJN08    04/Nov/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065228052' title='American Dad! season 8 episode 3'>Can I Be Frank With You?</a> 
+137    8-04      7AJN10    18/Nov/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065239195' title='American Dad! season 8 episode 4'>American Stepdad</a> 
+138    8-05      7AJN06    02/Dec/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065156504' title='American Dad! season 8 episode 5'>Why Can't We Be Friends?</a> 
+139    8-06      7AJN09    09/Dec/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065247032' title='American Dad! season 8 episode 6'>Adventures in Hayleysitting</a> 
+140    8-07                23/Dec/12   <a href='http://www.tvrage.com/American_Dad/episodes/1065257644' title='American Dad! season 8 episode 7'>National Treasure 4: Baby Franny: She's Doing Well: The Hole Story</a> 
+141    8-08                06/Jan/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065256516' title='American Dad! season 8 episode 8'>Finger Lenting Good</a> 
+142    8-09      7AJN11    13/Jan/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065258927' title='American Dad! season 8 episode 9'>The Adventures of Twill Ongenbone and His Boy Jabari</a> 
+143    8-10      7AJN15    27/Jan/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265624' title='American Dad! season 8 episode 10'>Blood Crieth Unto Heaven</a> 
+144    8-11      7AJN17    10/Feb/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265630' title='American Dad! season 8 episode 11'>Max Jets</a> 
+145    8-12      7AJN12    17/Feb/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265625' title='American Dad! season 8 episode 12'>Naked to the Limit, One More Time</a> 
+146    8-13      7AJN22    10/Mar/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265627' title='American Dad! season 8 episode 13'>For Black Eyes Only</a> 
+147    8-14      7AJN13    24/Mar/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265626' title='American Dad! season 8 episode 14'>Spelling Bee My Baby</a> 
+148    8-15      7AJN16    14/Apr/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265628' title='American Dad! season 8 episode 15'>The Missing Kink</a> 
+149    8-16      7AJN14    21/Apr/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265629' title='American Dad! season 8 episode 16'>The Boring Identity</a> 
+150    8-17      7AJN18    28/Apr/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265631' title='American Dad! season 8 episode 17'>The Full Cognitive Redaction of Avery Bullock by the Coward Stan Smith</a> 
+151    8-18      7AJN20    05/May/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265632' title='American Dad! season 8 episode 18'>Lost in Space</a> 
+152    8-19      7AJN21    12/May/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065265633' title='American Dad! season 8 episode 19'>Da Flippity Flop</a> 
 
- 97.   7- 1     5AJN14      3 Oct 10   <a target="_blank" href="http://www.tv.com/american-dad/100-a-d-1/episode/1287969/summary.html">100 A.D. (1)</a>
- 98.   7- 2     5AJN17     10 Oct 10   <a target="_blank" href="http://www.tv.com/american-dad/son-of-stan-2/episode/1359733/summary.html">Son of Stan (2)</a>
- 99.   7- 3     5AJN19      7 Nov 10   <a target="_blank" href="http://www.tv.com/american-dad/best-little-horror-house-in-langley-falls/episode/1360457/summary.html">Best Little Horror House in Langley Falls</a>
-100.   7- 4     5AJN16     14 Nov 10   <a target="_blank" href="http://www.tv.com/american-dad/stans-food-restaurant/episode/1363896/summary.html">Stan's Food Restaurant</a>
-101.   7- 5     5AJN15     21 Nov 10   <a target="_blank" href="http://www.tv.com/american-dad/white-rice/episode/1363897/summary.html">White Rice</a>
-102.   7- 6     5AJN20     28 Nov 10   <a target="_blank" href="http://www.tv.com/american-dad/there-will-be-bad-blood/episode/1366295/summary.html">There Will Be Bad Blood</a>
-103.   7- 7     5AJN05      5 Dec 10   <a target="_blank" href="http://www.tv.com/american-dad/the-people-vs-martin-sugar/episode/1367029/summary.html">The People vs. Martin Sugar</a>
-104.   7- 8     5AJN22     12 Dec 10   <a target="_blank" href="http://www.tv.com/american-dad/for-whom-the-sleigh-bell-tolls/episode/1367031/summary.html">For Whom the Sleigh Bell Tolls</a>
-105.   7- 9     5AJN18     16 Jan 11   <a target="_blank" href="http://www.tv.com/american-dad/fart-break-hotel/episode/1372089/summary.html">Fart-break Hotel</a>
-106.   7-10     5AJN13     23 Jan 11   <a target="_blank" href="http://www.tv.com/american-dad/stanny-boy-and-frantastic/episode/1372090/summary.html">Stanny Boy and Frantastic</a>
-107.   7-11     5AJN07     13 Feb 11   <a target="_blank" href="http://www.tv.com/american-dad/a-piata-named-desire/episode/1375597/summary.html">A Pi?ata Named Desire</a>
-108.   7-12     5AJN09     20 Feb 11   <a target="_blank" href="http://www.tv.com/american-dad/you-debt-your-life/episode/1375599/summary.html">You Debt Your Life</a>
-109.   7-13     5AJN21     27 Mar 11   <a target="_blank" href="http://www.tv.com/american-dad/i-am-the-walrus/episode/1379185/summary.html">I Am the Walrus</a>
-110.   7-14     6AJN03      3 Apr 11   <a target="_blank" href="http://www.tv.com/american-dad/school-lies/episode/1381132/summary.html">School Lies</a>
-111.   7-15     6AJN04     10 Apr 11   <a target="_blank" href="http://www.tv.com/american-dad/license-to-till/episode/1381135/summary.html">License to Till</a>
-112.   7-16     6AJN08     17 Apr 11   <a target="_blank" href="http://www.tv.com/american-dad/jenny-fromdabloc/episode/1381136/summary.html">Jenny Fromdabloc</a>
-113.   7-17     6AJN05      8 May 11   <a target="_blank" href="http://www.tv.com/american-dad/home-wrecker/episode/1384485/summary.html">Home Wrecker</a>
-114.   7-18     6AJN06     15 May 11   <a target="_blank" href="http://www.tv.com/american-dad/flirting-with-disaster/episode/1384487/summary.html">Flirting with Disaster</a>
-115.   7-19     6AJN10     22 May 11   <a target="_blank" href="http://www.tv.com/american-dad/gorillas-in-the-mist/episode/1386872/summary.html">Gorillas in the Mist</a>
+&bull; Season 9
 
-Season 8
+153    9-01                29/Sep/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344283' title='American Dad! season 9 episode 1'>Steve and Snot's Test-Tubular Adventure</a> 
+154    9-02                06/Oct/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344284' title='American Dad! season 9 episode 2'>Poltergasm</a> 
+155    9-03      8AJN05    03/Nov/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344278' title='American Dad! season 9 episode 3'>Buck, Wild</a> 
+156    9-04                10/Nov/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344282' title='American Dad! season 9 episode 4'>Crotchwalkers</a> 
+157    9-05      8AJN07    24/Nov/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344273' title='American Dad! season 9 episode 5'>Kung Pao Turkey</a> 
+158    9-06                01/Dec/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065428872' title='American Dad! season 9 episode 6'>Independent Movie</a> 
+159    9-07      8AJN08    08/Dec/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065344274' title='American Dad! season 9 episode 7'>Faking Bad</a> 
+160    9-08      7AJN19    15/Dec/13   <a href='http://www.tvrage.com/American_Dad/episodes/1065183217' title='American Dad! season 9 episode 8'>Minstrel Krampus</a> 
+161    9-09                05/Jan/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344285' title='American Dad! season 9 episode 9'>Vision: Impossible</a> 
+162    9-10                12/Jan/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344279' title='American Dad! season 9 episode 10'>Familyland</a> 
+163    9-11      #8AJN12   26/Jan/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344277' title='American Dad! season 9 episode 11'>Cock of the Sleepwalk</a> 
+164    9-12      #8AJN13   16/Mar/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344281' title='American Dad! season 9 episode 12'>Introducing the Naughty Stewardesses</a> 
+165    9-13      8AJN16    23/Mar/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065502606' title='American Dad! season 9 episode 13'>I Ain’t No Holodeck Boy</a> 
+166    9-14      8AJN14    30/Mar/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344275' title='American Dad! season 9 episode 14'>Stan Goes on the Pill</a> 
+167    9-15      BAJN11    06/Apr/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344280' title='American Dad! season 9 episode 15'>Honey, I'm Homeland</a> 
+168    9-16      8AJN06    13/Apr/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344272' title='American Dad! season 9 episode 16'>She Swill Survive</a> 
+169    9-17      8AJN15    27/Apr/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065344276' title='American Dad! season 9 episode 17'>Rubberneckers</a> 
+170    9-18      BAJN19    04/May/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065543795' title='American Dad! season 9 episode 18'>Permanent Record Wrecker</a> 
+171    9-19      8AJN20    11/May/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065548724' title='American Dad! season 9 episode 19'>News Glances With Genevieve Vavance</a> 
+172    9-20      BAJN18    18/May/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065548725' title='American Dad! season 9 episode 20'>The Longest Distance Relationship</a> 
 
-116.   8- 1     6AJN18     25 Sep 11   <a target="_blank" href="http://www.tv.com/american-dad/hot-water/episode/1400544/summary.html">Hot Water</a>
-117.   8- 2     6AJN07      2 Oct 11   <a target="_blank" href="http://www.tv.com/american-dad/hurricane/episode/1400647/summary.html">Hurricane!</a>
-118.   8- 3    6AJN01       6 Nov 11   <a target="_blank" href="http://www.tv.com/american-dad/a-ward-show/episode/1559979/summary.html">A Ward Show</a>
-119.   8- 4     6AJN11     13 Nov 11   <a target="_blank" href="http://www.tv.com/american-dad/the-worst-stan/episode/1559997/summary.html">The Worst Stan</a>
-120.   8- 5    6AJN16      20 Nov 11   <a target="_blank" href="http://www.tv.com/american-dad/virtual-in-stanity/episode/1559998/summary.html">Virtual In-Stanity</a>
-121.   8- 6    6AJN09      27 Nov 11   <a target="_blank" href="http://www.tv.com/american-dad/the-scarlett-getter/episode/1560706/summary.html">The Scarlett Getter</a>
-122.   8- 7    6AJN21      11 Dec 11   <a target="_blank" href="http://www.tv.com/american-dad/seasons-beatings/episode/1560707/summary.html">Season's Beatings </a>
-  0.   8- 8                 8 Jan 12   <a target="_blank" href="http://www.tv.com/american-dad/the-unbrave-one/episode/2858793/summary.html">The Unbrave One</a>
-123.   8- 8                 8 Jan 12   <a target="_blank" href="http://www.tv.com/american-dad/the-unbrave-one/episode/2874926/summary.html">The Unbrave One</a>
-124.   8- 9     6AJN15     29 Jan 12   <a target="_blank" href="http://www.tv.com/american-dad/stanny-tendergrass/episode/1858647/summary.html">Stanny Tendergrass</a>
-125.   8-10     6AJN17     12 Feb 12   <a target="_blank" href="http://www.tv.com/american-dad/wheels-and-the-legman-and-the-case-of-grandpas-key/episode/2390544/summary.html">Wheels & The Legman and The Case of Grandpa's Key</a>
-126.   8-11     6AJN14     19 Feb 12   <a target="_blank" href="http://www.tv.com/american-dad/old-stan-in-the-mountain/episode/2390545/summary.html">Old Stan in the Mountain</a>
-127.   8-12                 4 Mar 12   <a target="_blank" href="http://www.tv.com/american-dad/the-wrestler/episode/2402912/summary.html">The Wrestler</a>
-128.   8-13     6AJN12     11 Mar 12   <a target="_blank" href="http://www.tv.com/american-dad/dr-klaustus/episode/2416375/summary.html">Dr. Klaustus</a>
-129.   8-14     6AJN20     18 Mar 12   <a target="_blank" href="http://www.tv.com/american-dad/stans-best-friend/episode/2416405/summary.html">Stan's Best Friend</a>
-130.   8-15     6AJN02     25 Mar 12   <a target="_blank" href="http://www.tv.com/american-dad/less-money-mo-problems/episode/2416406/summary.html">Less Money, Mo' Problems</a>
-131.   8-16     6AJN22      1 Apr 12   <a target="_blank" href="http://www.tv.com/american-dad/the-kidney-stays-in-the-picture/episode/2416416/summary.html">The Kidney Stays in the Picture</a>
-132.   8-17     7AJN02      6 May 12   <a target="_blank" href="http://www.tv.com/american-dad/ricky-spanish/episode/2458851/summary.html">Ricky Spanish</a>
-133.   8-18     7AJN01     13 May 12   <a target="_blank" href="http://www.tv.com/american-dad/toy-whorey/episode/2458852/summary.html">Toy Whorey</a>
+&bull; Season 10
 
-Season 9
+173    10-01     BAJN21    14/Sep/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065610310' title='American Dad! season 10 episode 1'>Roger Passes the Bar</a> 
+174    10-02     BAJN17    14/Sep/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065610311' title='American Dad! season 10 episode 2'>A Boy Named Michael</a> 
+175    10-03     BAJN22    21/Sep/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065611036' title='American Dad! season 10 episode 3'>Blagsnarst: A Love Story</a> 
 
-134.   9- 1     7AJN03     30 Sep 12   <a target="_blank" href="http://www.tv.com/american-dad/love-ad-style/episode/2574927/summary.html">Love, AD Style</a>
-135.   9- 2     7AJN05      7 Oct 12   <a target="_blank" href="http://www.tv.com/american-dad/killer-vacation/episode/2574928/summary.html">Killer Vacation</a>
-136.   9- 3                 4 Nov 12   <a target="_blank" href="http://www.tv.com/american-dad/can-i-be-frank-with-you/episode/2600287/summary.html">Can I Be Frank With You?</a>
-137.   9- 4                18 Nov 12   <a target="_blank" href="http://www.tv.com/american-dad/american-stepdad/episode/2599462/summary.html">American Stepdad</a>
-138.   9- 5                 2 Dec 12   <a target="_blank" href="http://www.tv.com/american-dad/why-cant-we-be-friends/episode/2615994/summary.html">Why Can't We Be Friends?</a>
-139.   9- 6     7AJN09      9 Dec 12   <a target="_blank" href="http://www.tv.com/american-dad/adventures-in-hayleysitting/episode/2615995/summary.html">Adventures in Hayleysitting</a>
-140.   9- 7     7AJN04     23 Dec 12   <a target="_blank" href="http://www.tv.com/american-dad/national-treasure-4-baby-franny-shes-doing-well-the-hole-story/episode/2615996/summary.html">National Treasure 4: Baby Franny: She's Doing Well: The Hole Story</a>
-141.   9- 8     7AJN07      6 Jan 13   <a target="_blank" href="http://www.tv.com/american-dad/finger-lenting-good/episode/2624028/summary.html">Finger Lenting Good</a>
-142.   9- 9                13 Jan 13   <a target="_blank" href="http://www.tv.com/american-dad/the-adventures-of-twill-ongenbone-and-his-boy-jabari/episode/2630132/summary.html">The Adventures of Twill Ongenbone and His Boy Jabari</a>
-143.   9-10     7AJN15     27 Jan 13   <a target="_blank" href="http://www.tv.com/american-dad/blood-crieth-unto-heaven/episode/2635024/summary.html">Blood Crieth Unto Heaven</a>
-144.   9-11                10 Feb 13   <a target="_blank" href="http://www.tv.com/american-dad/max-jets/episode/2681876/summary.html">Max Jets</a>
-145.   9-12     7AJN12     17 Feb 13   <a target="_blank" href="http://www.tv.com/american-dad/naked-to-the-limit-one-more-time/episode/2635025/summary.html">Naked to the Limit, One More Time</a>
-146.   9-13     7AJN22     10 Mar 13   <a target="_blank" href="http://www.tv.com/american-dad/for-black-eyes-only/episode/2635027/summary.html">For Black Eyes Only</a>
-147.   9-14     7AJN13     24 Mar 13   <a target="_blank" href="http://www.tv.com/american-dad/spelling-bee-my-baby/episode/2635026/summary.html">Spelling Bee My Baby</a>
-148.   9-15     7AJN16     14 Apr 13   <a target="_blank" href="http://www.tv.com/american-dad/the-missing-kink/episode/2635028/summary.html">The Missing Kink</a>
-149.   9-16     7AJN14     21 Apr 13   <a target="_blank" href="http://www.tv.com/american-dad/the-boring-identity/episode/2681884/summary.html">The Boring Identity</a>
-150.   9-17     7AJN18     28 Apr 13   <a target="_blank" href="http://www.tv.com/american-dad/the-full-cognitive-redaction-of-avery-bullock-by-the-coward-stan-smith/episode/2681890/summary.html">The Full Cognitive Redaction of Avery Bullock by the Coward Stan Smith</a>
-151.   9-18     7AJN20      5 May 13   <a target="_blank" href="http://www.tv.com/american-dad/lost-in-space/episode/2681891/summary.html">Lost in Space</a>
-152.   9-19     7AJN21     12 May 13   <a target="_blank" href="http://www.tv.com/american-dad/da-flippity-flop/episode/2681892/summary.html">Da Flippity Flop</a>
+<a name='latest' id='latest' />&bull; Season 11
 
-Season 10
+176    11-01     9AJN01    20/Oct/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065619390' title='American Dad! season 11 episode 1'>Blonde Ambition</a> 
+177    11-02     9AJN02    27/Oct/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065684333' title='American Dad! season 11 episode 2'>CIAPOW</a> 
+178    11-03     #9AJN05   03/Nov/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065684334' title='American Dad! season 11 episode 3'>Scents and Sensei-bility</a> 
+179    11-04               10/Nov/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065684335' title='American Dad! season 11 episode 4'>Big Stan on Campus</a> 
+180    11-05               17/Nov/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065684336' title='American Dad! season 11 episode 5'>Now and Gwen</a> 
+181    11-06               01/Dec/14   <a href='http://www.tvrage.com/American_Dad/episodes/1065684337' title='American Dad! season 11 episode 6'>Dreaming of a White Porsche Christmas</a> 
+182    11-07               23/Feb/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065724979' title='American Dad! season 11 episode 7'>LGBSteve</a> 
+183    11-08               02/Mar/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065580915' title='American Dad! season 11 episode 8'>Morning Mimosa</a> 
+184    11-09               09/Mar/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065749117' title='American Dad! season 11 episode 9'>My Affair Lady</a> 
+185    11-10               16/Mar/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065580916' title='American Dad! season 11 episode 10'>A Star Is Reborn</a> 
+186    11-11               23/Mar/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065580922' title='American Dad! season 11 episode 11'>Manhattan Magical Murder Mystery Tour</a> 
+187    11-12     9AJN12    30/Mar/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065749118' title='American Dad! season 11 episode 12'>The Shrink</a> 
+188    11-13     9AJN13    18/May/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065580910' title='American Dad! season 11 episode 13'>Holy $h!t, Jeff's Back!</a> 
+189    11-14               25/May/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065802029' title='American Dad! season 11 episode 14'>American Fung</a> 
+190    11-15               01/Jun/15   <a href='http://www.tvrage.com/American_Dad/episodes/1065803234' title='American Dad! season 11 episode 15'>Seizures Suit Stanny</a> 
 
-153.  10- 1                29 Sep 13   <a target="_blank" href="http://www.tv.com/american-dad/steve-and-snots-test-tubular-adventure/episode/2950646/summary.html">Steve & Snot's Test-Tubular Adventure</a>
-154.  10- 2                 6 Oct 13   <a target="_blank" href="http://www.tv.com/american-dad/poltergasm/episode/2951990/summary.html">Poltergasm</a>
-157.  10- 3                 3 Nov 13   <a target="_blank" href="http://www.tv.com/american-dad/buck-wild/episode/2951993/summary.html">Buck, Wild</a>
-155.  10- 4                10 Nov 13   <a target="_blank" href="http://www.tv.com/american-dad/crotchwalkers/episode/2951991/summary.html">Crotchwalkers</a>
-  0.  10- 5                24 Nov 13   <a target="_blank" href="http://www.tv.com/american-dad/kung-pao-turkey/episode/2987317/summary.html">Kung Pao Turkey</a>
-  0.  10- 6                 1 Dec 13   <a target="_blank" href="http://www.tv.com/american-dad/independent-movie/episode/2992174/summary.html">Independent Movie</a>
-  0.  10- 7                 8 Dec 13   <a target="_blank" href="http://www.tv.com/american-dad/faking-bad/episode/2995426/summary.html">Faking Bad</a>
-160.  10- 8     7AJN19     15 Dec 13   <a target="_blank" href="http://www.tv.com/american-dad/minstrel-krampus/episode/2995412/summary.html">Minstrel Krampus</a>
-  0.  10- 9                 5 Jan 14   <a target="_blank" href="http://www.tv.com/american-dad/vision-impossible/episode/2999263/summary.html">Vision: Impossible</a>
-162.  10-10     8AJN09     12 Jan 14   <a target="_blank" href="http://www.tv.com/american-dad/familyland/episode/3000933/summary.html">Familyland</a>
-163.  10-11     8AJN12     26 Jan 14   <a target="_blank" href="http://www.tv.com/american-dad/cock-of-the-sleepwalk/episode/3002374/summary.html">Cock of the Sleepwalk</a>
-  0.  10-12                16 Mar 14   <a target="_blank" href="http://www.tv.com/american-dad/introducing-the-naughty-stewardesses/episode/3023613/summary.html">Introducing the Naughty Stewardesses</a>
-  0.  10-13                23 Mar 14   <a target="_blank" href="http://www.tv.com/american-dad/i-aint-no-holodeck/episode/3023614/summary.html">I Ain't No Holodeck</a>
-166.  10-14     8AJN14     30 Mar 14   <a target="_blank" href="http://www.tv.com/american-dad/stan-goes-on-the-pill/episode/3021998/summary.html">Stan Goes On the Pill</a>
-167.  10-15     8AJN11      6 Apr 14   <a target="_blank" href="http://www.tv.com/american-dad/honey-im-homeland/episode/3023491/summary.html">Honey, I'm Homeland</a>
-168.  10-16     8AJN06     13 Apr 14   <a target="_blank" href="http://www.tv.com/american-dad/she-swill-survive/episode/3024404/summary.html">She Swill Survive</a>
-  0.  10-17                27 Apr 14   <a target="_blank" href="http://www.tv.com/american-dad/rubberneckers/episode/3025477/summary.html">Rubberneckers</a>
-  0.  10-18                 4 May 14   <a target="_blank" href="http://www.tv.com/american-dad/permanent-record-wrecker/episode/3026214/summary.html">Permanent Record Wrecker</a>
-  0.  10-19                11 May 14   <a target="_blank" href="http://www.tv.com/american-dad/news-glances-with-genevieve-vavance/episode/3027612/summary.html">News Glances With Genevieve Vavance</a>
-172.  10-20     8AJN18     18 May 14   <a target="_blank" href="http://www.tv.com/american-dad/the-longest-distance-relationship/episode/3028162/summary.html">The Longest Distance Relationship</a>
 
-Season 11
+Other Episodes
 
-  0.  11- 1                14 Sep 14   <a target="_blank" href="http://www.tv.com/american-dad/roger-passes-the-bar/episode/3049541/summary.html">Roger Passes the Bar</a>
-  0.  11- 1                14 Sep 14   <a target="_blank" href="http://www.tv.com/american-dad/roger-passes-the-bar-a-boy-named-michael/episode/3044681/summary.html">Roger Passes the Bar; A Boy Named Michael</a>
-  0.  11- 2                14 Sep 14   <a target="_blank" href="http://www.tv.com/american-dad/a-boy-named-michael/episode/3049677/summary.html">A Boy Named Michael</a>
-  0.  11- 2                21 Sep 14   <a target="_blank" href="http://www.tv.com/american-dad/blagsnarst-a-love-story/episode/3045970/summary.html">Blagsnarst, a Love Story</a>
-  0.  11- 3                22 Sep 14   <a target="_blank" href="http://www.tv.com/american-dad/from-russia-with-love/episode/3046862/summary.html">From Russia With Love</a>
-  0.  11- 5                20 Oct 14   <a target="_blank" href="http://www.tv.com/american-dad/blonde-ambition/episode/3049931/summary.html">Blonde Ambition</a>
-
-Season 12
-
-  0.  12- 2                27 Oct 14   <a target="_blank" href="http://www.tv.com/american-dad/ciapow/episode/3051400/summary.html">Ciapow</a>
-  0.  12- 3                 3 Nov 14   <a target="_blank" href="http://www.tv.com/american-dad/scents-and-sensei-bility/episode/3052075/summary.html">Scents and Sensei-Bility</a>
-  0.  12- 4                10 Nov 14   <a target="_blank" href="http://www.tv.com/american-dad/turkey-bacon/episode/3053731/summary.html">Turkey Bacon</a>
-  0.  12- 5                17 Nov 14   <a target="_blank" href="http://www.tv.com/american-dad/now-and-gwen/episode/3054910/summary.html">Now and Gwen</a>
-  0.  12- 6                 1 Dec 14   <a target="_blank" href="http://www.tv.com/american-dad/dreaming-of-a-white-porsche-christmas/episode/3056299/summary.html">Dreaming of a White Porsche Christmas</a>
-  0.  12- 7                23 Feb 15   <a target="_blank" href="http://www.tv.com/american-dad/lgbsteve/episode/3066021/summary.html">LGBSteve</a>
-  0.  12- 8                 2 Mar 15   <a target="_blank" href="http://www.tv.com/american-dad/morning-mimosa/episode/3067359/summary.html">Morning Mimosa</a>
-  0.  12- 9                 9 Mar 15   <a target="_blank" href="http://www.tv.com/american-dad/my-affair-lady/episode/3068318/summary.html">My Affair Lady</a>
-  0.  12-10                16 Mar 15   <a target="_blank" href="http://www.tv.com/american-dad/a-star-is-reborn/episode/3069006/summary.html">A Star Is Reborn</a>
-  0.  12-11                23 Mar 15   <a target="_blank" href="http://www.tv.com/american-dad/manhattan-magical-murder-mystery-tour/episode/3070474/summary.html">Manhattan Magical Murder Mystery Tour</a>
-  0.  12-12                30 Mar 15   <a target="_blank" href="http://www.tv.com/american-dad/the-shrink/episode/3071024/summary.html">The Shrink</a>
-  0.  12-13                18 May 15   <a target="_blank" href="http://www.tv.com/american-dad/holy-s-jeffs-back/episode/3077408/summary.html">Holy S***, Jeff's Back!</a>
-  0.  12-14                25 May 15   <a target="_blank" href="http://www.tv.com/american-dad/american-fung/episode/3077537/summary.html">American Fung</a>
-  0.  12-15                 1 Jun 15   <a target="_blank" href="http://www.tv.com/american-dad/seizures-suit-stanny/episode/3079136/summary.html">Seizures Suit Stanny</a>
+Unnumbered S11 9AJN03      UNKNOWN      <a href='http://www.tvrage.com/American_Dad/episodes/1065580898'>A Tiny Affair</a> 
+Unnumbered S11 9AJN04      UNKNOWN      <a href='http://www.tvrage.com/American_Dad/episodes/1065580903'>Brobot</a> 
 
 
 </pre>
@@ -405,12 +402,11 @@ Season 12
 <tr class="center">
 <td><a href="#docTop">Back to<br />TOP</a></td>
 
-<a name="latest" id="latest" />
-<td class="TVcom"><form name="swList2" action="./" method="post"><input type="hidden" name="list" value="tvrage.com" /></form><a href="javascript:document.swList2.submit();">switch to<br />TVRage<br />list</a></td>
+<td class="TVRage"><form name="swList2" action="./" method="post"><input type="hidden" name="list" value="tv.com" /></form><a href="javascript:document.swList2.submit();">switch to<br />TV.com<br />list</a></td>
 
-<td class='TVcom'><a target='_blank' href="http://www.tv.com/shows/american-dad%21/episodes/?printable=1"><strong>Printable</strong><br />Guide<br />@TV.com</a></td>
-<td class="TVcom"><a target="_blank" href="http://www.tv.com/show/21935/forums.html">Questions<br />Forum<br />@TV.com</a></td>
-<td class="TVcom"><a target="_blank" href="http://www.tv.com/show/21935/summary.html">Show<br />Summary<br />@TV.com</a></td>
+<td class="TVRage"><a target="_blank" href="http://www.tvrage.com/shows/id-2594/printable"><strong>Printable</strong><br />Guide<br />@TVRage</a></td>
+<td class="TVRage"><a target="_blank" href="http://www.tvrage.com/shows/id-2594">Show<br />Summary<br />@TVRage</a></td>
+<td class="TVRage"><a href="http://epguides.com/common/exportToCSV.asp?rage=2594" onclick="return popup(this,'exportToCSV',725,625)">list as<br />.csv</a></td>
 
 
 <td class="linkTXT"><a target="_blank" href="http://thefutoncritic.com/showatch.aspx?id=American_Dad&#38;view=listings">The<br />Futon<br />Critic</a></td>
@@ -440,9 +436,9 @@ Season 12
 <hr />
 <div id="homenote">
 
-The home sites for this guide are
-<a href="http://epguides.com/">http://epguides.com/</a> and
-<a href="http://www.TV.com/">http://www.TV.com/</a>.
+The home sites for this guide are 
+<a href="http://epguides.com/">http://epguides.com/</a> and 
+<a href="http://www.TVRage.com/">http://www.TVRage.com/</a>.
 
 
 </div>

@@ -29,9 +29,11 @@ import java.util.regex.Pattern;
 public class EpGuidesShowUpdater implements ShowUpdater {
 
     private static final Logger logger = LoggerFactory.getLogger(EpGuidesShowUpdater.class);
-    private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+).*<a.*>(.*)</a");
-    private static final Pattern EPISODE_DATA_LINE_NO_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+)?.*<a.*>(.*)</a");
-    private static final DateFormat EPISODE_AIR_DATE_FORMATTER = new SimpleDateFormat("d MMM yy", Locale.ENGLISH);
+//    private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+).*<a.*>(.*)</a");
+//    private static final Pattern EPISODE_DATA_LINE_NO_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+)?.*<a.*>(.*)</a");
+    private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+ *([0-9])+-([0-9]+).*?([0-9]+/[A-Za-z]{3}/[0-9]+).*<a.*>(.*)</a");
+    private static final Pattern EPISODE_DATA_LINE_NO_DATE =   Pattern.compile(" *[0-9]+ *([0-9])+-([0-9]+).*?([0-9]+/[A-Za-z]{3}/[0-9]+)?.*<a.*>(.*)</a");
+    private static final DateFormat EPISODE_AIR_DATE_FORMATTER = new SimpleDateFormat("d/MMM/yy", Locale.ENGLISH);
 
     @Autowired
     private EpisodeDao episodeDao;
@@ -115,8 +117,9 @@ public class EpGuidesShowUpdater implements ShowUpdater {
     }
 
     protected String getEpisodesData(Show show) throws IOException {
-        return Request.Post(show.getUrl())
-                .bodyForm(Form.form().add("list", "tv.com").build())
+        return Request
+                .Get(show.getUrl())
+                //.Post(show.getUrl()).bodyForm(Form.form().add("list", "tv.com").build())
                 .execute().returnContent().asString();
     }
 
