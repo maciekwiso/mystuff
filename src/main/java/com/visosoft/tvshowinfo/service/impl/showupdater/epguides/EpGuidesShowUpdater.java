@@ -7,8 +7,12 @@ import com.visosoft.tvshowinfo.domain.Episode;
 import com.visosoft.tvshowinfo.domain.Show;
 import com.visosoft.tvshowinfo.service.ShowUpdater;
 import com.visosoft.tvshowinfo.util.ShowSearchResult;
+import org.apache.http.Consts;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
+import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +36,7 @@ public class EpGuidesShowUpdater implements ShowUpdater {
 //    private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+\\. *([0-9])+- ?([0-9]+).*?([0-9]+ [A-Za-z]{3} [0-9]+).*<a.*>(.*)</a");
     private static final Pattern EPISODE_DATA_LINE_WITH_DATE = Pattern.compile(" *[0-9]+ *([0-9])+-([0-9]+).*?([0-9]+/[A-Za-z]{3}/[0-9]+).*?<a.*?>(.*?)</a");
     private static final DateFormat EPISODE_AIR_DATE_FORMATTER = new SimpleDateFormat("d/MMM/yy", Locale.ENGLISH);
+	private static final ResponseHandler<String> myHandler = response -> EntityUtils.toString(response.getEntity(), Consts.UTF_8);
 
     @Autowired
     private EpisodeDao episodeDao;
@@ -113,7 +118,7 @@ public class EpGuidesShowUpdater implements ShowUpdater {
         return Request
                 .Get(show.getUrl())
                 //.Post(show.getUrl()).bodyForm(Form.form().add("list", "tv.com").build())
-                .execute().returnContent().asString();
+                .execute().handleResponse(myHandler);
     }
 
     @Override
