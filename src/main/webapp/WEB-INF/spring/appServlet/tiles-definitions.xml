@@ -62,5 +62,9 @@
 	<definition name="picviewer" extends="template-main">
 		<put-attribute name="primary-content" value="/WEB-INF/views/contents/picsViewer.jsp" />
 	</definition>
+
+	<definition name="groupspicviewer" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/groupsPicsViewer.jsp" />
+	</definition>
 	
 </tiles-definitions>

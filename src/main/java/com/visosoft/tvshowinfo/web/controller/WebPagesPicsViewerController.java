@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.google.common.io.ByteStreams;
 import com.visosoft.tvshowinfo.domain.PicViewerRecord;
@@ -27,18 +24,31 @@ public class WebPagesPicsViewerController {
 	private PicViewerRecordService picViewerRecordService;
 	
 	@RequestMapping(value = "/picviewer/showunseen", method = RequestMethod.GET)
-	public String displayUnseen(ModelMap model) {
-		List<PicViewerRecord> pics = picViewerRecordService.selectUnseen(50);
-		setAsSeen(pics);
+	public String displayUnseen(@RequestParam("group") String groupName, ModelMap model) {
+		List<PicViewerRecord> pics = picViewerRecordService.selectUnseen(50, groupName);
+		setAsSeen(pics, groupName);
 		model.put("pics", pics);
 		return "picviewer";
 	}
 	
 	@RequestMapping(value = "/picviewer/show", method = RequestMethod.GET)
-	public String displayAll(ModelMap model) {
-		List<PicViewerRecord> pics = picViewerRecordService.selectAll();
+	public String displayAll(@RequestParam("group") String groupName, ModelMap model) {
+		List<PicViewerRecord> pics = picViewerRecordService.selectAll(groupName);
 		model.put("pics", pics);
 		return "picviewer";
+	}
+
+	@RequestMapping(value = "/picviewer/setasseen", method = RequestMethod.GET)
+	public String setAsSeen(@RequestParam("group") String groupName) {
+		picViewerRecordService.setAsSeenWithIdLorE(Long.MAX_VALUE, groupName);
+		return "redirect:/picviewer/groups";
+	}
+
+	@RequestMapping(value = "/picviewer/groups", method = RequestMethod.GET)
+	public String displayAllGroups(ModelMap model) {
+		List<String> groups = picViewerRecordService.selectUnseenGroups();
+		model.put("groups", groups);
+		return "groupspicviewer";
 	}
 	
 	@RequestMapping(value = "/picviewer/pic/{id}", method = RequestMethod.GET)
@@ -60,14 +70,22 @@ public class WebPagesPicsViewerController {
 
     }
 	
-	private void setAsSeen(List<PicViewerRecord> pics) {
+	private void setAsSeen(List<PicViewerRecord> pics, String groupName) {
 		if (pics != null && !pics.isEmpty()) {
-			picViewerRecordService.setAsSeenWithIdLorE(pics.get(pics.size() - 1).getId());
+			picViewerRecordService.setAsSeenWithIdLorE(pics.get(pics.size() - 1).getId(), groupName);
 		}
 	}
 
 	private String getContentType(PicViewerRecord pvr) {
-		return pvr.getUrl().endsWith("jpg") ? "image/jpg" : pvr.getUrl().endsWith("mp4") ? "video/mp4" : "image/gif";
+		if (pvr.getUrl().endsWith("jpg")) {
+			return "image/jpg";
+		} else if (pvr.getUrl().endsWith("mp4")) {
+			return "video/mp4";
+		} else if (pvr.getUrl().endsWith("png")) {
+			return "image/png";
+		} else {
+			return "image/gif";
+		}
 	}
 
 	private byte[] getPic(PicViewerRecord pvr) {

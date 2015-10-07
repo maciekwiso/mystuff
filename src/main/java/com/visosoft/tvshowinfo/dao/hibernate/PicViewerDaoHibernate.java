@@ -27,7 +27,7 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 		String query = "select e from PicViewerRecord e order by e.id desc";
 		PicViewerRecord pvr = null;
 		try {
-			pvr = (PicViewerRecord)em.createQuery(query).setFirstResult(1000).setMaxResults(1).getSingleResult();
+			pvr = (PicViewerRecord)em.createQuery(query).setFirstResult(10000).setMaxResults(1).getSingleResult();
 		} catch (NoResultException e) {
 			return;
 		}
@@ -36,15 +36,15 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	}
 
 	@Override
-	public List<PicViewerRecord> selectAll() {
-		String query = "select e from PicViewerRecord e order by e.id";
-		return em.createQuery(query).getResultList();
+	public List<PicViewerRecord> selectAll(String groupName) {
+		String query = "select e from PicViewerRecord e where e.groupName = :groupName order by e.id";
+		return em.createQuery(query).setParameter("groupName", groupName).getResultList();
 	}
 
 	@Override
-	public List<PicViewerRecord> selectUnseen() {
-		String query = "select e from PicViewerRecord e where e.seen=false order by e.id";
-		return em.createQuery(query).getResultList();
+	public List<PicViewerRecord> selectUnseen(String groupName) {
+		String query = "select e from PicViewerRecord e where e.seen=false and e.groupName=:groupName order by e.id";
+		return em.createQuery(query).setParameter("groupName", groupName).getResultList();
 	}
 
 	@Override
@@ -53,9 +53,9 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	}
 
 	@Override
-	public void setAsSeenWithIdLorE(Long id) {
-		String query = "update PicViewerRecord e set e.seen=true where e.id <= :id";
-		em.createQuery(query).setParameter("id", id).executeUpdate();
+	public void setAsSeenWithIdLorE(Long id, String groupName) {
+		String query = "update PicViewerRecord e set e.seen=true where e.id <= :id and e.groupName=:groupName";
+		em.createQuery(query).setParameter("id", id).setParameter("groupName", groupName).executeUpdate();
 	}
 
 	@Override
@@ -79,15 +79,21 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	}
 
 	@Override
-	public List<PicViewerRecord> selectAll(int maxResults) {
-		String query = "select e from PicViewerRecord e order by e.id";
-		return em.createQuery(query).setMaxResults(maxResults).getResultList();
+	public List<PicViewerRecord> selectAll(int maxResults, String groupName) {
+		String query = "select e from PicViewerRecord e where e.groupName=:groupName order by e.id";
+		return em.createQuery(query).setMaxResults(maxResults).setParameter("groupName", groupName).getResultList();
 	}
 
 	@Override
-	public List<PicViewerRecord> selectUnseen(int maxResults) {
-		String query = "select e from PicViewerRecord e where e.seen=false order by e.id";
-		return em.createQuery(query).setMaxResults(maxResults).getResultList();
+	public List<PicViewerRecord> selectUnseen(int maxResults, String groupName) {
+		String query = "select e from PicViewerRecord e where e.seen=false and e.groupName=:groupName order by e.id";
+		return em.createQuery(query).setMaxResults(maxResults).setParameter("groupName", groupName).getResultList();
+	}
+
+	@Override
+	public List<String> selectUnseenGroups() {
+		String query = "select distinct e.groupName from PicViewerRecord e where e.seen=false order by e.groupName";
+		return em.createQuery(query).getResultList();
 	}
 
 }

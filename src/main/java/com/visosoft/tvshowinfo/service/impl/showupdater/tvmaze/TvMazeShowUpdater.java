@@ -81,7 +81,7 @@ public class TvMazeShowUpdater implements ShowUpdater {
                 logger.debug("added episode {}", newEpisodeDomain.toReadableString());
             }
         } catch (ParseException e) {
-            logger.error("Couldn't parse date", e);
+            logger.error("Couldn't parse date for episode: " + newEpisode.getName(), e);
         }
     }
 

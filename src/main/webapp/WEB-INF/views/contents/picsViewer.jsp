@@ -25,4 +25,5 @@
 		</tr>
 	</c:forEach>
 </table>
+    <a href="<c:url value="/picviewer/groups" />">Back</a>
 </center>

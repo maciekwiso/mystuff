@@ -33,6 +33,7 @@
 				<config.persistence.dialect>org.hibernate.dialect.H2Dialect</config.persistence.dialect>
 				<config.persistence.hbm2ddl.auto>create-drop</config.persistence.hbm2ddl.auto>
 				<config.persistence.generateDdl>true</config.persistence.generateDdl>
+				<maven.compiler.executable>C:\Program Files\Java\jdk1.8.0_45\bin\javac</maven.compiler.executable>
 			</properties>
 			<dependencies>
 				<dependency>

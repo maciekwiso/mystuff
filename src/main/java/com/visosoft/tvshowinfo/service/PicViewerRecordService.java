@@ -10,10 +10,11 @@ public interface PicViewerRecordService {
     
     void refresh();
     
-    List<PicViewerRecord> selectAll();
-    List<PicViewerRecord> selectUnseen();
-    List<PicViewerRecord> selectAll(int maxResults);
-    List<PicViewerRecord> selectUnseen(int maxResults);
+    List<PicViewerRecord> selectAll(String groupName);
+    List<PicViewerRecord> selectUnseen(String groupName);
+    List<PicViewerRecord> selectAll(int maxResults, String groupName);
+    List<PicViewerRecord> selectUnseen(int maxResults, String groupName);
     PicViewerRecord selectOne(Long id);
-    void setAsSeenWithIdLorE(Long id);
+    void setAsSeenWithIdLorE(Long id, String groupName);
+    List<String> selectUnseenGroups();
 }

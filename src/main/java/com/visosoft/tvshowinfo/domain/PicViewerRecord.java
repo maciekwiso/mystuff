@@ -11,6 +11,7 @@ public class PicViewerRecord  implements Serializable {
 	private Long id;
 	private String url;
 	private String title;
+    private String groupName;
 	private boolean seen;
 	
 	@Id
@@ -51,10 +52,19 @@ public class PicViewerRecord  implements Serializable {
         this.title = title;
     }
 
-	@Override
+    @Column(name = "picv_group_name", nullable = false)
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    @Override
 	public String toString() {
 		return "PicViewerRecord [id=" + id + ", title=" + title + ", url=" + url + ", seen=" + seen
-				+ "]";
+				+ ", groupName=" + groupName + "]";
 	}
 
     @Transient
