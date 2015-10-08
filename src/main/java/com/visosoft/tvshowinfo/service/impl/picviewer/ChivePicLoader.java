@@ -53,7 +53,7 @@ public class ChivePicLoader implements PicLoader {
         String groupName = matcher.group(1);
         if (groupName.lastIndexOf('(') != -1)
             groupName = groupName.substring(0, groupName.lastIndexOf("(")).trim();
-        groupName = groupName.replaceAll("[^a-zA-Z0-9 ]", "");
+        groupName = groupName.replaceAll("&[0-9A-Za-z]+;", " ").replaceAll("[^a-zA-Z0-9 ]", "");
         matcher = ARTICLE_FIGURE_PATTERN.matcher(contents);
         if (!matcher.find()) {
             logger.warn("Didn't find figure pattern for group {}", groupName);
