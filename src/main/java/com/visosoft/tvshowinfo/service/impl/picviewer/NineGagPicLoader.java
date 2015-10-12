@@ -38,7 +38,7 @@ public class NineGagPicLoader implements PicLoader {
     }
 
     private static String get9gagContents() throws IOException {
-        return Request.Get("http://9gag.com").execute().returnContent().asString();
+        return Request.Get("http://9gag.com").connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
     }
 
     @VisibleForTesting

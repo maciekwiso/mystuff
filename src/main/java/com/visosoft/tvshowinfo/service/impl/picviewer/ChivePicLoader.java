@@ -32,7 +32,7 @@ public class ChivePicLoader implements PicLoader {
     @Override
     public void loadPics() {
         try {
-            String contents = Request.Get("http://thechive.com/").execute().returnContent().asString();
+            String contents = Request.Get("http://thechive.com/").connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
             List<String> articlesUrls = getUrlsForArticles(contents);
             articlesUrls.forEach(this::parseArticleUrl);
         } catch (Exception e) {
