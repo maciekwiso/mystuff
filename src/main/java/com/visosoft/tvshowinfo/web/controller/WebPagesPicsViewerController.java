@@ -8,6 +8,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.fluent.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -90,9 +92,7 @@ public class WebPagesPicsViewerController {
 
 	private byte[] getPic(PicViewerRecord pvr) {
 		try {
-			URL url = new URL(pvr.getUrl());
-			InputStream stream = url.openStream();
-			return ByteStreams.toByteArray(stream);
+			return Request.Get(pvr.getUrl()).connectTimeout(5000).socketTimeout(10000).execute().returnContent().asBytes();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 

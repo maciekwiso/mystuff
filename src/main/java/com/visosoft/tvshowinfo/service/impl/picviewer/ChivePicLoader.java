@@ -85,7 +85,7 @@ public class ChivePicLoader implements PicLoader {
 
     private boolean addPic(String picUrl, String title, String groupName) {
         picUrl = picUrl.substring(0, picUrl.indexOf('?'));
-        if (!picViewerDao.withUrlEndingExists(picUrl)) {
+        if (!picViewerDao.withUrlEndingExists(picUrl.substring(10))) {
             PicViewerRecord picViewerRecord = new PicViewerRecord();
             picViewerRecord.setGroupName(groupName);
             picViewerRecord.setUrl(picUrl);
