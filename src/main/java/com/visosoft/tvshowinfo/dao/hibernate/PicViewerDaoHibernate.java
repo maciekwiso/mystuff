@@ -1,15 +1,18 @@
 package com.visosoft.tvshowinfo.dao.hibernate;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
+import com.google.common.collect.Collections2;
 import org.springframework.stereotype.Repository;
 
 import com.visosoft.tvshowinfo.dao.PicViewerDao;
 import com.visosoft.tvshowinfo.domain.PicViewerRecord;
+import org.springframework.util.CollectionUtils;
 
 @Repository
 public class PicViewerDaoHibernate implements PicViewerDao {
@@ -71,11 +74,7 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	@Override
 	public boolean withUrlEndingExists(String urlEnding) {
 		String query = "select e from PicViewerRecord e where e.url like :url";
-		try {
-			return em.createQuery(query).setParameter("url", "%" + urlEnding).getSingleResult() != null;
-		} catch (NoResultException e) {
-			return false;
-		}
+		return !CollectionUtils.isEmpty(em.createQuery(query).setParameter("url", "%" + urlEnding).getResultList());
 	}
 
 	@Override
