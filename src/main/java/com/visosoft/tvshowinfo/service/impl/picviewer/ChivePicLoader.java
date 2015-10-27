@@ -90,7 +90,7 @@ public class ChivePicLoader implements PicLoader {
             picViewerRecord.setGroupName(groupName);
             picViewerRecord.setUrl(picUrl);
             title = title.replaceAll("\n", " ").trim();
-            picViewerRecord.setTitle(title.substring(0, Math.min(255, title.length())));
+            picViewerRecord.setTitle(title);
             picViewerDao.insert(picViewerRecord);
             return true;
         }
