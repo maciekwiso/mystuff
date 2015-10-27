@@ -41,7 +41,7 @@ public class ChivePicLoader implements PicLoader {
         }
     }
 
-    private void parseArticleUrl(String url) {
+    protected void parseArticleUrl(String url) {
         String contents = null;
         try {
             contents = Request.Get(url).execute().returnContent().asString();
@@ -97,7 +97,7 @@ public class ChivePicLoader implements PicLoader {
         return false;
     }
 
-    private List<String> getUrlsForArticles(String contents) {
+    protected static List<String> getUrlsForArticles(String contents) {
         Matcher matcher = ARTICLE_LINK_PATTERN.matcher(contents);
         List<String> urls = Lists.newArrayList();
         while (matcher.find()) {
@@ -110,7 +110,7 @@ public class ChivePicLoader implements PicLoader {
         return urls;
     }
 
-    private boolean titleIsPhotos(String title) {
+    private static boolean titleIsPhotos(String title) {
         return title.endsWith("Photos)");
     }
 }

@@ -43,7 +43,7 @@ public class PicViewerRecord  implements Serializable {
         this.seen = seen;
     }
     
-    @Column(name = "picv_title", nullable = false)
+    @Column(name = "picv_title", nullable = false, length = 65535)
     public String getTitle() {
         return title;
     }
