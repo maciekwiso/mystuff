@@ -3,6 +3,7 @@ package com.visosoft.tvshowinfo.dao.hibernate;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -94,7 +95,8 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	@Override
 	public List<String> selectUnseenGroups() {
 		String query = "select e.groupName, (select min(p.added) from PicViewerRecord p where p.groupName=e.groupName and p.seen=false) as groupAdded from PicViewerRecord e where e.seen=false group by e.groupName order by groupAdded";
-		return em.createQuery(query).getResultList();
+		List<Object[]> res =  em.createQuery(query).getResultList();
+		return res.stream().map(a -> a[0].toString()).collect(Collectors.toList());
 	}
 
 }
