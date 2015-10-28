@@ -9,6 +9,8 @@
     <appender-ref ref="RollingFileAppender" />
   </appender>
 
+     
+	 
   <appender name="RollingFileAppender"
     class="org.apache.log4j.RollingFileAppender">
     <param name="MaxBackupIndex" value="10" />

@@ -1,6 +1,7 @@
 package com.visosoft.tvshowinfo.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -13,6 +14,7 @@ public class PicViewerRecord  implements Serializable {
 	private String title;
     private String groupName;
 	private boolean seen;
+    private Date added;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -59,6 +61,16 @@ public class PicViewerRecord  implements Serializable {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
+    }
+
+    @Column(name = "picv_added", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date getAdded() {
+        return added;
+    }
+
+    public void setAdded(Date added) {
+        this.added = added;
     }
 
     @Override
