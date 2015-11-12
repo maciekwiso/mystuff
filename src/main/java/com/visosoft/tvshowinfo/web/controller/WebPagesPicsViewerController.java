@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Request;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -42,8 +45,18 @@ public class WebPagesPicsViewerController {
 
 	@RequestMapping(value = "/picviewer/setasseen", method = RequestMethod.GET)
 	public String setAsSeen(@RequestParam("group") String groupName) {
-		picViewerRecordService.setAsSeenWithIdLorE(Long.MAX_VALUE, groupName);
+		setAsSeenInDb(groupName);
 		return "redirect:/picviewer/groups";
+	}
+
+	@RequestMapping(value = "/picviewer/setasseen", method = RequestMethod.POST)
+	public String setAsSeenFromCheckboxes(@RequestParam("seen") String[] groupNames) {
+		Arrays.stream(groupNames).forEach(this::setAsSeenInDb);
+		return "redirect:/picviewer/groups";
+	}
+
+	private void setAsSeenInDb(String groupName) {
+		picViewerRecordService.setAsSeenWithIdLorE(Long.MAX_VALUE, groupName);
 	}
 
 	@RequestMapping(value = "/picviewer/groups", method = RequestMethod.GET)

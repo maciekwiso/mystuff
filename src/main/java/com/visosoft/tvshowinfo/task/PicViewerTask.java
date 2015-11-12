@@ -12,7 +12,7 @@ public class PicViewerTask {
 	@Autowired
 	private PicViewerRecordService picViewerRecordService;
 	
-	@Scheduled(cron = "0 0/3 * * * ?")
+	@Scheduled(cron = "0 0/5 * * * ?")
 	public void run() {
 		picViewerRecordService.refresh();
 	}

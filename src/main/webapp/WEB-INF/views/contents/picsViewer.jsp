@@ -19,8 +19,8 @@
                 </c:otherwise>
                 </c:choose>
 			<br />
-			${item.title}<br />
-			${item.url}
+			<div style="width:600px;">${item.title}</div>
+			<div>${item.url}</div>
 			</td>
 		</tr>
 	</c:forEach>
