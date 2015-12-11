@@ -44,7 +44,7 @@ public class ChivePicLoader implements PicLoader {
     protected void parseArticleUrl(String url) {
         String contents = null;
         try {
-            contents = Request.Get(url).execute().returnContent().asString();
+            contents = Request.Get(url).connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
