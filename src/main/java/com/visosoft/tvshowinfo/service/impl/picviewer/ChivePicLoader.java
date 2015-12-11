@@ -16,7 +16,8 @@ public class ChivePicLoader implements PicLoader {
 
     private static final Logger logger = LoggerFactory.getLogger(ChivePicLoader.class);
 
-    private static final Pattern ARTICLE_LINK_PATTERN = Pattern.compile("<h1 class=\"post-title entry-title\" itemprop=\"headline\"><a .*?href=\"(.*?)\".*?>(.*?)</a></h1>");
+    private static final Pattern ARTICLE_FEAT_LINK_PATTERN = Pattern.compile("card-main-info.*?<a .*?href=\"(.*?)\".*?>(.*?)</a>", Pattern.DOTALL);
+    private static final Pattern ARTICLE_LINK_PATTERN = Pattern.compile("<h3 class=\"post-title entry-title card-title\" itemprop=\"headline\"><a .*?href=\"(.*?)\".*?>(.*?)</a>");
     private static final Pattern ARTICLE_TITLE_PATTERN = Pattern.compile("<title>(.*?)</");
     private static final Pattern ARTICLE_FIGURE_PATTERN = Pattern.compile("<figure(.*)</figure>", Pattern.DOTALL);
     private static final Pattern ARTICLE_IMG_TAG_PATTERN = Pattern.compile("<img(.*?)/>", Pattern.DOTALL);
@@ -98,8 +99,16 @@ public class ChivePicLoader implements PicLoader {
     }
 
     protected static List<String> getUrlsForArticles(String contents) {
-        Matcher matcher = ARTICLE_LINK_PATTERN.matcher(contents);
         List<String> urls = Lists.newArrayList();
+        Matcher featMatcher = ARTICLE_FEAT_LINK_PATTERN.matcher(contents);
+        if (featMatcher.find()) {
+            String title = featMatcher.group(2);
+            String url = featMatcher.group(1);
+            if (url.contains("http://thechive") && titleIsPhotos(title)) {
+                urls.add(url);
+            }
+        }
+        Matcher matcher = ARTICLE_LINK_PATTERN.matcher(contents);
         while (matcher.find()) {
             String title = matcher.group(2);
             String url = matcher.group(1);

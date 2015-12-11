@@ -34,6 +34,9 @@
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tvshowinfo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,16 +59,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PicViewerIntegrationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/PicViewerIntegrationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PicViewerDaoHibernate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,7 +85,7 @@
       <file leaf-file-name="groupsPicsViewer.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/groupsPicsViewer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
+            <state vertical-scroll-proportion="0.0">
               <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding />
             </state>
@@ -132,18 +125,38 @@
       <file leaf-file-name="root-context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.481482">
+            <state vertical-scroll-proportion="0.0">
               <caret line="88" column="68" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TvMazeShowUpdater.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TvMazeShowUpdater.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/showupdater/tvmaze/TvMazeShowUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6616162">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChivePicLoaderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChivePicLoader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4548495">
+              <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -210,8 +223,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/NineGagPicLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java" />
         <option value="$PROJECT_DIR$/src/test/resources/picviewer-context.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -221,6 +232,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/groupsPicsViewer.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/web/controller/WebPagesPicsViewerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/task/PicViewerTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" />
       </list>
     </option>
   </component>
@@ -315,8 +328,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1031,6 +1042,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1072,33 +1085,7 @@
       <recent name="com.visosoft.tvshowinfo.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PicViewerIntegrationTest.test">
-    <configuration default="false" name="TvMazeShowUpdaterTest.testUpdater" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.visosoft.tvshowinfo.service.impl.showupdater.tvmaze.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tvshowinfo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.visosoft.tvshowinfo.service.impl.showupdater.tvmaze" />
-      <option name="MAIN_CLASS_NAME" value="com.visosoft.tvshowinfo.service.impl.showupdater.tvmaze.TvMazeShowUpdaterTest" />
-      <option name="METHOD_NAME" value="testUpdater" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ChivePicLoaderTest.testLoadGalleries">
     <configuration default="false" name="ChivePicLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1184,6 +1171,32 @@
       <option name="PACKAGE_NAME" value="com.visosoft.tvshowinfo.service.impl" />
       <option name="MAIN_CLASS_NAME" value="com.visosoft.tvshowinfo.service.impl.PicViewerIntegrationTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ChivePicLoaderTest.testLoadGalleries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.visosoft.tvshowinfo.service.impl.picviewer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tvshowinfo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.visosoft.tvshowinfo.service.impl.picviewer" />
+      <option name="MAIN_CLASS_NAME" value="com.visosoft.tvshowinfo.service.impl.picviewer.ChivePicLoaderTest" />
+      <option name="METHOD_NAME" value="testLoadGalleries" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1471,19 +1484,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TvMazeShowUpdaterTest.testUpdater" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ChivePicLoader" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PicViewerRecordServiceImplTest.tt" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadPics" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PicViewerIntegrationTest.test" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ChivePicLoader" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PicViewerRecordServiceImplTest.tt" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadPics" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PicViewerIntegrationTest.test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadGalleries" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PicViewerIntegrationTest.test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadPics" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PicViewerRecordServiceImplTest.tt" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ChivePicLoader" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TvMazeShowUpdaterTest.testUpdater" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadGalleries" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PicViewerIntegrationTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ChivePicLoaderTest.testLoadPics" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PicViewerRecordServiceImplTest.tt" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ChivePicLoader" />
       </list>
     </recent_temporary>
   </component>
@@ -1540,6 +1553,7 @@
       <workItem from="1446063046771" duration="5211000" />
       <workItem from="1447361328597" duration="2863000" />
       <workItem from="1449602345549" duration="216000" />
+      <workItem from="1449865446435" duration="1130000" />
     </task>
     <task id="LOCAL-00001" summary="Changed dataSource to a pooled one">
       <created>1435698853787</created>
@@ -1551,7 +1565,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77937000" />
+    <option name="totallyTimeSpent" value="79067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1559,34 +1573,34 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15991472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32756758" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39891893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39891893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32756758" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1804,13 +1818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22895622">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5875139">
@@ -1898,13 +1905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="87" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51264757">
@@ -1948,7 +1948,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/groupsPicsViewer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
@@ -1980,7 +1980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.481482">
+        <state vertical-scroll-proportion="0.0">
           <caret line="88" column="68" selection-start-line="88" selection-start-column="68" selection-end-line="88" selection-end-column="68" />
           <folding />
         </state>
@@ -1996,8 +1996,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/showupdater/tvmaze/TvMazeShowUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6616162">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4548495">
+          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
           <folding />
         </state>
       </provider>
