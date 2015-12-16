@@ -1,6 +1,7 @@
 package com.visosoft.tvshowinfo.service.impl;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.net.URL;
 
 import javax.xml.transform.stream.StreamSource;
@@ -18,6 +19,14 @@ public class XMLUnmarshallerImpl implements XMLUnmarshaller {
 
 	@Autowired
 	private Unmarshaller unmarshaller;
+
+	public XMLUnmarshallerImpl() {
+		//
+	}
+
+	public XMLUnmarshallerImpl(Unmarshaller unmarshaller) {
+		this.unmarshaller = unmarshaller;
+	}
 	
 	private static final Logger logger = LoggerFactory.getLogger(XMLUnmarshallerImpl.class);
 	
@@ -29,6 +38,16 @@ public class XMLUnmarshallerImpl implements XMLUnmarshaller {
 			logger.error("Problem with unmarshalling url: " + url.toExternalForm(), e);
 		}
         return null;
+	}
+
+	@Override
+	public <T> T unmarshall(String xml, Class<?> XMLMapperclass) {
+		try {
+			return (T)unmarshaller.unmarshal(new StreamSource(new StringReader(xml)));
+		} catch (XmlMappingException | IOException e) {
+			logger.error("Problem with unmarshalling xml string: " + xml, e);
+		}
+		return null;
 	}
 
 }
