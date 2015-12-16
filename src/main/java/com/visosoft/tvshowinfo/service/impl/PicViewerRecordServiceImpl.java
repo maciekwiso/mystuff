@@ -3,7 +3,9 @@ package com.visosoft.tvshowinfo.service.impl;
 import java.util.List;
 
 import com.google.common.collect.ImmutableList;
+import com.visosoft.tvshowinfo.service.XMLUnmarshaller;
 import com.visosoft.tvshowinfo.service.impl.picviewer.ChivePicLoader;
+import com.visosoft.tvshowinfo.service.impl.picviewer.KickAssTorrentzMoviesLoader;
 import com.visosoft.tvshowinfo.service.impl.picviewer.NineGagPicLoader;
 import com.visosoft.tvshowinfo.service.impl.picviewer.PicLoader;
 import org.slf4j.Logger;
@@ -27,11 +29,14 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     @Autowired
     private PicViewerDao picViewerDao;
 
+    @Autowired
+    private XMLUnmarshaller xmlUnmarshaller;
+
     private List<PicLoader> picLoaders;
 
     @PostConstruct
     public void init() {
-        picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao));
+        picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao), new KickAssTorrentzMoviesLoader(xmlUnmarshaller, picViewerDao));
     }
 
     @Override

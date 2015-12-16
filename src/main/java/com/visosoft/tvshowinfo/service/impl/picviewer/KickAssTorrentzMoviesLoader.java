@@ -26,7 +26,7 @@ public class KickAssTorrentzMoviesLoader implements PicLoader {
     private final String rssUrl = "https://kat.cr/movies/?rss=1";
     private final PicViewerDao picViewerDao;
 
-    public KickAssTorrentzMoviesLoader(XMLUnmarshaller xmlUnmarshaller, PicViewerDao picViewerDao) throws MalformedURLException {
+    public KickAssTorrentzMoviesLoader(XMLUnmarshaller xmlUnmarshaller, PicViewerDao picViewerDao) {
         this.xmlUnmarshaller = xmlUnmarshaller;
         this.picViewerDao = picViewerDao;
     }

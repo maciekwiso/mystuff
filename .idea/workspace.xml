@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="870d7f92-b7f1-4482-8b06-160a30b7084f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoaderTest.java" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\.idea\libraries\Maven__antlr_antlr_2_7_6.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\.idea\libraries\Maven__asm_asm_3_1.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\.idea\libraries\Maven__c3p0_c3p0_0_9_1.xml" afterPath="" />
@@ -36,11 +34,8 @@
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/XMLUnmarshaller.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/XMLUnmarshaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
     </list>
     <ignored path="tvshowinfo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,11 +116,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PicViewerRecordServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="169" selection-start-line="38" selection-start-column="169" selection-end-line="38" selection-end-column="169" />
+              <folding>
+                <element signature="e#2427#2428#0" expanded="true" />
+                <element signature="e#2483#2484#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KickAssTorrentzMoviesLoader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3411371">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.26532888">
+              <caret line="28" column="98" selection-start-line="28" selection-start-column="98" selection-end-line="28" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -218,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/PicParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/NineGagPicParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/PicLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/NineGagPicLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java" />
@@ -235,8 +242,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/XMLUnmarshaller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" />
       </list>
     </option>
   </component>
@@ -1518,7 +1526,7 @@
       <workItem from="1449602345549" duration="216000" />
       <workItem from="1449865446435" duration="1130000" />
       <workItem from="1450047294593" duration="38000" />
-      <workItem from="1450300305126" duration="5435000" />
+      <workItem from="1450300305126" duration="5598000" />
     </task>
     <task id="LOCAL-00001" summary="Changed dataSource to a pooled one">
       <created>1435698853787</created>
@@ -1530,7 +1538,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84540000" />
+    <option name="totallyTimeSpent" value="84703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1790,13 +1798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51264757">
-          <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/PicViewerIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1891,14 +1892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33277312">
           <caret line="173" column="46" selection-start-line="173" selection-start-column="46" selection-end-line="173" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="87" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -2005,10 +1998,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="169" selection-start-line="38" selection-start-column="169" selection-end-line="38" selection-end-column="169" />
+          <folding>
+            <element signature="e#2427#2428#0" expanded="true" />
+            <element signature="e#2483#2484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3411371">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.26532888">
+          <caret line="28" column="98" selection-start-line="28" selection-start-column="98" selection-end-line="28" selection-end-column="98" />
           <folding />
         </state>
       </provider>
