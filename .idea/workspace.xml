@@ -31,22 +31,11 @@
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\.idea\libraries\Maven__org_springframework_spring_webmvc_3_1_3_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\diy\index.html" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\diy\testrubyserver.rb" afterPath="" />
-      <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\kat\Channel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\kat\Enclosure.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\kat\Item.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\kat\ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\kat\Rss.java" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\z.xsd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/picsViewer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/picsViewer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\main\java\com\visosoft\tvshowinfo\service\impl\picviewer\KickAssTorrentzMoviesLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoader.java" />
-      <change type="MOVED" beforePath="D:\javaStuff\znewtvshowinfo\diy\src\test\java\com\visosoft\tvshowinfo\service\impl\picviewer\KickAssTorrentzMoviesLoaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
     </list>
     <ignored path="tvshowinfo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,20 +63,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="root-context.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="81" column="91" selection-start-line="81" selection-start-column="91" selection-end-line="81" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChivePicLoaderTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChivePicLoaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.42857143">
               <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding />
             </state>
@@ -124,11 +103,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DvdBlueRayReleasesLoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DvdBlueRayReleasesLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4488636">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rss.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/moviesreleases/Rss.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -230,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/web/controller/WebPagesPicsViewerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/task/PicViewerTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/XMLUnmarshaller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/XMLUnmarshallerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java" />
@@ -240,6 +228,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/KickAssTorrentzMoviesLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
       </list>
     </option>
   </component>
@@ -843,6 +832,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="picviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tvshowinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tvshowinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="picviewer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moviesreleases" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1481,7 +1512,7 @@
       <workItem from="1450047294593" duration="38000" />
       <workItem from="1450300305126" duration="6446000" />
       <workItem from="1450813058870" duration="639000" />
-      <workItem from="1451333972614" duration="2344000" />
+      <workItem from="1451333972614" duration="3340000" />
     </task>
     <task id="LOCAL-00001" summary="Changed dataSource to a pooled one">
       <created>1435698853787</created>
@@ -1493,7 +1524,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88534000" />
+    <option name="totallyTimeSpent" value="89530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1516,11 +1547,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3264865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39891893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39891893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1529,7 +1561,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1844,14 +1875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="91" selection-start-line="81" selection-start-column="91" selection-end-line="81" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4750499">
@@ -1922,14 +1945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/PicViewerRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1948,8 +1963,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4488636">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/moviesreleases/Rss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34935305">
+          <caret line="81" column="102" selection-start-line="81" selection-start-column="102" selection-end-line="81" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42857143">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>

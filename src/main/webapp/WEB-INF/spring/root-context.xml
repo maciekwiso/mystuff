@@ -79,7 +79,7 @@
 	<oxm:jaxb2-marshaller id="marshaller">
  		<oxm:class-to-be-bound name="com.visosoft.tvshowinfo.service.impl.showupdater.tvrage.ShowXmlTVRage"/>
  		<oxm:class-to-be-bound name="com.visosoft.tvshowinfo.service.impl.showupdater.tvrage.SearchResultsTVRage"/>
- 		<oxm:class-to-be-bound name="com.visosoft.tvshowinfo.service.impl.picviewer.kat.Rss"/>
+ 		<oxm:class-to-be-bound name="com.visosoft.tvshowinfo.service.impl.picviewer.moviesreleases.Rss"/>
  	</oxm:jaxb2-marshaller>
 	
 	<beans:bean id="showUpdaterResolverService" class="com.visosoft.tvshowinfo.service.impl.ShowUpdaterResolverServiceImpl">
