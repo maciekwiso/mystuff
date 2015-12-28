@@ -20,7 +20,7 @@
                 </c:choose>
 			<br />
 			<div style="width:600px;">${item.title}</div>
-			<div>${item.url}</div>
+            <div><a href="${item.url}" target="_new">${item.url}</a></div>
 			</td>
 		</tr>
 	</c:forEach>
