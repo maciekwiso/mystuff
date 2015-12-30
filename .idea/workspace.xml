@@ -35,7 +35,7 @@
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\EmailQueueServiceImpl$6.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\target\classes\com\visosoft\tvshowinfo\service\impl\ShowServiceImpl$2.class" afterPath="" />
       <change type="DELETED" beforePath="D:\javaStuff\znewtvshowinfo\diy\z.xsd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java" afterPath="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java" />
     </list>
     <ignored path="tvshowinfo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChivePicLoaderTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChivePicLoaderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42857143">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PicViewerDaoHibernate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4789916">
+              <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -213,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/domain/PicViewerRecord.java" />
         <option value="$PROJECT_DIR$/src/test/resources/picviewer-context.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/PicViewerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/groupsPicsViewer.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/web/controller/WebPagesPicsViewerController.java" />
@@ -229,6 +238,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/DvdBlueRayReleasesLoaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java" />
       </list>
     </option>
   </component>
@@ -1512,7 +1522,7 @@
       <workItem from="1450047294593" duration="38000" />
       <workItem from="1450300305126" duration="6446000" />
       <workItem from="1450813058870" duration="639000" />
-      <workItem from="1451333972614" duration="3340000" />
+      <workItem from="1451333972614" duration="4368000" />
     </task>
     <task id="LOCAL-00001" summary="Changed dataSource to a pooled one">
       <created>1435698853787</created>
@@ -1524,11 +1534,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89530000" />
+    <option name="totallyTimeSpent" value="90558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1786,13 +1796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="98" selection-start-line="96" selection-start-column="98" selection-end-line="96" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/task/PicViewerTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2866779">
@@ -1987,8 +1990,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/visosoft/tvshowinfo/service/impl/picviewer/ChivePicLoaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/visosoft/tvshowinfo/dao/hibernate/PicViewerDaoHibernate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4789916">
+          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
           <folding />
         </state>
       </provider>

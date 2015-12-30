@@ -33,7 +33,7 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 		String query = "select e from PicViewerRecord e order by e.id desc";
 		PicViewerRecord pvr = null;
 		try {
-			pvr = (PicViewerRecord)em.createQuery(query).setFirstResult(10000).setMaxResults(1).getSingleResult();
+			pvr = (PicViewerRecord)em.createQuery(query).setFirstResult(20000).setMaxResults(1).getSingleResult();
 		} catch (NoResultException e) {
 			return;
 		}
