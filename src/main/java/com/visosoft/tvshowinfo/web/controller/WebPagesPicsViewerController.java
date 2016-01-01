@@ -30,7 +30,7 @@ public class WebPagesPicsViewerController {
 	
 	@RequestMapping(value = "/picviewer/showunseen", method = RequestMethod.GET)
 	public String displayUnseen(@RequestParam("group") String groupName, ModelMap model) {
-		List<PicViewerRecord> pics = picViewerRecordService.selectUnseen(50, groupName);
+		List<PicViewerRecord> pics = picViewerRecordService.selectUnseen(20, groupName);
 		setAsSeen(pics, groupName);
 		model.put("pics", pics);
 		return "picviewer";
