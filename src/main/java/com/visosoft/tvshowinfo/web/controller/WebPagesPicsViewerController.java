@@ -49,6 +49,12 @@ public class WebPagesPicsViewerController {
 		return "redirect:/picviewer/groups";
 	}
 
+	@RequestMapping(value = "/picviewer/moveUp", method = RequestMethod.GET)
+	public String moveGroupUp(@RequestParam("group") String groupName) {
+		picViewerRecordService.setGroupDateToDateZero(groupName);
+		return "redirect:/picviewer/groups";
+	}
+
 	@RequestMapping(value = "/picviewer/setasseen", method = RequestMethod.POST)
 	public String setAsSeenFromCheckboxes(@RequestParam("seen") String[] groupNames) {
 		Arrays.stream(groupNames).forEach(this::setAsSeenInDb);

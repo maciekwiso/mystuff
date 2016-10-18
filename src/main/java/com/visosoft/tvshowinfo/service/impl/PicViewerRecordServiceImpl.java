@@ -78,6 +78,11 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     }
 
     @Override
+    public void setGroupDateToDateZero(String groupName) {
+        picViewerDao.setGroupDateToDateZero(groupName);
+    }
+
+    @Override
     public List<PicViewerRecord> selectAll(int maxResults, String groupName) {
         return picViewerDao.selectAll(maxResults, groupName);
     }

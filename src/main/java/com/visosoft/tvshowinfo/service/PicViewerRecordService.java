@@ -17,4 +17,6 @@ public interface PicViewerRecordService {
     PicViewerRecord selectOne(Long id);
     void setAsSeenWithIdLorE(Long id, String groupName);
     List<String> selectUnseenGroups();
+
+    void setGroupDateToDateZero(String groupName);
 }

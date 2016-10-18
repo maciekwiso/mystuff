@@ -20,4 +20,6 @@ public interface PicViewerDao {
 	List<PicViewerRecord> selectUnseen(int maxResults, String groupName);
 
     List<String> selectUnseenGroups();
+
+    void setGroupDateToDateZero(String groupName);
 }

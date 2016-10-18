@@ -5,7 +5,7 @@
 <h1>Pics Viewer</h1>
 <center>
 <table>
-	<c:forEach var="item" items="${pics}">
+	<c:forEach var="item" items="${pics}" varStatus="loop">
 		<tr>
 			<td>
                 <c:choose>
@@ -19,7 +19,7 @@
                 </c:otherwise>
                 </c:choose>
 			<br />
-			<div style="width:600px;">${item.title}</div>
+			<div style="width:600px;">${loop.index}. ${item.title}</div>
             <div><a href="${item.url}" target="_new">${item.url}</a></div>
 			</td>
 		</tr>

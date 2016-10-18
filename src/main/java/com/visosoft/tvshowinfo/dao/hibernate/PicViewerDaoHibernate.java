@@ -99,4 +99,10 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 		return res.stream().map(a -> a[0].toString()).collect(Collectors.toList());
 	}
 
+	@Override
+	public void setGroupDateToDateZero(String groupName) {
+		String query = "update PicViewerRecord e set e.added=:newDate where e.groupName=:groupName";
+		em.createQuery(query).setParameter("newDate", new Date(116, 1, 1)).setParameter("groupName", groupName).executeUpdate();
+	}
+
 }
