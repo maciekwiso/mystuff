@@ -23,15 +23,16 @@
 	}
 </style>
 <script>
-function selectPrevious(toValue) {
+function selectNext(fromNextValue) {
 var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;
+var foundTheValue = false;
 for (var i = 0; i < inputs.length; i++) {
   if (inputs[i].type == "checkbox") {
-    if (inputs[i].value == toValue) {
-		break;
+    if (inputs[i].value != '9gag' && foundTheValue)
+    	inputs[i].checked = true;
+    if (inputs[i].value == fromNextValue) {
+		foundTheValue = true;
     }
-	if (inputs[i].value != '9gag')
-		inputs[i].checked = true;
   }
 }
 }
@@ -44,7 +45,7 @@ for (var i = 0; i < inputs.length; i++) {
 		<tr>
 			<td>
                 <a href="<c:url value="/picviewer/showunseen?group=${item}" />">${item}</a> |
-				<a href="<c:url value="/picviewer/setasseen?group=${item}" />">set as seen</a> | <input type="checkbox" name="seen" value="${item}"/> | <a href="javascript:;" onClick="selectPrevious('${item}')">previous as seen</a>
+				<a href="<c:url value="/picviewer/setasseen?group=${item}" />">set as seen</a> | <input type="checkbox" name="seen" value="${item}"/> | <a href="javascript:;" onClick="selectNext('${item}')">next as seen</a>
 			</td>
 		</tr>
 	</c:forEach>
