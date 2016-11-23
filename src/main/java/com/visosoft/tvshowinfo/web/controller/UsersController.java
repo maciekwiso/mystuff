@@ -229,7 +229,7 @@ public class UsersController {
 	}
 
 	@RequestMapping(value = "addnewsub/{userId}/{showId}", method = RequestMethod.GET)
-	public String addNewSub(@PathVariable long userId, @PathVariable String showId) {
+	public String addNewSub(@PathVariable long userId, @PathVariable long showId) {
 		UserSubscription newSub = new UserSubscription();
 		newSub.setEnabled(true);
 		newSub.setEmailEnabled(false);
