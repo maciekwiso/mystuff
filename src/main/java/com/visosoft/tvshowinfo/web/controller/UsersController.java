@@ -1,9 +1,7 @@
 package com.visosoft.tvshowinfo.web.controller;
 
-import java.util.Date;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -211,10 +209,13 @@ public class UsersController {
 		} else {
 			LOG.info("Showing subscriptions of user: {}", s);
 			model.put("user", s);
-			model.put("subs", userSubscriptionService.selectAll(s));
+			List<UserSubscription> subs = userSubscriptionService.selectAll(s);
+			model.put("subs", subs);
 			if (!model.containsKey("showName")) {
 				model.put("showName", "");
 			}
+			Set<Long> existingShows = subs.stream().map(a -> a.getShow().getId()).collect(Collectors.toSet());
+			model.put("shows", showService.selectAll().stream().filter(a -> !existingShows.contains(a.getId())).collect(Collectors.toList()));
 		}
 		return "addsub";
 	}
@@ -225,6 +226,17 @@ public class UsersController {
 		model.put("searchResults", searchResults);
 		model.put("showName", showName);
 		return addSub(userId, model);
+	}
+
+	@RequestMapping(value = "addnewsub/{userId}/{showId}", method = RequestMethod.GET)
+	public String addNewSub(@PathVariable long userId, @PathVariable String showId) {
+		UserSubscription newSub = new UserSubscription();
+		newSub.setEnabled(true);
+		newSub.setEmailEnabled(false);
+		newSub.setUser(userService.selectOne(userId));
+		newSub.setShow(showService.selectOne(showId));
+		userSubscriptionService.insert(newSub);
+		return "redirect:/usersubs/" + userId;
 	}
 	
 	@RequestMapping(value = "addselectedusersub/{userId}/{showName}/{showUpdaterId}/{showId}/{emailEnabled}", method = RequestMethod.GET)

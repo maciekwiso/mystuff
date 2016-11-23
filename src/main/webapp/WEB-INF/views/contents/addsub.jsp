@@ -32,8 +32,8 @@
 			<a href="<c:url value="/addselectedusersub/${user.id}/${item.name}/${item.showUpdaterId}/${item.showId}/1" />">Add (with email)</a></td>
 		</tr>
 	</c:forEach>
-</c:if>	
-	<tr>
+</c:if>
+    <tr>
 		<td colspan="5">Current subscriptions</td>
 	</tr>
 	<tr>
@@ -46,6 +46,19 @@
 			<td>${item.show.title}</td>
 			<td>${item.enabled}</td>
 			<td>${item.emailEnabled}</td>
+		</tr>
+	</c:forEach>
+	<tr>
+		<td colspan="5">Add subscription</td>
+	</tr>
+	<tr>
+		<td colspan="2">Show</td>
+		<td>Action</td>
+	</tr>
+	<c:forEach var="item" items="${shows}">
+		<tr>
+			<td colspan="2">${item.title}</td>
+			<td><a href="<c:url value="/addnewsub/${user.id}/${item.id}" />">Add</a></td>
 		</tr>
 	</c:forEach>
 </table>

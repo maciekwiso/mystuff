@@ -38,6 +38,10 @@
 	<definition name="editshow" extends="template-main">
 		<put-attribute name="primary-content" value="/WEB-INF/views/contents/editshow.jsp" />
 	</definition>
+
+	<definition name="addshow" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/views/contents/addshow.jsp" />
+	</definition>
 	
 	<definition name="users" extends="template-main">
 		<put-attribute name="primary-content" value="/WEB-INF/views/contents/users.jsp" />

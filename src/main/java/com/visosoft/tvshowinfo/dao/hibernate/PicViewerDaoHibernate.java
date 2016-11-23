@@ -24,7 +24,8 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	
 	@Override
 	public void insert(PicViewerRecord s) {
-		s.setAdded(new Date());
+		if (s.getAdded() == null)
+			s.setAdded(new Date());
 		em.persist(s);
 	}
 

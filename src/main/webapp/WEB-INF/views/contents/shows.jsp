@@ -8,6 +8,9 @@
 		<td colspan="5"><a href="deleteunsubscribedshows">Delete unsubscribed shows</a></td>
 	</tr>
 	<tr>
+    	<td colspan="5"><a href="addshow">Add</a></td>
+    </tr>
+	<tr>
 		<td>ID</td>
 		<td>Name</td>
 		<td>URL</td>

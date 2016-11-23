@@ -1,7 +1,9 @@
 package com.visosoft.tvshowinfo.web.controller;
 
+import java.util.Date;
 import java.util.List;
 
+import com.visosoft.tvshowinfo.service.ShowsDataUpdaterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,8 @@ public class ShowsController {
 	
 	@Autowired
 	private ShowService showService;
+
+	@Autowired private ShowsDataUpdaterService showsDataUpdaterService;
 	
 	@Autowired
 	private EpisodeService episodeService;
@@ -77,5 +81,23 @@ public class ShowsController {
 		show.setUrl(editedShow.getUrl());
 		showService.update(show);
 		LOG.info("Updated show: {}", show);
+	}
+
+	@RequestMapping(value = "addshow", method = RequestMethod.GET)
+	public String addShow(ModelMap model) {
+		model.addAttribute("show", new Show());
+		return "addshow";
+	}
+
+	@RequestMapping(value = "addshow", method = RequestMethod.POST)
+	public String saveAddShow(@ModelAttribute("show") Show show, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			LOG.info("There were errors on adding show");
+			return "addshow";
+		}
+		show.setLastUpdated(new Date());
+		showService.insert(show);
+		showsDataUpdaterService.updateShow(show);
+		return "redirect:/shows";
 	}
 }

@@ -1,5 +1,6 @@
 package com.visosoft.tvshowinfo.service.impl.picviewer;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.visosoft.tvshowinfo.dao.PicViewerDao;
 import com.visosoft.tvshowinfo.domain.PicViewerRecord;
@@ -8,7 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,6 +29,25 @@ public class ChivePicLoader implements PicLoader {
     private static final Pattern ARTICLE_IMG_GIF_PATTERN = Pattern.compile("alt=\"(.*?)\".*?data-gifsrc=\"(.*?)\"", Pattern.DOTALL);
 
     private final PicViewerDao picViewerDao;
+    private final Map<String, String> specialCases = ImmutableMap.<String, String>builder()
+            .put("FLBP", "FLBP")
+            .put("Choose tugs", "FLBP")
+            .put("Bras", "FLBP")
+            .put("burn Bra", "FLBP")
+            .put("squishy", "FLBP")
+            .put("big boobs", "FLBP")
+            .put("tug life", "FLBP")
+            .put("tight dress", "tight dress")
+            .put("Cat saturday", "Cat saturday")
+            .put("lowbrow humor", "lowbrow humor")
+            .put("meme", "memes")
+            .put("best photos", "best photos")
+            .put("dma", "best photos")
+            .put("Daily Afternoon Randomness", "best photos")
+            .put("Daily Morning Awesomeness", "best photos")
+            .put("DGAF", "best photos")
+            .put("shit hit", "best photos")
+            .build();
 
     public ChivePicLoader(PicViewerDao picViewerDao) {
         this.picViewerDao = picViewerDao;
@@ -59,6 +82,13 @@ public class ChivePicLoader implements PicLoader {
         if (!matcher.find()) {
             logger.warn("Didn't find figure pattern for group {}", groupName);
         } else {
+            Date theDate = null;
+            final String finalGroupName = groupName;
+            Optional<String> foundSpecialCaseGroupName = specialCases.entrySet().stream().filter(e -> finalGroupName.contains(e.getKey())).map(Map.Entry::getValue).findFirst();
+            if (foundSpecialCaseGroupName.isPresent()) {
+                groupName = foundSpecialCaseGroupName.get();
+                theDate = new Date(116, 1, 1);
+            }
             String allPicsStr = matcher.group(1);
             matcher = ARTICLE_IMG_TAG_PATTERN.matcher(allPicsStr);
             int added = 0;
@@ -77,14 +107,14 @@ public class ChivePicLoader implements PicLoader {
                         title = matcherPic.group(2);
                     }
                 }
-                if (picUrl != null && addPic(picUrl, title, groupName))
+                if (picUrl != null && addPic(picUrl, title, groupName, theDate))
                     added++;
             }
             logger.info("Added pics for the chive for article {}: {}", groupName, added);
         }
     }
 
-    private boolean addPic(String picUrl, String title, String groupName) {
+    private boolean addPic(String picUrl, String title, String groupName, Date theDate) {
         picUrl = picUrl.substring(0, picUrl.indexOf('?'));
         if (!picViewerDao.withUrlEndingExists(picUrl.substring(10))) {
             PicViewerRecord picViewerRecord = new PicViewerRecord();
@@ -92,6 +122,7 @@ public class ChivePicLoader implements PicLoader {
             picViewerRecord.setUrl(picUrl);
             title = title.replaceAll("\n", " ").trim();
             picViewerRecord.setTitle(title);
+            picViewerRecord.setAdded(theDate);
             picViewerDao.insert(picViewerRecord);
             return true;
         }

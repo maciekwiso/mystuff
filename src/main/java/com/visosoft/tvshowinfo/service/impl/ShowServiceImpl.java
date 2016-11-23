@@ -84,26 +84,31 @@ public class ShowServiceImpl implements ShowService,ShowsDataUpdaterService {
 			});
 		
         for (final Show s : list) {
-        	logger.debug("Resolving updater for show: " + s);
-            final ShowUpdater updater = showUpdaterResolverService.resolve(s);
-            if (updater == null) {
-            	logger.error("Couldn't resolve updater");
-            	continue;
-            }
-            tt.execute(new TransactionCallbackWithoutResult() {
-    			
-    			@Override
-    			protected void doInTransactionWithoutResult(TransactionStatus status) {
-    				try {
-    					if (!updater.updateShow(s)) {
-    						logger.error("Error on updating show's data: " + s.getTitle());
-    					}
-    				}  catch (RuntimeException e) {
-    					status.setRollbackOnly();
-    					logger.error("Rolledback. Exception while updating show " + s, e);
-    				}
-    			}});
+			updateShow(s);
         }
+	}
+
+	@Override
+	public void updateShow(Show s) {
+		logger.debug("Resolving updater for show: " + s);
+		final ShowUpdater updater = showUpdaterResolverService.resolve(s);
+		if (updater == null) {
+			logger.error("Couldn't resolve updater");
+			return;
+		}
+		tt.execute(new TransactionCallbackWithoutResult() {
+
+			@Override
+			protected void doInTransactionWithoutResult(TransactionStatus status) {
+				try {
+					if (!updater.updateShow(s)) {
+						logger.error("Error on updating show's data: " + s.getTitle());
+					}
+				}  catch (RuntimeException e) {
+					status.setRollbackOnly();
+					logger.error("Rolledback. Exception while updating show " + s, e);
+				}
+			}});
 	}
 
 	@Override
