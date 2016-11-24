@@ -30,22 +30,22 @@ public class ChivePicLoader implements PicLoader {
 
     private final PicViewerDao picViewerDao;
     private final Map<String, String> specialCases = ImmutableMap.<String, String>builder()
-            .put("FLBP", "FLBP")
-            .put("Choose tugs", "FLBP")
-            .put("Bras", "FLBP")
-            .put("burn Bra", "FLBP")
+            .put("flbp", "FLBP")
+            .put("choose tugs", "FLBP")
+            .put("bras", "FLBP")
+            .put("burn bra", "FLBP")
             .put("squishy", "FLBP")
             .put("big boobs", "FLBP")
             .put("tug life", "FLBP")
             .put("tight dress", "tight dress")
-            .put("Cat saturday", "Cat saturday")
+            .put("cat saturday", "Cat saturday")
             .put("lowbrow humor", "lowbrow humor")
             .put("meme", "memes")
             .put("best photos", "best photos")
             .put("dma", "best photos")
-            .put("Daily Afternoon Randomness", "best photos")
-            .put("Daily Morning Awesomeness", "best photos")
-            .put("DGAF", "best photos")
+            .put("daily afternoon randomness", "best photos")
+            .put("daily morning awesomeness", "best photos")
+            .put("dgaf", "best photos")
             .put("shit hit", "best photos")
             .build();
 
@@ -83,7 +83,7 @@ public class ChivePicLoader implements PicLoader {
             logger.warn("Didn't find figure pattern for group {}", groupName);
         } else {
             Date theDate = null;
-            final String finalGroupName = groupName;
+            final String finalGroupName = groupName.toLowerCase();
             Optional<String> foundSpecialCaseGroupName = specialCases.entrySet().stream().filter(e -> finalGroupName.contains(e.getKey())).map(Map.Entry::getValue).findFirst();
             if (foundSpecialCaseGroupName.isPresent()) {
                 groupName = foundSpecialCaseGroupName.get();
