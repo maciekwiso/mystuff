@@ -5,7 +5,10 @@
 
 <h1>Please log in</h1>
 <div id="login-error">${error}</div>
-
+<div>
+<a href="<c:url value="/picviewer/groups" />">pics</a><br />
+<a href="<c:url value="/showsInfoHtml/maciekwiso" />">shows dates</a>
+</div>
 <form action="j_spring_security_check" method="post" >
 
 <p>

@@ -4,10 +4,7 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 import com.visosoft.tvshowinfo.service.XMLUnmarshaller;
-import com.visosoft.tvshowinfo.service.impl.picviewer.ChivePicLoader;
-import com.visosoft.tvshowinfo.service.impl.picviewer.DvdBlueRayReleasesLoader;
-import com.visosoft.tvshowinfo.service.impl.picviewer.NineGagPicLoader;
-import com.visosoft.tvshowinfo.service.impl.picviewer.PicLoader;
+import com.visosoft.tvshowinfo.service.impl.picviewer.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +33,10 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
 
     @PostConstruct
     public void init() {
-        picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao), new DvdBlueRayReleasesLoader(xmlUnmarshaller, picViewerDao));
+        picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao),
+                //new DvdBlueRayReleasesLoader(xmlUnmarshaller, picViewerDao)
+                new YoutubeLoader(picViewerDao)
+        );
     }
 
     @Override

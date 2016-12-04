@@ -31,6 +31,7 @@ public class ChivePicLoader implements PicLoader {
     private final PicViewerDao picViewerDao;
     private final Map<String, String> specialCases = ImmutableMap.<String, String>builder()
             .put("flbp", "FLBP")
+            .put("sideboob", "FLBP")
             .put("choose tugs", "FLBP")
             .put("bras", "FLBP")
             .put("burn bra", "FLBP")
@@ -39,7 +40,8 @@ public class ChivePicLoader implements PicLoader {
             .put("tug life", "FLBP")
             .put("tight dress", "tight dress")
             .put("cat saturday", "Cat saturday")
-            .put("lowbrow humor", "lowbrow humor")
+            .put("lowbrow", "lowbrow humor")
+            .put("escalated quickly", "lowbrow humor")
             .put("meme", "memes")
             .put("best photos", "best photos")
             .put("dma", "best photos")
@@ -47,6 +49,7 @@ public class ChivePicLoader implements PicLoader {
             .put("daily morning awesomeness", "best photos")
             .put("dgaf", "best photos")
             .put("shit hit", "best photos")
+            .put("fk yeah", "best photos")
             .build();
 
     public ChivePicLoader(PicViewerDao picViewerDao) {
