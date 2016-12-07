@@ -30,12 +30,15 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     private XMLUnmarshaller xmlUnmarshaller;
 
     private List<PicLoader> picLoaders;
+    private YoutubeLoader youtubeLoader;
+
 
     @PostConstruct
     public void init() {
+        youtubeLoader = new YoutubeLoader(picViewerDao);
         picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao),
                 //new DvdBlueRayReleasesLoader(xmlUnmarshaller, picViewerDao)
-                new YoutubeLoader(picViewerDao)
+                youtubeLoader
         );
     }
 
@@ -50,6 +53,12 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
         picLoaders.forEach(PicLoader::loadPics);
         logger.info("Pic Viewer loadPics done, deleting old pics");
         picViewerDao.deleteOld();
+    }
+
+    @Override
+    public void refresh(String type) {
+        logger.info("Starting Pic Viewer loadPics for {}", type);
+        youtubeLoader.loadPics(true);
     }
 
     @Override

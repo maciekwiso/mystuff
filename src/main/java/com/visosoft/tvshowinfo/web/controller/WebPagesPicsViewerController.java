@@ -31,6 +31,9 @@ public class WebPagesPicsViewerController {
 	@RequestMapping(value = "/picviewer/showunseen", method = RequestMethod.GET)
 	public String displayUnseen(@RequestParam("group") String groupName, ModelMap model) {
 		boolean isYoutubeGroup = "youtube".equals(groupName);
+		if (isYoutubeGroup) {
+			picViewerRecordService.refresh(groupName);
+		}
 		List<PicViewerRecord> pics = picViewerRecordService.selectUnseen(isYoutubeGroup ? 50 : 20, groupName);
 		setAsSeen(pics, groupName);
 		model.put("pics", pics);

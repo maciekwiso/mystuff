@@ -41,6 +41,11 @@ for (var i = 0; i < inputs.length; i++) {
 <form method="post" action="<c:url value="/picviewer/setasseen" />">
 <center>
 <table>
+        <tr>
+			<td>
+                <a href="<c:url value="/picviewer/showunseen?group=youtube" />">youtube</a>
+			</td>
+		</tr>
 	<c:forEach var="item" items="${groups}">
 		<tr>
 			<td>

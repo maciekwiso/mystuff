@@ -9,7 +9,9 @@ public interface PicViewerRecordService {
 	void insert(PicViewerRecord s);
     
     void refresh();
-    
+
+    void refresh(String type);
+
     List<PicViewerRecord> selectAll(String groupName);
     List<PicViewerRecord> selectUnseen(String groupName);
     List<PicViewerRecord> selectAll(int maxResults, String groupName);
