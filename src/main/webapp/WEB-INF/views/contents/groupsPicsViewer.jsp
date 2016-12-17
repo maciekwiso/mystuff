@@ -50,7 +50,7 @@ for (var i = 0; i < inputs.length; i++) {
 		<tr>
 			<td>
                 <a href="<c:url value="/picviewer/showunseen?group=${item}" />">${item}</a> |
-				<a href="<c:url value="/picviewer/setasseen?group=${item}" />">set as seen</a> | <input type="checkbox" name="seen" value="${item}"/> | <a href="javascript:;" onClick="selectNext('${item}')">next as seen</a>
+				<a href="<c:url value="/picviewer/setasseen?group=${item}" />">remove</a> | <input type="checkbox" name="seen" value="${item}"/> | <a href="javascript:;" onClick="selectNext('${item}')">check next for removal</a>
 				| <a href="<c:url value="/picviewer/moveUp?group=${item}" />">move up</a>
 			</td>
 		</tr>
