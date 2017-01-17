@@ -40,9 +40,9 @@ public class YoutubeLoader implements PicLoader {
 
     @Override
     public void loadPics() {
-        if (count++ % 10 == 0 && new Date().getHours() == 0) {
-            doLoadPics();
-        }
+//        if (count++ % 10 == 0 && new Date().getHours() == 0) {
+//            doLoadPics();
+//        }
     }
 
     private void doLoadPics() {

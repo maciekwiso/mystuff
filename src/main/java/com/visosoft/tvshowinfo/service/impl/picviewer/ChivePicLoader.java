@@ -31,7 +31,9 @@ public class ChivePicLoader implements PicLoader {
     private final PicViewerDao picViewerDao;
     private final Map<String, String> specialCases = ImmutableMap.<String, String>builder()
             .put("flbp", "FLBP")
+			.put("future lower back", "FLBP")
             .put("sideboob", "FLBP")
+			.put("underboob", "FLBP")
             .put("choose tugs", "FLBP")
             .put("bras", "FLBP")
             .put("burn bra", "FLBP")
