@@ -8,6 +8,7 @@ import com.visosoft.tvshowinfo.domain.Episode;
 import com.visosoft.tvshowinfo.domain.Show;
 import com.visosoft.tvshowinfo.service.ShowUpdater;
 import com.visosoft.tvshowinfo.util.ShowSearchResult;
+import org.apache.http.client.fluent.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,7 +103,7 @@ public class TvMazeShowUpdater implements ShowUpdater {
 
     private List<TvMazeEpisode> getEpisodesData(Show show) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(new URL(show.getUrl()), objectMapper.getTypeFactory().constructCollectionType(List.class, TvMazeEpisode.class));
+        return objectMapper.readValue(Request.Get(show.getUrl()).connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString(), objectMapper.getTypeFactory().constructCollectionType(List.class, TvMazeEpisode.class));
     }
 
     @Override
