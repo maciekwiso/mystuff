@@ -10,6 +10,9 @@
 	<tr>
     	<td colspan="5"><a href="addshow">Add</a></td>
     </tr>
+    <tr>
+    	<td colspan="5"><a href="refreshShows">Refresh shows</a></td>
+    </tr>
 	<tr>
 		<td>ID</td>
 		<td>Name</td>

@@ -52,6 +52,12 @@ public class ShowsController {
 		return "redirect:/shows";
 	}
 	
+	@RequestMapping(value = "refreshShows", method = RequestMethod.GET)
+	public String refreshShows() {
+		showsDataUpdaterService.updateShowsData();
+		return "redirect:/shows";
+	}
+
 	@RequestMapping(value = "editshow/{showId}", method = RequestMethod.GET)
 	public String editShow(@PathVariable long showId, ModelMap model) {
 		Show s = showService.selectOne(showId);
