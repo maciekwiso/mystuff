@@ -55,10 +55,13 @@ public final class Utils {
 		return dateFormat.format(airdate);
 	}
 
-	public static StringBuilder generateSubscribedShowsContent(
-			SortedSet<Show> shows) {
+	public static StringBuilder generateSubscribedShowsContent(SortedSet<Show> shows) {
+		return generateSubscribedShowsContent(shows, true);
+	}
+
+	public static StringBuilder generateSubscribedShowsContent(SortedSet<Show> shows, boolean newLineAsSeparator) {
 		StringBuilder b = new StringBuilder();
-        shows.forEach((s) -> b.append(s.getTitle()).append(NEW_LINE));
+        shows.forEach((s) -> b.append(s.getTitle()).append(newLineAsSeparator ? NEW_LINE : ", "));
 		return b;
 	}
 	

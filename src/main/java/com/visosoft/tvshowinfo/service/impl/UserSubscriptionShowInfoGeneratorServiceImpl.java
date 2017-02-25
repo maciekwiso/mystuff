@@ -64,7 +64,7 @@ public class UserSubscriptionShowInfoGeneratorServiceImpl implements
 		StringBuilder inTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getInTwoWeeks(), true, withLinks);
 		StringBuilder lastWeek = Utils.generateEpisodesList(rec.getValue(), Lists.reverse(data.getLastWeek()), true, withLinks);
 		StringBuilder moreThanTwoWeeks = Utils.generateEpisodesList(rec.getValue(), data.getMoreThanTwoWeeks(), true, withLinks);
-		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue());
+		StringBuilder shows = Utils.generateSubscribedShowsContent(rec.getValue(), false);
         try {
             return contentTemplate.replaceAll(CONTENTVAR_SHOWS, escapeString(shows.toString()))
                     .replaceAll(CONTENTVAR_USERNAME, escapeString(rec.getKey().getUsername()))
