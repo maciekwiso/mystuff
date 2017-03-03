@@ -14,6 +14,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 public class YoutubeLoader implements PicLoader {
@@ -22,7 +24,6 @@ public class YoutubeLoader implements PicLoader {
     public static final JsonFactory JSON_FACTORY = new JacksonFactory();
     private final PicViewerDao picViewerDao;
     private static final Logger logger = LoggerFactory.getLogger(ChivePicLoader.class);
-    private long count = 0;
     private final List<String> channels = ImmutableList.<String>builder()
             .add("UUa6vGFO9ty8v5KZJXQxdhaw")//kimmel
             .add("UUi7GJNg51C3jgmYTUwqoUXA")//conan
@@ -55,7 +56,9 @@ public class YoutubeLoader implements PicLoader {
             PlaylistItemListResponse playlistItems = youtube.playlistItems().list("contentDetails").setKey("AIzaSyCNo7XDGEbVDwkGO_ry8NfV_ptHgw0wqSw")
                     .setPlaylistId(playlistId).setMaxResults(15L).execute();
             int added = 0;
-            for (PlaylistItem playlistItem : playlistItems.getItems()) {
+            ArrayList<PlaylistItem> items = new ArrayList<>(playlistItems.getItems());
+            Collections.reverse(items);
+            for (PlaylistItem playlistItem : items) {
                 String videoId = playlistItem.getContentDetails().getVideoId();
                 if (!picViewerDao.withUrlEndingExists(videoId)) {
                     added++;
