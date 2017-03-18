@@ -50,7 +50,7 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     @Override
     public void refresh() {
         logger.info("Starting Pic Viewer loadPics");
-        picLoaders.forEach(PicLoader::loadPics);
+        picLoaders.parallelStream().forEach(PicLoader::loadPics);
         logger.info("Pic Viewer loadPics done, deleting old pics");
         picViewerDao.deleteOld();
     }

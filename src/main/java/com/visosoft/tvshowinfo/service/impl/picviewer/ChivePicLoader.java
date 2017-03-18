@@ -70,7 +70,7 @@ public class ChivePicLoader implements PicLoader {
         try {
             String contents = Request.Get("http://thechive.com/").connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
             List<String> articlesUrls = getUrlsForArticles(contents);
-            articlesUrls.forEach(this::parseArticleUrl);
+            articlesUrls.parallelStream().forEach(this::parseArticleUrl);
         } catch (Exception e) {
             logger.error("Exception in loadPics", e);
             e.printStackTrace();
