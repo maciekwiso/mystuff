@@ -48,32 +48,36 @@ public class YoutubeLoader implements PicLoader {
 
     private void doLoadPics() {
         logger.info("Starting youtube loader");
-        channels.forEach(this::loadChannelVideos);
+        channels.parallelStream().map(this::loadChannelVideos).forEachOrdered(this::insertNewRecords);
     }
 
-    private void loadChannelVideos(String playlistId) {
+    private void insertNewRecords(List<PicViewerRecord> picViewerRecords) {
+        picViewerRecords.forEach(picViewerDao::insert);
+    }
+
+    private List<PicViewerRecord> loadChannelVideos(String playlistId) {
+        List<PicViewerRecord> recordsToInsert = new ArrayList<>();
         try {
             PlaylistItemListResponse playlistItems = youtube.playlistItems().list("contentDetails").setKey("AIzaSyCNo7XDGEbVDwkGO_ry8NfV_ptHgw0wqSw")
                     .setPlaylistId(playlistId).setMaxResults(15L).execute();
-            int added = 0;
             ArrayList<PlaylistItem> items = new ArrayList<>(playlistItems.getItems());
             Collections.reverse(items);
             for (PlaylistItem playlistItem : items) {
                 String videoId = playlistItem.getContentDetails().getVideoId();
                 if (!picViewerDao.withUrlEndingExists(videoId)) {
-                    added++;
                     PicViewerRecord picViewerRecord = new PicViewerRecord();
                     picViewerRecord.setGroupName("youtube");
                     picViewerRecord.setUrl(videoId);
                     picViewerRecord.setTitle(videoId);
                     picViewerRecord.setAdded(theDate);
-                    picViewerDao.insert(picViewerRecord);
+                    recordsToInsert.add(picViewerRecord);
                 }
             }
-            logger.info("Added {} videos from playlist {}", added, playlistId);
+            logger.info("Added {} videos from playlist {}", recordsToInsert.size(), playlistId);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return recordsToInsert;
     }
 
     public void loadPics(boolean force) {
