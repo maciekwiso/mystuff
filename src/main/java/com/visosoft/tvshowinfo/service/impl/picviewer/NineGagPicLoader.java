@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,13 +30,14 @@ public class NineGagPicLoader implements PicLoader {
     }
 
     @Override
-    public void loadPics() {
+    public List<PicViewerRecord> loadPics() {
         try {
             String contents = get9gagContents();
-            addPics(contents);
+            return addPics(contents);
         } catch (Exception e) {
             logger.error("Exception in refresh9gag", e);
         }
+        return new ArrayList<>();
     }
 
     private static String get9gagContents() throws IOException {
@@ -42,7 +45,8 @@ public class NineGagPicLoader implements PicLoader {
     }
 
     @VisibleForTesting
-    protected void addPics(String contents) {
+    protected List<PicViewerRecord> addPics(String contents) {
+        List<PicViewerRecord> records = new ArrayList<>();
         Matcher m = artPattern.matcher(contents);
         int added = 0;
         while (m.find()) {
@@ -68,12 +72,13 @@ public class NineGagPicLoader implements PicLoader {
                     logger.warn("Didn't find src pattern in [{}]", currentContent);
                 }
             }
-            if (url.isPresent() && addNewPic(url.get(), title)) added++;
+            if (url.isPresent() && addNewPic(url.get(), title, records)) added++;
         }
         logger.info("Added new pics {}", added);
+        return records;
     }
 
-    private boolean addNewPic(String url, String title) {
+    private boolean addNewPic(String url, String title, List<PicViewerRecord> records) {
         int lastSlash = url.lastIndexOf("/");
         if (lastSlash == -1) {
             return false;
@@ -85,7 +90,7 @@ public class NineGagPicLoader implements PicLoader {
         p.setUrl(url);
         p.setTitle(title);
         p.setGroupName("9gag");
-        picViewerDao.insert(p);
+        records.add(p);
         return true;
     }
 }

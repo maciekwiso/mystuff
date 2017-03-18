@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,7 +34,7 @@ public class DvdBlueRayReleasesLoader implements PicLoader {
     }
 
     @Override
-    public void loadPics() {
+    public List<PicViewerRecord> loadPics() {
         Rss rss = null;
         try {
             rss = xmlUnmarshaller.unmarshall(Request.Get(rssUrl).connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString(), Rss.class);
@@ -42,6 +44,7 @@ public class DvdBlueRayReleasesLoader implements PicLoader {
         if (rss != null) {
             loadMovies(rss.getChannel());
         }
+        return new ArrayList<>();
     }
 
     protected void loadMovies(Channel channel) {

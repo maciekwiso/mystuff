@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+
 public class YoutubeLoader implements PicLoader {
 
     public static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
@@ -40,15 +42,16 @@ public class YoutubeLoader implements PicLoader {
     }
 
     @Override
-    public void loadPics() {
+    public List<PicViewerRecord> loadPics() {
 //        if (count++ % 10 == 0 && new Date().getHours() == 0) {
 //            doLoadPics();
 //        }
+        return new ArrayList<>();
     }
 
     private void doLoadPics() {
         logger.info("Starting youtube loader");
-        channels.parallelStream().map(this::loadChannelVideos).forEachOrdered(this::insertNewRecords);
+        channels.parallelStream().map(this::loadChannelVideos).collect(Collectors.toList()).forEach(this::insertNewRecords);
     }
 
     private void insertNewRecords(List<PicViewerRecord> picViewerRecords) {

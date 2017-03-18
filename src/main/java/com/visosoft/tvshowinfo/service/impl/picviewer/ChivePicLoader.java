@@ -9,12 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class ChivePicLoader implements PicLoader {
 
@@ -66,18 +64,20 @@ public class ChivePicLoader implements PicLoader {
     }
 
     @Override
-    public void loadPics() {
+    public List<PicViewerRecord> loadPics() {
         try {
             String contents = Request.Get("http://thechive.com/").connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
             List<String> articlesUrls = getUrlsForArticles(contents);
-            articlesUrls.parallelStream().forEach(this::parseArticleUrl);
+            return articlesUrls.parallelStream().map(this::parseArticleUrl).flatMap(List::stream).collect(Collectors.toList());
         } catch (Exception e) {
             logger.error("Exception in loadPics", e);
             e.printStackTrace();
         }
+        return new ArrayList<>();
     }
 
-    protected void parseArticleUrl(String url) {
+    protected List<PicViewerRecord> parseArticleUrl(String url) {
+        List<PicViewerRecord> recordsToAdd = new ArrayList<>();
         String contents = null;
         try {
             contents = Request.Get(url).connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString();
@@ -119,14 +119,15 @@ public class ChivePicLoader implements PicLoader {
                         title = matcherPic.group(2);
                     }
                 }
-                if (picUrl != null && addPic(picUrl, title, groupName, theDate))
+                if (picUrl != null && addPic(picUrl, title, groupName, theDate, recordsToAdd))
                     added++;
             }
             logger.info("Added pics for the chive for article {}: {}", groupName, added);
         }
+        return recordsToAdd;
     }
 
-    private boolean addPic(String picUrl, String title, String groupName, Date theDate) {
+    private boolean addPic(String picUrl, String title, String groupName, Date theDate, List<PicViewerRecord> recordsToAdd) {
         picUrl = picUrl.substring(0, picUrl.indexOf('?'));
         if (!picViewerDao.withUrlEndingExists(picUrl.substring(10))) {
             PicViewerRecord picViewerRecord = new PicViewerRecord();
@@ -135,7 +136,7 @@ public class ChivePicLoader implements PicLoader {
             title = title.replaceAll("\n", " ").trim();
             picViewerRecord.setTitle(title);
             picViewerRecord.setAdded(theDate);
-            picViewerDao.insert(picViewerRecord);
+            recordsToAdd.add(picViewerRecord);
             return true;
         }
         return false;

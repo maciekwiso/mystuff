@@ -1,6 +1,7 @@
 package com.visosoft.tvshowinfo.service.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.google.common.collect.ImmutableList;
 import com.visosoft.tvshowinfo.service.XMLUnmarshaller;
@@ -50,9 +51,13 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     @Override
     public void refresh() {
         logger.info("Starting Pic Viewer loadPics");
-        picLoaders.parallelStream().forEach(PicLoader::loadPics);
+        picLoaders.parallelStream().map(PicLoader::loadPics).collect(Collectors.toList()).forEach(this::insertAll);
         logger.info("Pic Viewer loadPics done, deleting old pics");
         picViewerDao.deleteOld();
+    }
+
+    private void insertAll(List<PicViewerRecord> picViewerRecords) {
+        picViewerRecords.forEach(this::insert);
     }
 
     @Override
