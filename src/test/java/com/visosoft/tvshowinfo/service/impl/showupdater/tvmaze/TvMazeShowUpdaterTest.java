@@ -28,6 +28,6 @@ public class TvMazeShowUpdaterTest {
         Mockito.when(episodeDao.selectAllByShow(show)).thenReturn(ImmutableList.of());
         tvMazeShowUpdater.setEpisodeDao(episodeDao);
 
-        Assert.assertTrue(tvMazeShowUpdater.updateShow(show));
+        Assert.assertNotNull(tvMazeShowUpdater.updateShow(show));
     }
 }

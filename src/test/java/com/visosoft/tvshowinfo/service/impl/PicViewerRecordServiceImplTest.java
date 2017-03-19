@@ -1,10 +1,17 @@
 package com.visosoft.tvshowinfo.service.impl;
 
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.Lists;
+import com.google.api.services.youtube.YouTube;
 import com.google.common.base.Charsets;
+import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;
 import com.visosoft.tvshowinfo.dao.PicViewerDao;
 import com.visosoft.tvshowinfo.domain.PicViewerRecord;
+import org.apache.http.client.fluent.Request;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -36,7 +43,45 @@ public class PicViewerRecordServiceImplTest {
         //picViewerRecordService.addPics(contents);
     }
 
-    @Test
+    @Test@Ignore
+    public void parallelYoutube() {
+        final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
+        final JsonFactory JSON_FACTORY = new JacksonFactory();
+        List<String> channels = ImmutableList.<String>builder()
+                .add("UUa6vGFO9ty8v5KZJXQxdhaw")//kimmel
+                .add("UUi7GJNg51C3jgmYTUwqoUXA")//conan
+                .add("UU8-Th83bH_thdKZDJCrn88g")//fallon
+                .add("UUVTyTA7-g9nopHeHbeuvpRA")//meyers
+                .add("UUJ0uqCI0Vqr2Rrt1HseGirg")//corden
+                .add("UUMtFAi84ehTSYSE9XoHefig")//colbert
+                .build();
+        YouTube youtube = new YouTube.Builder(HTTP_TRANSPORT, JSON_FACTORY, request -> {}).setApplicationName("my-videos-finder").build();
+        channels.parallelStream().forEach(a -> {
+            try {
+                System.out.println(Thread.currentThread().getName() + " " + youtube.playlistItems().list("contentDetails").setKey("AIzaSyCNo7XDGEbVDwkGO_ry8NfV_ptHgw0wqSw")
+                        .setPlaylistId(a).setMaxResults(15L).execute().getItems().size());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    @Ignore
+    @Test public void parallelRequests() {
+        List<String> theList = com.google.common.collect.Lists.newArrayList("first", "second", "third", "forth");
+        theList.parallelStream().forEach(this::dorequest);
+    }
+
+    private void dorequest(String s) {
+        try {
+            System.out.println(s);
+            System.out.println(s + Request.Get("http://9gag.com").connectTimeout(5000).socketTimeout(10000).execute().returnContent().asString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test@Ignore
     public void parallelStreamTest() {
         List<String> theList = com.google.common.collect.Lists.newArrayList("first", "second", "third", "forth");
         theList.parallelStream().map(this::nextObj).forEachOrdered(this::after);

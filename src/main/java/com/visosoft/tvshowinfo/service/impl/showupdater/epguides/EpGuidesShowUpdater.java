@@ -4,6 +4,7 @@ import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.visosoft.tvshowinfo.dao.EpisodeDao;
 import com.visosoft.tvshowinfo.domain.Episode;
+import com.visosoft.tvshowinfo.domain.EpisodeUpdaterResult;
 import com.visosoft.tvshowinfo.domain.Show;
 import com.visosoft.tvshowinfo.service.ShowUpdater;
 import com.visosoft.tvshowinfo.util.ShowSearchResult;
@@ -46,15 +47,15 @@ public class EpGuidesShowUpdater implements ShowUpdater {
     }
 
     @Override
-    public boolean updateShow(Show show) {
+    public EpisodeUpdaterResult updateShow(Show show) {
         logger.debug("Starting update of show: {}", show);
         try {
             String episodesData = getEpisodesData(show);
-            return updateEps(episodesData, show);
+            updateEps(episodesData, show);
         } catch (Exception e) {
             logger.error("Error on updating show " + show.getTitle(), e);
         }
-        return false;
+        return null;
     }
 
     private boolean updateEps(String episodesData, Show show) throws ParseException {

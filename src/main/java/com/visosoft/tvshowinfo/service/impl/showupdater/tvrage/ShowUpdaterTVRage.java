@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.visosoft.tvshowinfo.domain.EpisodeUpdaterResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,15 +47,16 @@ public class ShowUpdaterTVRage implements ShowUpdater {
 	private final Date EMPTY_DATE = new Date(70, 0, 1);
 	
 	@Override
-	public boolean updateShow(Show show) {
+	public EpisodeUpdaterResult updateShow(Show show) {
 		logger.debug("Starting update of show: {}", show);
 		ShowXmlTVRage showXml = createShowXml(show);
 		if (showXml == null) {
 			logger.error("Unmarshalling of the show was unsuccessfull");
-			return false;
+			return null;
 		}
 		updateShow(show, showXml);
-		return updateEps(show, showXml);
+		updateEps(show, showXml);
+		return null;
 	}
 	
 	private void updateShow(Show show, ShowXmlTVRage showXml) {

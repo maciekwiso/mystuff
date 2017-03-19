@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 import com.visosoft.tvshowinfo.dao.EpisodeDao;
 import com.visosoft.tvshowinfo.domain.Episode;
+import com.visosoft.tvshowinfo.domain.EpisodeUpdaterResult;
 import com.visosoft.tvshowinfo.domain.Show;
 import com.visosoft.tvshowinfo.service.ShowUpdater;
 import com.visosoft.tvshowinfo.util.ShowSearchResult;
@@ -37,33 +38,33 @@ public class TvMazeShowUpdater implements ShowUpdater {
     }
 
     @Override
-    public boolean updateShow(Show show) {
+    public EpisodeUpdaterResult updateShow(Show show) {
         logger.debug("Starting update of show: {}", show);
+        EpisodeUpdaterResult result = new EpisodeUpdaterResult();
         try {
             List<TvMazeEpisode> episodesData = getEpisodesData(show);
-            return updateEps(episodesData, show);
+            updateEps(episodesData, show, result);
         } catch (Exception e) {
             logger.error("Error on updating show " + show.getTitle(), e);
         }
-        return false;
+        return result;
     }
 
-    private boolean updateEps(List<TvMazeEpisode> episodesData, Show show) {
+    private void updateEps(List<TvMazeEpisode> episodesData, Show show, EpisodeUpdaterResult result) {
         List<Episode> oldEpisodes = episodeDao.selectAllByShow(show);
         if (oldEpisodes == null) {
             oldEpisodes = Lists.newArrayList();
         }
         for (TvMazeEpisode episode : episodesData) {
-            processEpisode(episode, oldEpisodes, show);
+            processEpisode(episode, oldEpisodes, show, result);
         }
         if (!oldEpisodes.isEmpty()) {
             logger.debug("Removing not found episodes {} for show {}", oldEpisodes.size(), show.getTitle());
-            oldEpisodes.forEach(episodeDao::delete);
+            result.toDelete.addAll(oldEpisodes);
         }
-        return true;
     }
 
-    private void processEpisode(TvMazeEpisode newEpisode, List<Episode> oldEpisodes, Show show) {
+    private void processEpisode(TvMazeEpisode newEpisode, List<Episode> oldEpisodes, Show show, EpisodeUpdaterResult result) {
         try {
             Optional<Episode> foundOldEp = findOldEp(newEpisode, oldEpisodes);
             Date newEpAirDate = EPISODE_AIR_DATE_FORMATTER.parse(newEpisode.getAirdate());
@@ -72,13 +73,13 @@ public class TvMazeShowUpdater implements ShowUpdater {
                 if (!Objects.equals(foundEp.getTitle(), newEpisode.getName()) || !Objects.equals(foundEp.getAirdate(), newEpAirDate)) {
                     foundEp.setTitle(newEpisode.getName());
                     foundEp.setAirdate(newEpAirDate);
-                    episodeDao.update(foundEp);
+                    result.toUpdate.add(foundEp);
                     logger.debug("updated episode {}", foundEp.toReadableString());
                 }
                 oldEpisodes.remove(foundEp);
             } else {
                 Episode newEpisodeDomain = createEpisode(newEpAirDate, newEpisode, show);
-                episodeDao.insert(newEpisodeDomain);
+                result.toInsert.add(newEpisodeDomain);
                 logger.debug("added episode {}", newEpisodeDomain.toReadableString());
             }
         } catch (ParseException e) {
