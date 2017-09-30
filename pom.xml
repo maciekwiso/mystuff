@@ -21,9 +21,7 @@
 	<profiles>
 		<profile>
 			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+			
 			<properties>
 				<env>dev</env>
 				<config.jdbc.driverClassName>org.h2.Driver</config.jdbc.driverClassName>
@@ -86,6 +84,9 @@
 		</profile>
 		<profile>
 			<id>openshift</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<properties>
 				<env>openshift</env>
 				<config.jdbc.driverClassName>com.mysql.jdbc.Driver</config.jdbc.driverClassName>
@@ -111,7 +112,7 @@
 						<artifactId>maven-war-plugin</artifactId>
 						<version>2.1.1</version>
 						<configuration>
-							<outputDirectory>${env.OPENSHIFT_DATA_DIR}/apache-tomcat-8.0.20/webapps</outputDirectory>
+							
 							<warName>ROOT</warName>
 						</configuration>
 					</plugin>
