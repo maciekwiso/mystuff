@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -67,6 +68,12 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 	
 	@Autowired
 	private ShowsDataUpdaterService showService;
+
+	@PostConstruct
+	public void postContr() {
+		System.out.println(System.getProperties());
+		System.out.println(System.getenv());
+	}
 	
 	@Override
 	@Transactional
