@@ -91,8 +91,8 @@
 				<env>openshift</env>
 				<config.jdbc.driverClassName>com.mysql.jdbc.Driver</config.jdbc.driverClassName>
 				<config.jdbc.url>jdbc:mysql://${env.mysql_SERVICE_HOST}:${env.mysql_SERVICE_PORT}/mystuffdb</config.jdbc.url>
-				<config.jdbc.user>${env.MYSQL_USER}</config.jdbc.user>
-				<config.jdbc.pass>${env.MYSQL_PASSWORD}</config.jdbc.pass>
+				<config.jdbc.user>${env.mysql_MYSQL_USER}</config.jdbc.user>
+				<config.jdbc.pass>${env.mysql_MYSQL_PASSWORD}</config.jdbc.pass>
 				<config.persistence.dialect>org.hibernate.dialect.MySQLDialect</config.persistence.dialect>
 				<config.persistence.hbm2ddl.auto>update</config.persistence.hbm2ddl.auto>
 				<config.persistence.generateDdl>true</config.persistence.generateDdl>
