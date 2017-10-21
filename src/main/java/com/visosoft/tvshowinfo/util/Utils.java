@@ -34,7 +34,7 @@ public final class Utils {
 			}
 			b.append(e.toReadableString());
 			if (withLink) {
-				b.append("  ").append(torrentzLink(e));
+				b.append("  ").append(torrentLink(e));
 			}
 			b.append(NEW_LINE);
 		}
@@ -44,9 +44,11 @@ public final class Utils {
 		return b;
 	}
 
-	private static String torrentzLink(Episode e) {
+	private static String torrentLink(Episode e) {
+		String searchText = String.format("%s+s%02de%02d",e.getShow().getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
 		//return String.format("<a href=\"https://torrentz.eu/search?q=%s+s%se%02d\">torrent</a>", e.getShow().getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
-		return String.format("<a href=\"https://rarbg.to/torrents.php?search=%s+s%02de%02d\">torrent</a>", e.getShow().getTitle().replaceAll(" ", "+"), e.getSeason(), e.getNumber());
+		return String.format("<a href=\"https://rarbg.to/torrents.php?search=%s\">rarbg</a>&nbsp;<a href=\"https://thepiratebay.org/search/%s\">pbay</a>",
+				searchText, searchText);
 	}
 
 	private static DateFormat dateFormat = DateFormat.getDateInstance();
