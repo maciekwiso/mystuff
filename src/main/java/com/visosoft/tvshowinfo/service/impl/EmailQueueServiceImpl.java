@@ -102,8 +102,8 @@ public class EmailQueueServiceImpl implements ApplicationListener<ContextRefresh
 
 	@Override
 	public void start() {
-		refreshStuckPending();
-		startQueue();
+//		refreshStuckPending();
+//		startQueue();
 	}
 
 	private void refreshStuckPending() {
