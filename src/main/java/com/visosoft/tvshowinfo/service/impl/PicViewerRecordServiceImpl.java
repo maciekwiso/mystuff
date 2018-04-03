@@ -38,6 +38,7 @@ public class PicViewerRecordServiceImpl implements PicViewerRecordService {
     public void init() {
         youtubeLoader = new YoutubeLoader(picViewerDao);
         picLoaders = ImmutableList.of(new NineGagPicLoader(picViewerDao), new ChivePicLoader(picViewerDao),
+                new ApartmentsLoader(picViewerDao),
                 //new DvdBlueRayReleasesLoader(xmlUnmarshaller, picViewerDao)
                 youtubeLoader
         );
