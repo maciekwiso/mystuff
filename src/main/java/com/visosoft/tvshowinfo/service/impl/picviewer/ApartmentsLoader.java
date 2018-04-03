@@ -102,7 +102,8 @@ public class ApartmentsLoader implements PicLoader {
     }
 
     private final List<String> keyWordsToFilterOut = ImmutableList.of("mistrzejowice", "czyżyny", "nowa huta", "obozowa",
-            "salwator", "płaszów", "2 poziomowe", "antresol", "termin realizacji");
+            "salwator", "płaszów", "2 poziomowe", "antresol", "termin realizacji", "parter", "pierwsze piętro", "pierwszym piętrze",
+            "stan deweloperski");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
