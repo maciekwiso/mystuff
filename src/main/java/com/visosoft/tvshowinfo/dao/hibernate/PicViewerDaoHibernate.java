@@ -82,6 +82,12 @@ public class PicViewerDaoHibernate implements PicViewerDao {
 	}
 
 	@Override
+	public boolean withTitleEndingExists(String titleEnding) {
+		String query = "select e from PicViewerRecord e where e.title like :title";
+		return !CollectionUtils.isEmpty(em.createQuery(query).setParameter("title", "%" + titleEnding).getResultList());
+	}
+
+	@Override
 	public List<PicViewerRecord> selectAll(int maxResults, String groupName) {
 		String query = "select e from PicViewerRecord e where e.groupName=:groupName order by e.id";
 		return em.createQuery(query).setMaxResults(maxResults).setParameter("groupName", groupName).getResultList();

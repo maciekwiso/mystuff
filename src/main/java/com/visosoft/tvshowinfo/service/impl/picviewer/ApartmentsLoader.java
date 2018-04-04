@@ -48,22 +48,21 @@ public class ApartmentsLoader implements PicLoader {
         while ((pos = pageContents.indexOf("<li class=\"result pictures\"", endPos)) != -1) {
             endPos = pageContents.indexOf("</li", pos);
             String detailsUrl = "https://www.gumtree.pl" + fromPattern(detailsPagePattern, pageContents.substring(pos, endPos));
-            if (isNew(detailsUrl)) {
-                String detailsContents = contents(detailsUrl);
-                if (detailsContents.contains(detailsPageSizeKey)) {
-                    int size = Integer.parseInt(fromPattern(detailsPageSizePattern, detailsContents.substring(detailsContents.indexOf(detailsPageSizeKey))));
-                    if (size < 46 || size > 60)
-                        continue;
-                }
-                String title = fromPattern(detailsPageTitlePattern, detailsContents);
-                String desc = fromPattern(detailsPageDescPattern, detailsContents);
-                if (looksInteresting(title + " " + desc)) {
-                    PicViewerRecord record = new PicViewerRecord();
-                    record.setGroupName("apartments");
-                    record.setTitle(title);
-                    record.setUrl(detailsUrl);
-                    toAdd.add(record);
-                }
+            String detailsContents = contents(detailsUrl);
+            if (detailsContents.contains(detailsPageSizeKey)) {
+                int size = Integer.parseInt(fromPattern(detailsPageSizePattern, detailsContents.substring(detailsContents.indexOf(detailsPageSizeKey))));
+                if (size < 46 || size > 60)
+                    continue;
+            }
+            String title = fromPattern(detailsPageTitlePattern, detailsContents);
+            String desc = fromPattern(detailsPageDescPattern, detailsContents);
+            String descHash = String.valueOf(desc.trim().hashCode());
+            if (looksInteresting(title + " " + desc) && isNewTitle(descHash)) {
+                PicViewerRecord record = new PicViewerRecord();
+                record.setGroupName("apartments");
+                record.setTitle(title + " " + descHash);
+                record.setUrl(detailsUrl);
+                toAdd.add(record);
             }
         }
         logger.info("Added gumtree {}", toAdd.size());
@@ -83,7 +82,7 @@ public class ApartmentsLoader implements PicLoader {
         while ((pos = pageContents.indexOf("<article", endPos)) != -1) {
             endPos = pageContents.indexOf("</article", pos);
             String detailsUrl = fromPattern(detailsPagePattern, pageContents.substring(pos, endPos));
-            if (isNew(detailsUrl)) {
+            if (isNewUrl(detailsUrl)) {
                 String detailsContents = contents(detailsUrl);
                 String title1 = fromPattern(detailsPageTitle1Pattern, detailsContents);
                 String title2 = fromPattern(detailsPageTitle2Pattern, detailsContents);
@@ -103,7 +102,12 @@ public class ApartmentsLoader implements PicLoader {
 
     private final List<String> keyWordsToFilterOut = ImmutableList.of("mistrzejowice", "czyżyny", "nowa huta", "obozowa",
             "salwator", "płaszów", "2 poziomowe", "antresol", "termin realizacji", "parter", "pierwsze piętro", "pierwszym piętrze",
-            "stan deweloperski");
+            "stan deweloperski", "bieńczyce", "dzielnicy tonie", "stan: deweloperski", "wola justowska", "kliny borkowskie",
+            "stare miasto", "lokalu: deweloperski", "wola duchacka", "prądnik czerwony", "mieszkania: dewe", "oferta dewelopera",
+            "na i piętrze", "90-tych", "z 199", "metalowców", "wieliczka", "nowej huty", "na 1 piętrze", "wykończenia deweloperski",
+            "przy wawelu", "Nullo", "lokalu: do wykończenia", "w 195", "stanie deweloperskim", "dietla", "olsza", "nowa inwestycja",
+            "nowoczesna inwestycja", "50-tych", "ulicy lea", "piecyk gazowy", "nowej inwestycji", "inwestycja powstanie",
+            "ścisłym centrum", "piec dwufunkcyjny", "planowe zakończenie budowy", "z lat 60-tych");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
@@ -121,8 +125,12 @@ public class ApartmentsLoader implements PicLoader {
         return matcher.group(1);
     }
 
-    private boolean isNew(String detailsUrl) {
+    private boolean isNewUrl(String detailsUrl) {
         return !picViewerDao.withUrlEndingExists(detailsUrl);
+    }
+
+    private boolean isNewTitle(String title) {
+        return !picViewerDao.withTitleEndingExists(title);
     }
 
     private static String contents(String url) throws IOException {

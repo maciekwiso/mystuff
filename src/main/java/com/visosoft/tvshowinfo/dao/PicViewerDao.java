@@ -15,7 +15,9 @@ public interface PicViewerDao {
     void setAsSeenWithIdLorE(Long id,String groupName);
     boolean withUrlEndingExists(String urlEnding);
 
-	List<PicViewerRecord> selectAll(int maxResults,String groupName);
+    boolean withTitleEndingExists(String titleEnding);
+
+    List<PicViewerRecord> selectAll(int maxResults, String groupName);
 
 	List<PicViewerRecord> selectUnseen(int maxResults, String groupName);
 
