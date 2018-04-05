@@ -108,7 +108,8 @@ public class ApartmentsLoader implements PicLoader {
             "przy wawelu", "nullo", "lokalu: do wykończenia", "w 195", "stanie deweloperskim", "dietla", "olsza", "nowa inwestycja",
             "nowoczesna inwestycja", "50-tych", "ulicy lea", "piecyk gazowy", "nowej inwestycji", "inwestycja powstanie",
             "ścisłym centrum", "piec dwufunkcyjny", "planowe zakończenie budowy", "z lat 60-tych", "nowe mieszkania",
-            "oddany do użytku w 2019", "oddany do użytku w 2018", "kwartale 201", "budynku z 19", "IX piętrowym bloku");
+            "oddany do użytku w 2019", "oddany do użytku w 2018", "kwartale 201", "budynku z 19", "IX piętrowym bloku",
+            "planowe oddanie budynku", "ul. Lea");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
