@@ -109,7 +109,7 @@ public class ApartmentsLoader implements PicLoader {
             "nowoczesna inwestycja", "50-tych", "ulicy lea", "piecyk gazowy", "nowej inwestycji", "inwestycja powstanie",
             "ścisłym centrum", "piec dwufunkcyjny", "planowe zakończenie budowy", "z lat 60-tych", "nowe mieszkania",
             "oddany do użytku w 2019", "oddany do użytku w 2018", "kwartale 201", "budynku z 19", "IX piętrowym bloku",
-            "planowe oddanie budynku", "ul. Lea");
+            "planowe oddanie budynku", "ul. Lea", "własne gazowe", "nowy kleparz", "nowym kleparzu", "chmieleniec", "piecyka gazowego");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
