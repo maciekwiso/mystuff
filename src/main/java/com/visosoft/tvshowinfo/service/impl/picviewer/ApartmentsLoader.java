@@ -57,7 +57,7 @@ public class ApartmentsLoader implements PicLoader {
             String title = fromPattern(detailsPageTitlePattern, detailsContents);
             String desc = fromPattern(detailsPageDescPattern, detailsContents);
             String descHash = String.valueOf(desc.trim().hashCode());
-            if (looksInteresting(title + " " + desc) && isNewTitle(descHash)) {
+            if (looksInteresting(title + " " + desc) && isNewTitle(descHash) && isNewUrl(detailsUrl)) {
                 PicViewerRecord record = new PicViewerRecord();
                 record.setGroupName("apartments");
                 record.setTitle(title + " " + descHash);
