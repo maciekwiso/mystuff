@@ -56,8 +56,8 @@ public class ApartmentsLoader implements PicLoader {
                         continue;
                 }
                 String title = fromPattern(detailsPageTitlePattern, detailsContents);
-                String desc = fromPattern(detailsPageDescPattern, detailsContents);
-                String descHash = String.valueOf(desc.trim().hashCode());
+                String desc = fromPattern(detailsPageDescPattern, detailsContents).trim();
+                String descHash = String.valueOf(desc.substring(0, desc.length() > 300 ? desc.length() - 300 : desc.length() - 1).hashCode());
                 if (looksInteresting(title + " " + desc) && isNewTitle(descHash)) {
                     PicViewerRecord record = new PicViewerRecord();
                     record.setGroupName("apartments");
@@ -111,7 +111,10 @@ public class ApartmentsLoader implements PicLoader {
             "nowoczesna inwestycja", "50-tych", "ulicy lea", "piecyk gazowy", "nowej inwestycji", "inwestycja powstanie",
             "ścisłym centrum", "piec dwufunkcyjny", "planowe zakończenie budowy", "z lat 60-tych", "nowe mieszkania",
             "oddany do użytku w 2019", "oddany do użytku w 2018", "kwartale 201", "budynku z 19", "IX piętrowym bloku",
-            "planowe oddanie budynku", "ul. Lea", "własne gazowe", "nowy kleparz", "nowym kleparzu", "chmieleniec", "piecyka gazowego");
+            "planowe oddanie budynku", "ul. Lea", "własne gazowe", "nowy kleparz", "nowym kleparzu", "chmieleniec", "piecyka gazowego",
+            "2 kwartał 2018", "planowany termin ukończenia", "wkrótce w sprzedaży", "ulicy przewóz", "oś.słoneczne",
+            "inwestycja to", "nwestycja zna", "dobrego pasterza", "gotowe do odbioru", "nowej hucie", "wysłouchów", "grzegórzki",
+            "placu inwalidów", "z lat siedemdziesiątych");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
