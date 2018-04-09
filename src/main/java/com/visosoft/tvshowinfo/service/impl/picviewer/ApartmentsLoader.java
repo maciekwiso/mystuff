@@ -48,21 +48,23 @@ public class ApartmentsLoader implements PicLoader {
         while ((pos = pageContents.indexOf("<li class=\"result pictures\"", endPos)) != -1) {
             endPos = pageContents.indexOf("</li", pos);
             String detailsUrl = "https://www.gumtree.pl" + fromPattern(detailsPagePattern, pageContents.substring(pos, endPos));
-            String detailsContents = contents(detailsUrl);
-            if (detailsContents.contains(detailsPageSizeKey)) {
-                int size = Integer.parseInt(fromPattern(detailsPageSizePattern, detailsContents.substring(detailsContents.indexOf(detailsPageSizeKey))));
-                if (size < 46 || size > 60)
-                    continue;
-            }
-            String title = fromPattern(detailsPageTitlePattern, detailsContents);
-            String desc = fromPattern(detailsPageDescPattern, detailsContents);
-            String descHash = String.valueOf(desc.trim().hashCode());
-            if (looksInteresting(title + " " + desc) && isNewTitle(descHash) && isNewUrl(detailsUrl)) {
-                PicViewerRecord record = new PicViewerRecord();
-                record.setGroupName("apartments");
-                record.setTitle(title + " " + descHash);
-                record.setUrl(detailsUrl);
-                toAdd.add(record);
+            if (isNewUrl(detailsUrl)) {
+                String detailsContents = contents(detailsUrl);
+                if (detailsContents.contains(detailsPageSizeKey)) {
+                    int size = Integer.parseInt(fromPattern(detailsPageSizePattern, detailsContents.substring(detailsContents.indexOf(detailsPageSizeKey))));
+                    if (size < 46 || size > 60)
+                        continue;
+                }
+                String title = fromPattern(detailsPageTitlePattern, detailsContents);
+                String desc = fromPattern(detailsPageDescPattern, detailsContents);
+                String descHash = String.valueOf(desc.trim().hashCode());
+                if (looksInteresting(title + " " + desc) && isNewTitle(descHash)) {
+                    PicViewerRecord record = new PicViewerRecord();
+                    record.setGroupName("apartments");
+                    record.setTitle(title + " " + descHash);
+                    record.setUrl(detailsUrl);
+                    toAdd.add(record);
+                }
             }
         }
         logger.info("Added gumtree {}", toAdd.size());
