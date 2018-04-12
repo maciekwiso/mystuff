@@ -114,7 +114,7 @@ public class ApartmentsLoader implements PicLoader {
             "planowe oddanie budynku", "ul. Lea", "własne gazowe", "nowy kleparz", "nowym kleparzu", "chmieleniec", "piecyka gazowego",
             "2 kwartał 2018", "planowany termin ukończenia", "wkrótce w sprzedaży", "ulicy przewóz", "oś.słoneczne",
             "inwestycja to", "nwestycja zna", "dobrego pasterza", "gotowe do odbioru", "nowej hucie", "wysłouchów", "grzegórzki",
-            "placu inwalidów", "z lat siedemdziesiątych");
+            "placu inwalidów", "z lat siedemdziesiątych", "pomocą pieca gazowego");
 
     private boolean looksInteresting(String desc) {
         desc = desc.toLowerCase();
