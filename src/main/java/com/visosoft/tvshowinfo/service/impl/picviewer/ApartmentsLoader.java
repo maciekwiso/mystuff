@@ -37,7 +37,7 @@ public class ApartmentsLoader implements PicLoader {
 
     private Collection<? extends PicViewerRecord> gumtree() throws IOException {
         List<PicViewerRecord> toAdd = new ArrayList<>();
-        String pageContents = contents("https://www.gumtree.pl/s-mieszkania-i-domy-sprzedam-i-kupie/krakow/mieszkanie/v1c9073l3200208a1dwp1?nr=2&pr=300000,490000");
+        String pageContents = contents("https://www.gumtree.pl/s-mieszkania-i-domy-sprzedam-i-kupie/krakow/mieszkanie/v1c9073l3200208a1dwp1?pr=300000,500000");
         int pos;
         int endPos = 0;
         Pattern detailsPagePattern = Pattern.compile("<a class=\"href-link\" href=\"([^\"]+)");
@@ -73,7 +73,7 @@ public class ApartmentsLoader implements PicLoader {
 
     private Collection<? extends PicViewerRecord> processOtoDom() throws IOException {
         List<PicViewerRecord> toAdd = new ArrayList<>();
-        String pageContents = contents("https://www.otodom.pl/sprzedaz/mieszkanie/krakow/?search%5Bfilter_float_price%3Afrom%5D=300000&search%5Bfilter_float_price%3Ato%5D=500000&search%5Bfilter_float_price_per_m%3Ato%5D=9000&search%5Bfilter_float_m%3Afrom%5D=43&search%5Bfilter_float_m%3Ato%5D=60&search%5Bfilter_enum_market%5D%5B0%5D=secondary&search%5Bfilter_enum_floor_no%5D%5B0%5D=floor_2&search%5Bfilter_enum_floor_no%5D%5B1%5D=floor_3&search%5Bfilter_enum_floor_no%5D%5B2%5D=floor_4&search%5Bfilter_enum_floor_no%5D%5B3%5D=floor_5&search%5Bfilter_enum_floor_no%5D%5B4%5D=floor_6&search%5Bfilter_enum_floor_no%5D%5B5%5D=floor_7&search%5Bfilter_float_building_floors_num%3Ato%5D=7&search%5Bfilter_float_build_year%3Afrom%5D=2004&search%5Bfilter_float_build_year%3Ato%5D=2016&search%5Bdescription%5D=1&search%5Border%5D=created_at_first%3Adesc&search%5Bdist%5D=0&search%5Bsubregion_id%5D=410&search%5Bcity_id%5D=38");
+        String pageContents = contents("https://www.otodom.pl/sprzedaz/mieszkanie/krakow/?search%5Bfilter_float_price%3Afrom%5D=300000&search%5Bfilter_float_price%3Ato%5D=500000&search%5Bfilter_float_price_per_m%3Ato%5D=9000&search%5Bfilter_float_m%3Afrom%5D=43&search%5Bfilter_float_m%3Ato%5D=60&search%5Bfilter_enum_market%5D%5B0%5D=secondary&search%5Bfilter_enum_floor_no%5D%5B0%5D=floor_2&search%5Bfilter_enum_floor_no%5D%5B1%5D=floor_3&search%5Bfilter_enum_floor_no%5D%5B2%5D=floor_4&search%5Bfilter_enum_floor_no%5D%5B3%5D=floor_5&search%5Bfilter_enum_floor_no%5D%5B4%5D=floor_6&search%5Bfilter_enum_floor_no%5D%5B5%5D=floor_7&search%5Bfilter_float_building_floors_num%3Ato%5D=7&search%5Bfilter_float_build_year%3Afrom%5D=2000&search%5Bfilter_float_build_year%3Ato%5D=2016&search%5Bdescription%5D=1&search%5Border%5D=created_at_first%3Adesc&search%5Bdist%5D=0&search%5Bsubregion_id%5D=410&search%5Bcity_id%5D=38");
         pageContents = pageContents.substring(pageContents.indexOf("<div class=\"listing-title\">Wszystkie "));
         int pos;
         int endPos = 0;
